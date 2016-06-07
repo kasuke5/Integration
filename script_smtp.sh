@@ -9,10 +9,10 @@ test=`sudo cat vmailbox | grep $2`
 case $1 in
 	1 )
 		if [[ -z $test ]]; then
-			sudo bash -c echo "$2@$dname $2/ >> vmailbox"
-			sudo mkdir $mail$2
+			sudo bash -c "echo $2@$dname $2/ >> vmailbox"
+			mkdir $mail$2
 			sudo chmod 700 $mail$2
-			sudo chown vmail:vmail $mail$2
+			sudo chown -R vmail:vmail $mail$2
 		else
 			exit 1
 		fi	
@@ -20,15 +20,14 @@ case $1 in
 	2 )
 		if [[ -n $test ]]; then
 			sudo sed -i -e "/^$2@$dname /d" vmailbox
-			sudo rm -R $mail$2
+			sudo rm -r $mail$2
 		else
 			exit 1
 		fi	
 	;;
 	3 )
 		if [[ -z $test ]]; then
-			sudo bash -c
-			"echo $2@$dname $2/ >> vmailbox"
+			sudo bash -c "echo $2@$dname $2/ >> vmailbox"
 		else
 			exit 1
 		fi	

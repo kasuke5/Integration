@@ -7,3 +7,4 @@ source /var/www/eventizi.itinet.fr/scripts/source.sh
 
 ./script_smtp.sh $1 $2
 ./script_imap.sh $1 $2 $3
+qrencode "$fqdn" -o /var/tmp/monsite.png

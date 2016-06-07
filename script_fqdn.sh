@@ -4,8 +4,8 @@ source /var/www/eventizi.itinet.fr/scripts/source.sh
 
 cd /etc/tinydns/root/
 url=$2$fqdn
-if [[ $url != $fqdn ]]; then
-test=`cat data | grep $url`
+if [ $url != $fqdn ]; then
+test=`sudo cat data | grep $url`
 case $1 in 
 	1) 
 		if [ -z $test ]; then

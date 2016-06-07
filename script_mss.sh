@@ -11,8 +11,8 @@ fi
 case $1 in
         1) 
 	mdp=`openssl passwd $2`
-	sudo useradd --home /home/$2 --shell /usr/bin/mysecureshell -g createur -p $mdp $2
-	sudo chown -R $2:createur $www$2
+	sudo useradd --home /home/$2 --shell /usr/bin/mysecureshell -g www-data -p $mdp $2
+	sudo chown -R $2:www-data $www$2
 	sudo bash -c "echo '<User $2>
 Home /var/www/$2
 StayAtHome true
