@@ -1,6 +1,7 @@
 <?php 
 include 'header.php'; 
 ?>
+<div id="formulaire">
 <h3>Inscription</h3>
 
  <form class="form-horizontal" role="form">
@@ -34,6 +35,7 @@ include 'header.php';
     </div>
   </div>
 </form>
+</div>
 <?php
 include 'footer.php';
 ?>
