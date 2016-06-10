@@ -2,31 +2,19 @@
 include 'header.php'; 
 ?>
 <div id="formulaire">
-<h3>Inscription</h3>
-<?php echo "<h3>".$message."</h3>"; ?>
+<h3>Connexion</h3>
+
  <form class="form-horizontal" role="form" method="post">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Email:</label>
-    <div class="col-sm-5">
-      <input type="email" name="mail" class="form-control" id="email" placeholder="Enter email">
-    </div>
-  </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="login">Pseudo:</label>
     <div class="col-sm-5">
-      <input type="text" name="login" required class="form-control" id="login" placeholder="Enter pseudo">
+      <input type="password" name="login" required class="form-control" id="login" placeholder="Enter pseudo">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="pass">Mot de passe:</label>
     <div class="col-sm-5">
-      <input type="password" name="pass1" class="form-control" id="pass" placeholder="Enter password">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pass2">Confirmer mot de passe:</label>
-    <div class="col-sm-5">
-      <input type="password" name="pass2" class="form-control" id="pass2" placeholder="Enter password">
+      <input type="password" name="pass" class="form-control" id="pass" placeholder="Enter password">
     </div>
   </div>
   <div class="form-group">

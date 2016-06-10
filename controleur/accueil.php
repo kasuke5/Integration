@@ -1,4 +1,4 @@
 <?php
-	include_once("controleur/accueil.php");
+	include_once("vue/index.html");
 
 ?>
