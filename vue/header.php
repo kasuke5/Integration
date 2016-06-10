@@ -26,7 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="fa fa-home fa-3x" id="home" href="#myPage"></a>
+      <a class="fa fa-home fa-3x" id="home" href="index.html"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

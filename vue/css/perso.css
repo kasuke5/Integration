@@ -3,7 +3,7 @@ body {
       color: #777;
   }
   h3, h4 {
-      margin: 10px 0 30px 0;
+      margin: 10px 30px 30px 30px;
       letter-spacing: 10px;      
       font-size: 20px;
       color: #111;
@@ -34,7 +34,7 @@ body {
       -webkit-filter: grayscale(90%);
       filter: grayscale(90%); /* make all photos black and white */ 
       width: 100%; /* Set width to 100% */
-      height: auto;
+      max-height: auto;
       margin: auto;
       box-sizing: border-box;
   }
@@ -84,6 +84,10 @@ body {
   #contact {
     background-color: #2d2d30;
     padding: 32px;
+    width: 97%;
+  }
+  #contact h3 {
+    color: white;
   }
   .modal-header, h4, .close {
       background-color: #333;

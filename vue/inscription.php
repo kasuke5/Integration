@@ -14,7 +14,7 @@ include 'header.php';
   <div class="form-group">
     <label class="control-label col-sm-2" for="pseudo">Pseudo:</label>
     <div class="col-sm-5">
-      <input type="password" class="form-control" id="pseudo" placeholder="Enter pseudo">
+      <input type="text" class="form-control" id="pseudo" placeholder="Enter pseudo">
     </div>
   </div>
   <div class="form-group">
