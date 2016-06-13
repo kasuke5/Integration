@@ -31,7 +31,7 @@ include ('header.php');
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="lieu">lieu de l'évènement:</label>
+    <label class="control-label col-sm-2" for="lieu">Lieu de l'évènement:</label>
     <div class="col-sm-5">
       <input type="text" class="form-control" id="lieu" placeholder="Enter password">
     </div>
@@ -45,8 +45,15 @@ include ('header.php');
     <div class="form-group">
             <label for="date_fin" class="col-sm-2 control-label">Date et heure fin:</label>
             <div class="col-sm-5">
-            <input type="datetime-local" id="date_fin" name="date_fin" value="" placeholder="2016-01-10T10:00"  class="form-control"/>
+              <input type="datetime-local" id="date_fin" name="date_fin" value="" placeholder="2016-01-10T10:00"  class="form-control"/>
             </div>
+    </div>
+    <div class="form-group">
+      
+      <label for="description" class="col-sm-2 control-label">Description : </label>
+        <div class="col-sm-5">
+          <textarea name="description" id="description" rows="4" cols="50"></textarea>
+        </div>
     </div>
 
   <div class="form-group">
