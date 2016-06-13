@@ -14,7 +14,11 @@ include 'header.php';
   <div class="form-group">
     <label class="control-label col-sm-2" for="login">Pseudo:</label>
     <div class="col-sm-5">
+<<<<<<< HEAD
       <input type="text" name="login" required class="form-control" id="login" placeholder="Enter pseudo">
+=======
+      <input type="text" class="form-control" id="pseudo" placeholder="Enter pseudo">
+>>>>>>> 4bdad4d6f8518b27c1195677dc8a95bbd024771c
     </div>
   </div>
   <div class="form-group">
