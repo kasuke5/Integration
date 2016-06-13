@@ -3,32 +3,49 @@ include 'header.php';
 ?>
 <div id="formulaire">
 <h3>Inscription</h3>
-<?php echo "<h2>".$message."</h2>"; ?>
+<?php //echo "<h2>".$message."</h2>"; ?>
  <form class="form-horizontal" role="form" method="post">
   <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Email:</label>
+    <label class="control-label col-sm-2" for="email">Nom:</label>
     <div class="col-sm-5">
-      <input type="email" name="mail" class="form-control" id="email" placeholder="Enter email">
+      <input type="text" name="nom" required class="form-control" placeholder="Nom">
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="login">Pseudo:</label>
+    <label class="control-label col-sm-2" for="login">Description:</label>
     <div class="col-sm-5">
-      <input type="text" name="login" required class="form-control" id="login" placeholder="Enter pseudo">
+      <input type="text" name="description" required class="form-control" placeholder="Description">
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pass">Mot de passe:</label>
+    <label class="control-label col-sm-2" for="pass">Date et heure de début :</label>
     <div class="col-sm-5">
-      <input type="password" name="pass1" class="form-control" id="pass" placeholder="Enter password">
+      <input type="date" name="debut" class="form-control" placeholder="jj-mm-aa hh-mm">
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pass2">Confirmer mot de passe:</label>
+    <label class="control-label col-sm-2" for="pass2">Date et heure de fin:</label>
     <div class="col-sm-5">
-      <input type="password" name="pass2" class="form-control" id="pass2" placeholder="Enter password">
+      <input type="datetime" name="fin" class="form-control" placeholder="jj-mm-aa hh-mm">
     </div>
   </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Adresse:</label>
+    <div class="col-sm-5">
+      <input type="text" name="adresse" required class="form-control" placeholder="Adresse">
+    </div>
+    <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-5">
+    <select id='c'>
+        <option value="1" >Importer votre site</option>
+        <option value="2" selected >Utiliser wordpress</option>
+
+    <br></br>
+    <div id="bdd">
+    </div>
+    </select>
+  </div>
+</div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-5">
       <button type="submit" class="btn btn-default"name="action">Submit</button>
@@ -41,6 +58,14 @@ include 'footer.php';
 ?>
 
 <script>
+  /*$('#c').change(function(){
+      if($('#c').val() == 1){
+        alert($('#c').val());
+        $('#bdd').html("<input type='checkbox' name='bdd'> Utiliser aussi une bdd");
+      }
+      });*/
+
+
 $(document).ready(function(){
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip(); 

@@ -15,7 +15,7 @@ fi
 
 sudo script_vhosts.sh $1 $2
 sudo script_fqdn.sh $1 $2
-sudo script_bdd.sh $1 $2
+#sudo script_bdd.sh $1 $2
 sudo script_mail.sh $1 $2 $4
 if [ $3 = 1 ] 
 then

@@ -1,29 +1,15 @@
 <?php 
 include 'header.php'; 
 ?>
-<div id="formulaire">
-<h3>Connexion</h3>
+<?php
+echo"
+<h3> Bienvenue ".$infos["user_login"]. "sur Event'IZI. Voici votre profil.</h3>
+<h2> Vos compétences sont : ";
+for($i=0;$i<count($skills);$i++){
+    echo ($skills[$i]["skill_nom"].",");
+}
+?>
 
- <form class="form-horizontal" role="form" method="post">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="login">Pseudo:</label>
-    <div class="col-sm-5">
-      <input type="text" name="login" required class="form-control" id="login" placeholder="Enter pseudo">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pass">Mot de passe:</label>
-    <div class="col-sm-5">
-      <input type="password" name="pass" required class="form-control" id="pass" placeholder="Enter password">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" class="btn btn-default"name="action">Submit</button>
-    </div>
-  </div>
-</form>
-</div>
 <?php
 include 'footer.php';
 ?>
