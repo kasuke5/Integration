@@ -32,7 +32,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="#">Evenements</a></li>
+<<<<<<< HEAD
         <li><a href="http://mail.eventizi.itinet.fr">Mailbox</a></li>
+=======
+        <li><a href="http://mail.eventizi.itinet.fr/">Mailbox</a></li>
+>>>>>>> a9813d1f0eea426d8861579035d538b292ec7d8d
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>

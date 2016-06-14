@@ -1,6 +1,7 @@
 <?php 
-include 'header.php'; 
+include ('header.php');
 ?>
+<<<<<<< HEAD
 <div id="formulaire">
 <h3>Créez le site de votre évènement</h3>
 <?php //echo "<h2>".$message."</h2>"; ?>
@@ -9,17 +10,41 @@ include 'header.php';
     <label class="control-label col-sm-2" for="email">Nom:</label>
     <div class="col-sm-5">
       <input type="text" name="nom" required class="form-control" placeholder="Nom">
+=======
+<link rel="stylesheet" type="text/css" href="./css/chosen.min.css" />  
+<link rel="stylesheet" type="text/css" href="./css/fileinput.css" />  
+
+<script type="text/javascript" src="./js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="./js/fileinput.js"></script>
+<!-- afarkas.github.io/webshim/demos/index.html q-->
+<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+<script>
+    webshims.setOptions('forms-ext', {types: 'date'});
+    webshims.polyfill('forms forms-ext');
+</script>
+<h2>Creation d'evenement</h2>
+ <form class="form-horizontal" role="form">
+ <div class="form-group">
+  <p>upload photo (super widget de la muerte)</p>
+  <label class="control-label">Select File</label>
+  <div class="col-sm-5">
+      <input id="input-1" type="file" class="file">
+>>>>>>> a9813d1f0eea426d8861579035d538b292ec7d8d
+    </div>
+ </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="name">Nom de l'évènement :</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="name" placeholder="Enter name">
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="login">Description:</label>
+    <label class="control-label col-sm-2" for="lieu">Lieu de l'évènement:</label>
     <div class="col-sm-5">
-      <input type="text" name="description" required class="form-control" placeholder="Description">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pass">Date et heure de début :</label>
-    <div class="col-sm-5">
+<<<<<<< HEAD
       <input type="date" name="debut" class="form-control" placeholder="aaaa-mm-jj hh-mm">
     </div>
   </div>
@@ -27,14 +52,25 @@ include 'header.php';
     <label class="control-label col-sm-2" for="pass2">Date et heure de fin:</label>
     <div class="col-sm-5">
       <input type="datetime" name="fin" class="form-control" placeholder="aaaa-mm-jj hh-mm">
+=======
+      <input type="text" class="form-control" id="lieu" placeholder="Entrer lieu">
     </div>
   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Adresse:</label>
-    <div class="col-sm-5">
-      <input type="text" name="adresse" required class="form-control" placeholder="Adresse">
+    <div class="form-group">
+            <label for="date_debut" class="col-sm-2 control-label">Date et heure début:</label>
+            <div class="col-sm-5">
+            <input type="datetime-local" id="date_debut" name="date_debut" value="" placeholder="2016-01-10T09:00"  class="form-control"/>
+            </div>
+>>>>>>> a9813d1f0eea426d8861579035d538b292ec7d8d
     </div>
     <div class="form-group">
+            <label for="date_fin" class="col-sm-2 control-label">Date et heure fin:</label>
+            <div class="col-sm-5">
+              <input type="datetime-local" id="date_fin" name="date_fin" value="" placeholder="2016-01-10T10:00"  class="form-control"/>
+            </div>
+    </div>
+    <div class="form-group">
+<<<<<<< HEAD
     <div class="col-sm-offset-2 col-sm-5">
     <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
@@ -45,12 +81,22 @@ include 'header.php';
     <br></br>
     <div id="bdd">
     </div>
+=======
+      
+      <label for="description" class="col-sm-2 control-label">Description : </label>
+        <div class="col-sm-5">
+          <textarea name="description" id="description" rows="4" cols="50"></textarea>
+        </div>
+    </div>
+
+>>>>>>> a9813d1f0eea426d8861579035d538b292ec7d8d
   <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" class="btn btn-default"name="action">Submit</button>
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
     </div>
   </div>
 </form>
+<<<<<<< HEAD
 </div>
 <?php
 include 'footer.php';
@@ -65,36 +111,9 @@ include 'footer.php';
 	}
       });
 
+=======
+>>>>>>> a9813d1f0eea426d8861579035d538b292ec7d8d
 
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-</script>
-
-</body>
-</html>
+<?php
+include ('footer.php');
+?>
