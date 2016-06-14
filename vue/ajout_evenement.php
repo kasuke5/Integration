@@ -33,7 +33,7 @@ include ('header.php');
   <div class="form-group">
     <label class="control-label col-sm-2" for="lieu">Lieu de l'évènement:</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control" id="lieu" placeholder="Enter password">
+      <input type="text" class="form-control" id="lieu" placeholder="Entrer lieu">
     </div>
   </div>
     <div class="form-group">
