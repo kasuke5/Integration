@@ -2,7 +2,7 @@
 include 'header.php'; 
 ?>
 <div id="formulaire">
-<h3>Inscription</h3>
+<h3>Créez le site de votre évènement</h3>
 <?php //echo "<h2>".$message."</h2>"; ?>
  <form class="form-horizontal" role="form" method="post">
   <div class="form-group">
@@ -20,13 +20,13 @@ include 'header.php';
   <div class="form-group">
     <label class="control-label col-sm-2" for="pass">Date et heure de début :</label>
     <div class="col-sm-5">
-      <input type="date" name="debut" class="form-control" placeholder="jj-mm-aa hh-mm">
+      <input type="date" name="debut" class="form-control" placeholder="aaaa-mm-jj hh-mm">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="pass2">Date et heure de fin:</label>
     <div class="col-sm-5">
-      <input type="datetime" name="fin" class="form-control" placeholder="jj-mm-aa hh-mm">
+      <input type="datetime" name="fin" class="form-control" placeholder="aaaa-mm-jj hh-mm">
     </div>
   </div>
   <div class="form-group">
@@ -36,16 +36,15 @@ include 'header.php';
     </div>
     <div class="form-group">
     <div class="col-sm-offset-2 col-sm-5">
-    <select id='c'>
-        <option value="1" >Importer votre site</option>
-        <option value="2" selected >Utiliser wordpress</option>
-
+    <select id='c' name="choix">
+        <option value="importer" >Importer votre site</option>
+        <option value="wordpress" selected >Utiliser wordpress</option>
+	</select>
+	</div>
+	</div>
     <br></br>
     <div id="bdd">
     </div>
-    </select>
-  </div>
-</div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-5">
       <button type="submit" class="btn btn-default"name="action">Submit</button>
@@ -58,12 +57,13 @@ include 'footer.php';
 ?>
 
 <script>
-  /*$('#c').change(function(){
-      if($('#c').val() == 1){
-        alert($('#c').val());
+  $('#c').change(function(){
+      if($('#c').val() == "importer"){
         $('#bdd').html("<input type='checkbox' name='bdd'> Utiliser aussi une bdd");
-      }
-      });*/
+      }else{
+	$('#bdd').html("");
+	}
+      });
 
 
 $(document).ready(function(){

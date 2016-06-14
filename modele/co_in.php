@@ -14,7 +14,7 @@ function inscription($login,$pass,$mail){
     			'mail' => $mail,
     			'role' => $role
     			)) or die ( print_r($req->errorInfo()) );
-    			$commande = "./scripts/script_chat.sh 1 ".$login." ".$pass;
+    			$commande = "./script_chat.sh 1 ".$login." ".$pass;
     			exec($commande);
     			$val = GetIdByLogin($login)["user_id"];
     			var_dump($val);
@@ -53,8 +53,8 @@ function GetIdByLogin($login){
 function GetLoginById($id){
 	global $bdd;
 	$donnees = 0;
-	$req = $bdd->prepare('SELECT user_login FROM t_user WHERE user_id = ?');
-	$req->execute(array($login));
+	$req = $bdd->prepare('SELECT user_login, user_password FROM t_user WHERE user_id = ?');
+	$req->execute(array($id));
 	$donnees = $req->fetch();
 	return $donnees;
 }

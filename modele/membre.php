@@ -63,9 +63,9 @@ function get_events_by_tags($tags){
 	$requete = "SELECT e.event_title, e.event_description FROM t_event e WHERE event_id IN";
 	foreach ($tags as $cle => $value) {
 			if($i < count($tags)){
-	 			$requete = $requete." (SELECT Events_idEvents FROM events_has_tags WHERE Tags_idTags =".$value.") AND event_id IN";
+	 			$requete = $requete." (SELECT Events_idEvents FROM Events_has_Tags WHERE Tags_idTags =".$value.") AND event_id IN";
 	 		}else{
-	 			$requete = $requete." (SELECT Events_idEvents FROM events_has_tags WHERE Tags_idTags =".$value.")";
+	 			$requete = $requete." (SELECT Events_idEvents FROM Events_has_Tags WHERE Tags_idTags =".$value.")";
 	 		}	
 	 		$i++;
 	 }

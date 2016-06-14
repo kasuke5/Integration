@@ -2,7 +2,6 @@
 
 function add_events($details){
 		global $bdd;
-		var_dump($details);
 		$role = 0;
 		$categorie = 1; // A modifier
 		$organisateur = 30; // A modifier
@@ -17,12 +16,12 @@ function add_events($details){
     			'organisateur' => $organisateur
     			)) or die ( print_r($req->errorInfo()) );
 				
-				$event_id = id_events($details["nom"])["event_id"];
-				$req = $bdd->prepare('INSERT INTO users_has_events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
+			/*	$event_id = id_events($details["nom"])["event_id"];
+				$req = $bdd->prepare('INSERT INTO Users_has_Events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
    				$req->execute(array(
     			'user_id' => $organisateur,
     			'event_id' => $event_id,
-    			'role' => 1	)) or die ( print_r($req->errorInfo()) );
+    			'role' => 1	)) or die ( print_r($req->errorInfo()) );*/
 
 }
 

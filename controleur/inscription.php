@@ -2,8 +2,8 @@
 
 // => Contrôleur
 
-include_once("../modele/co_in.php");
-include_once("../modele/connexion_bdd.php");
+include_once("modele/co_in.php");
+include_once("modele/connexion_bdd.php");
 //$_SESSION["erreur"] = "khjkhjkhj";
 $message = "";
 if(isset($_POST["action"])){
@@ -17,17 +17,17 @@ if(isset($_POST["action"])){
 			}else{
 				
 				$message = $retour;
-				include_once("../vue/inscription.php"); // Ajouter le message de $retour
+				include_once("vue/inscription.php"); // Ajouter le message de $retour
 			}
 		}else{
 			$message = "Les deux mots de passe ne sont pas identiques";
-			include("../vue/inscription.php"); // Ajouter un message
+			include("vue/inscription.php"); // Ajouter un message
 		}
 	}else{
 		$message = "Vous devez remplir tous les champs";
-		include_once("../vue/inscription.php"); // Ajouter un message
+		include_once("vue/inscription.php"); // Ajouter un message
 	}
 }else{
-	include_once("../vue/inscription.php");
+	include_once("vue/inscription.php");
 
 }
