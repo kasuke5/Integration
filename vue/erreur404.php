@@ -1,6 +1,8 @@
 <?php
 include ('header.php');
 ?>
-<h1> Erreur 404 : page non trouvee <h1>
+<div class="container"> 
+<h1> Erreur 404 : page non trouvee </h1>
+</div>
 <?php
 include ('footer.php');
