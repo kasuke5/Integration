@@ -13,6 +13,8 @@ if($_SERVER["REQUEST_URI"] == "/"){
 	include_once("controleur/events.php");
 }elseif($_SERVER["REQUEST_URI"] =="/ajout_evenement"){
 	include_once("controleur/ajout_evenement.php");
+}elseif($_SERVER["REQUEST_URI"] =="/tableau_bord"){
+	include_once("controleur/tableau_bord.php");
 }else{
         include_once("vue/erreur404.php");
 }

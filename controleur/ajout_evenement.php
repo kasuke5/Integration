@@ -1,9 +1,9 @@
 <?php
 	
 
-include_once("modele/events.php");
-include_once("modele/co_in.php");
-include_once("modele/connexion_bdd.php");
+#include_once("modele/events.php");
+#include_once("modele/co_in.php");
+#include_once("modele/connexion_bdd.php");
 
 if(isset($_POST["action"])){
 	add_events($_POST);

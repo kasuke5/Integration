@@ -1,15 +1,7 @@
 <?php 
 include ('header.php');
-?>
-<div id="formulaire">
-<h3>Créez le site de votre évènement</h3>
-<?php //echo "<h2>".$message."</h2>"; ?>
- <form class="form-horizontal" role="form" method="post">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Nom:</label>
-    <div class="col-sm-5">
-      <input type="text" name="nom" required class="form-control" placeholder="Nom">
-<link rel="stylesheet" type="text/css" href="./css/chosen.min.css" />  
+//echo "<h2>".$message."</h2>"; ?>
+<link rel="stylesheet" type="text/css" href="../css/chosen.min.css" />  
 <link rel="stylesheet" type="text/css" href="./css/fileinput.css" />  
 
 <script type="text/javascript" src="./js/bootstrap-datetimepicker.min.js"></script>
@@ -23,6 +15,7 @@ include ('header.php');
     webshims.setOptions('forms-ext', {types: 'date'});
     webshims.polyfill('forms forms-ext');
 </script>
+<div class="container">
 <h2>Creation d'evenement</h2>
  <form class="form-horizontal" role="form">
  <div class="form-group">
@@ -41,14 +34,7 @@ include ('header.php');
   <div class="form-group">
     <label class="control-label col-sm-2" for="lieu">Lieu de l'évènement:</label>
     <div class="col-sm-5">
-      <input type="date" name="debut" class="form-control" placeholder="aaaa-mm-jj hh-mm">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pass2">Date et heure de fin:</label>
-    <div class="col-sm-5">
-      <input type="datetime" name="fin" class="form-control" placeholder="aaaa-mm-jj hh-mm">
-      <input type="text" class="form-control" id="lieu" placeholder="Entrer lieu">
+      <input type="text" name="lieu" class="form-control" placeholder="lieu de l'evenement">
     </div>
   </div>
     <div class="form-group">
@@ -74,12 +60,12 @@ include ('header.php');
     <br></br>
     <div id="bdd">
     </div>
-      
+  <div class="form-group">
       <label for="description" class="col-sm-2 control-label">Description : </label>
         <div class="col-sm-5">
           <textarea name="description" id="description" rows="4" cols="50"></textarea>
         </div>
-    </div
+    </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-default">Submit</button>
