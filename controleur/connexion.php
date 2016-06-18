@@ -1,27 +1,25 @@
 <?php
 
 // =>  Contrôleur
-
 include_once("modele/co_in.php");
+include_once("modele/events.php");
 include_once("modele/connexion_bdd.php");
 
+if(!isset($_SESSION["id_user"])){
 
-if(isset($_POST["action"])){
-		if(isset($_POST["login"]) AND isset($_POST["pass"])){
-			echo "ok";
-			$id_user = connexion($_POST["login"],$_POST["pass"]);
-			echo $id_user;
-			if($id_user == 0 ){
-				include_once("vue/connexion.php"); // Ajouter un message sur la page
-			}else{
-				$_SESSION["id_user"] = $id_user;
-				//include_once("../vue/accueil_membre.html");
-				echo "Vous êtes connecté ! ".$id_user;
-			}
-		}else{
-				include_once("vue/connexion.php"); // Ajouter un message sur la page
-			}
-}else{
-	include_once("vue/connexion.php");
-}
+	if(isset($_POST["action"])){
+				$id_user = connexion($_POST["login"],$_POST["pass"]);
+				if($id_user == 0 ){
+					include_once("vue/connexion.php"); // Ajouter un message sur la page
+				}else{
+					$_SESSION["id_user"] = $id_user;
+					$_SESSION["login_user"] = $_POST["login"];
+					include_once("controleur/events.php");
+				}
+	}else{
+		include_once("vue/connexion.php");
+	}
+
+}else
+	include_once("controleur/tableau_bord.php");
 	
