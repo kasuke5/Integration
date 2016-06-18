@@ -40,8 +40,10 @@ function move_file($image){
 if(isset($_POST["action"])){
 	//var_dump($_FILES,$_POST);
 	if(verif_upload($_FILES["photo"])){
-		$login = GetLoginById($_SESSION["id_user"])["user_login"]; // Mettre $_SESSION["id_user"] à la place
-		$password = GetLoginById($_SESSION["id_user"])["user_password"];
+		$infos_user = GetLoginById($_SESSION["id_user"]);
+		$login = $infos_user["user_login"];
+		$password = $infos_user["user_password"];
+		$role = $infos_user["user_role"];
 
 
 		if($_POST["choix"] == "wordpress"){
@@ -55,20 +57,24 @@ if(isset($_POST["action"])){
 			if(!get_event_by_name($_POST["nom"])){
 				if(move_file($_FILES["photo"])){
 					add_events($_POST,$site);
-					/*switch($site){
+					switch($site){
 						case 1:
-							//$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 2 ".$_POST["nom"];
-							//$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
-							//exec($commande_bdd);
+							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 2 ".$_POST["nom"] $_SESSION["login_user"];
+							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
+							exec($commande_bdd);
 							break;
 						case 2:
-							//$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"];
+							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"] $_SESSION["login_user"];
+							if($role == 0){
+								$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
+								exec($commande_mss); 
+							}
 							break;
 						case 3:
-							//$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
-							//echo exec($commande_bdd);
-							break;*/
-						//echo exec($commande_web);
+							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
+							exec($commande_bdd);
+							break;
+						exec($commande_web);
 				}else{
 				echo "erreur fichier";
 				}
