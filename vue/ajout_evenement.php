@@ -1,54 +1,70 @@
 <?php 
 include ('header.php');
-//echo "<h2>".$message."</h2>"; ?>
-<link rel="stylesheet" type="text/css" href="../css/chosen.min.css" />  
-<link rel="stylesheet" type="text/css" href="./css/fileinput.css" />  
+?>
+<h3>Créez le site de votre évènement</h3>
+<?php //echo "<h2>".$message."</h2>"; ?>
+    <label class="control-label col-sm-2" for="email">Nom:</label>
+<link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
+<link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" />  
 
 <script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="vue/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="vue/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="vue/js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="vue/js/fileinput.js"></script>
-<!-- afarkas.github.io/webshim/demos/index.html q-->
 <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 <script>
     webshims.setOptions('forms-ext', {types: 'date'});
     webshims.polyfill('forms forms-ext');
 </script>
-<div class="container">
 <h2>Creation d'evenement</h2>
- <form class="form-horizontal" role="form">
+ <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
   <p>upload photo (super widget de la muerte)</p>
   <label class="control-label">Select File</label>
   <div class="col-sm-5">
-      <input id="input-1" type="file" class="file">
+      <input  type="file" name="photo">
     </div>
  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="name">Nom de l'évènement :</label>
+ <div class="form-group">
+    <label class="control-label col-sm-2" for="lieu">Nom:</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control" id="name" placeholder="Enter name">
+      <input type="text" name="nom" class="form-control" placeholder="">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="lieu">Lieu de l'évènement:</label>
     <div class="col-sm-5">
-      <input type="text" name="lieu" class="form-control" placeholder="lieu de l'evenement">
+      <input type="text" name="adresse" class="form-control" placeholder="">
     </div>
   </div>
     <div class="form-group">
             <label for="date_debut" class="col-sm-2 control-label">Date et heure début:</label>
             <div class="col-sm-5">
-            <input type="datetime-local" id="date_debut" name="date_debut" value="" placeholder="2016-01-10T09:00"  class="form-control"/>
+            <input type="datetime-local" id="debut" name="debut" value="" placeholder="2016-01-10T09:00"  class="form-control"/>
             </div>
     </div>
     <div class="form-group">
             <label for="date_fin" class="col-sm-2 control-label">Date et heure fin:</label>
             <div class="col-sm-5">
-              <input type="datetime-local" id="date_fin" name="date_fin" value="" placeholder="2016-01-10T10:00"  class="form-control"/>
+              <input type="datetime-local" id="fin" name="fin" value="" placeholder="2016-01-10T10:00"  class="form-control"/>
             </div>
     </div>
+
+    <div class="form-group">
+            <label for="date_fin" class="col-sm-2 control-label">Catégorie</label>
+            <div class="col-sm-5">
+             <select name="categorie">
+                    <?php for($i=0;$i<count($categories);$i++){
+                                echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
+                            }
+                            echo "</select>";
+                            ?>
+            </div>
+    </div>
+    <br>
+
+
     <div class="form-group">
     <div class="col-sm-offset-2 col-sm-5">
     <select id='c' name="choix">
@@ -59,16 +75,16 @@ include ('header.php');
 	</div>
     <br></br>
     <div id="bdd">
-    </div>
-  <div class="form-group">
+    </div>      
       <label for="description" class="col-sm-2 control-label">Description : </label>
         <div class="col-sm-5">
           <textarea name="description" id="description" rows="4" cols="50"></textarea>
         </div>
     </div>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default" name="action">Submit</button>
     </div>
   </div>
 </form>
@@ -85,7 +101,4 @@ include 'footer.php';
 	$('#bdd').html("");
 	}
       });
-
-<?php
-include ('footer.php');
-?>
+</script>
