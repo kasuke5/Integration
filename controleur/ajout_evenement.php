@@ -57,24 +57,26 @@ if(isset($_POST["action"])){
 			if(!get_event_by_name($_POST["nom"])){
 				if(move_file($_FILES["photo"])){
 					add_events($_POST,$site);
+					if($role == 0){
+								$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
+								exec($commande_mss); 
+							}
 					switch($site){
 						case 1:
-							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 2 ".$_POST["nom"] $_SESSION["login_user"];
+							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 2 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
 							exec($commande_bdd);
 							break;
 						case 2:
-							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"] $_SESSION["login_user"];
-							if($role == 0){
-								$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
-								exec($commande_mss); 
-							}
+							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							break;
 						case 3:
+							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
 							exec($commande_bdd);
 							break;
 						exec($commande_web);
+					}
 				}else{
 				echo "erreur fichier";
 				}
