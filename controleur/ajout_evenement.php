@@ -1,10 +1,10 @@
 <?php
 	
 
-include_once("modele/events.php");
-include_once("modele/membre.php");
-include_once("modele/co_in.php");
-include_once("modele/connexion_bdd.php");
+include("modele/events.php");
+include("modele/membre.php");
+include("modele/co_in.php");
+include("modele/connexion_bdd.php");
 
 $categories = get_categories();
 
@@ -56,27 +56,38 @@ if(isset($_POST["action"])){
 		}
 			if(!get_event_by_name($_POST["nom"])){
 				if(move_file($_FILES["photo"])){
-					add_events($_POST,$site);
-					if($role == 0){
-								$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
-								exec($commande_mss); 
-							}
+					//add_events($_POST,$site);
+								if($role == 0){
+									if($site == 2 || $site ==3){
+										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
+										exec($commande_mss);
+									}
+									if($site == 1 || $site == 3){
+								
+									$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"]." 0";
+									exec($commande_bdd);
+									}
+								}else{
+									if($site == 1 || $site == 3){
+								
+									$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"]." 1";
+									exec($commande_bdd);
+									}
+								}
+
 					switch($site){
 						case 1:
+							echo $_SESSION["login_user"];
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 2 ".$_POST["nom"]." ".$_SESSION["login_user"];
-							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
-							exec($commande_bdd);
 							break;
 						case 2:
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							break;
 						case 3:
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
-							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"];
-							exec($commande_bdd);
 							break;
-						exec($commande_web);
 					}
+					echo exec($commande_web);
 				}else{
 				echo "erreur fichier";
 				}
