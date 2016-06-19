@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="stylesheet" href="../vue/css/bootstrap.css">
+  <link rel="stylesheet" href="vue/css/bootstrap.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -22,8 +22,8 @@
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="../vue/css/perso.css">
-  <script src="../vue/js/japix.js"></script>
+  <link rel="stylesheet" href="vue/css/perso.css">
+  <script src="vue/js/japix.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -52,7 +52,7 @@
 
  <form class="form-horizontal" role="form" method="post">
  
- <h3> Sélectionner une catégorie et entrez un nom </h3>
+ <h3> Trouver un évènement </h3>
                     <select id='c'>
                     <option value="0" selected >toutes catégories</option>
                     <?php for($i=0;$i<count($categories);$i++){
@@ -62,48 +62,100 @@
                             ?>
 
     <div class="form-group">                       
-    <label class="control-label col-sm-2" for="login">Entrez du texte</label>
+    <label class="control-label col-sm-2" for="login"></label>
     <div class="col-sm-5">
-      <input type="text" name="recherche" id="recherche" required class="form-control" id="login" placeholder="">
+      <input type="text" name="recherche" id="recherche" required class="form-control" id="login" placeholder="Entrez du texte">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" class="btn btn-default"name="nom">Submit</button>
+      <button type="submit" id="submit" class="btn btn-default"name="nom">Submit</button>
     </div>
   </div>
 </form>
 
-<h3> Ou sélectionner des tags </h3>
-<form class="form-horizontal" role="form" method="post">
-
 <?php
-for($i=0;$i<count($tags);$i++){
-    echo "<INPUT type='checkbox' name='tags[]'  value='".$tags[$i]["tag_id"]."'>".$tags[$i]["tag_name"];
-}
-?>
-<div class="form-group">
+  /*$nb = count($tags);
+  for($i=0;$i<$nb;$i++){
+    echo'<div class="form-group">
     <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" class="btn btn-default"name="stags">Submit</button>
+      <button type="submit" id="submit" class="btn btn-default tag" value='.$tags[$i]["tag_id"].'>'.$tags[$i]["tag_name"].'</button>
     </div>
-  </div>
-</form>
-</div>
-
-<?php 
-    if(isset($events)){
-        echo "Les évènements correspondants sont : ";
-        for($i=0;$i<count($events);$i++){
-            echo $events[$i]["event_title"];
-        }
-    }
+  </div>';
+  }*/
 ?>
 
 
+<h1 class="page-header">Evenements récents
+                    <small>#sportif #soirée</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
 
-<?php
-include 'footer.php';
-?>
+        <?php
+          for($i=0;$i<count($events);$i++){
+              echo"<div id='events'>
+              <div class='row'>
+              <div class='col-md-7'>
+                  <a href='#''>
+                      <img class='img-responsive' src='http://placehold.it/700x300' alt=''>
+                  </a>
+              </div>
+              <div class='col-md-13'>
+                  <h4>".$events[$i]["event_title"]."</h4>
+                  <h3>Cet évènement commence le ".$events[$i]["event_date_debut"]."</h3>
+                  <p>".$events[$i]["event_description"]."</p>
+                  <a class='btn btn-primary' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr''>View Project <span class='glyphicon glyphicon-chevron-right'></span></a>
+              </div>
+          </div>
+          <!-- /.row -->
+
+          <hr>";
+          }
+            ?>
+          </div>
+
+
+
+
+
+        
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+<?php include ('footer.php');?>
+
 
 <script>
 $(document).ready(function(){
@@ -144,6 +196,8 @@ $(document).ready(function(){
           $('#c').change(function(){
             c = $("#c").val();
         });
+
+
           
 
             $(document).ready(function() {
@@ -154,7 +208,7 @@ $(document).ready(function(){
                             dataType: "json",
                             data: {
                                 term: request.term,
-                                recherche: c
+                                categorie: c
                             },
                      success: function(data) {
                         response(data);
@@ -165,6 +219,35 @@ $(document).ready(function(){
 
             });
             });
+
+
+
+
+            $(document).ready(function() {
+              $("#submit").click(function(e){
+                e.preventDefault();
+                $("#events").html("");
+                  $.get(
+                          'vue/liste.php',
+                          {
+                            query : $("#recherche").val(),
+                            categorie: c
+                          },
+
+                          function(data){
+                            $("#events").html(data);
+                            },
+                            'html'
+                            );
+                          });
+
+
+
+
+
+            
+
+              });
         </script>
 
 

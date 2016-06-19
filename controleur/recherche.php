@@ -1,10 +1,12 @@
 <?php
 
 include_once("modele/membre.php");
+include_once("modele/events.php");
 include_once("modele/connexion_bdd.php");
 
 $categories = get_categories();
 $tags = get_tags();
+$events = get_events();
 
 if(isset($_POST["nom"])){
 	echo "Recherche ok".$_POST["nom"];
