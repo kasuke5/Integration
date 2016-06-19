@@ -12,9 +12,10 @@
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../vue/css/perso.css">
-  <script src="../vue/js/japix.js"></script>
+  <link rel="stylesheet" href="vue/css/perso.css">
+  <script src="vue/js/japix.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -26,14 +27,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="fa fa-home fa-3x" id="home" href="../"></a>
+      <a class="fa fa-home fa-3x" id="home" href="index.html"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./">Accueil</a></li>
-        <li><a href="./events">Evenements</a></li>
-        <li><a href="http://mail.eventizi.itinet.fr">Mailbox</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      <li><a href="/">Accueil</a></li>
+        <?php
+        if(isset($_SESSION["id_user"])){
+          echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li> ';
+        }else{
+          echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li>';
+        }
+        ?>
+       
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
