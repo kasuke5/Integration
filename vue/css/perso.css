@@ -145,7 +145,8 @@ body {
       padding: 32px;
       position: inherit;
       bottom: 0;
-      width: 98%;
+      width: 100%;
+      box-sizing: border-box;
   }
   footer a {
       color: #f5f5f5;
