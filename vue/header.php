@@ -34,7 +34,7 @@
       <li><a href="/">Accueil</a></li>
         <?php
         if(isset($_SESSION["id_user"])){
-          echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li> ';
+          echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li> ';
         }else{
           echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li>';
         }
