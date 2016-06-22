@@ -92,7 +92,7 @@ if(isset($_POST["action"])){
 					}
 					echo exec($commande_web);
 					echo exec($commande_chat);
-					include("vue/tableaubord.php");
+					include("controleur/tableaubord.php");
 
 				}else{
 				echo "erreur fichier";
