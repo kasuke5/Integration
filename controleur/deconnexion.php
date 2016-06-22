@@ -1,7 +1,10 @@
 <?php
 
+        session_destroy();
 	unset($_SESSION["id_user"]);
-	unset($_SESSION["login_user"]);
-	session_destroy();
-	include("vue/index.php");
+        unset($_SESSION["login_user"]);
+
+        include("vue/index.html");
+
 ?>
+

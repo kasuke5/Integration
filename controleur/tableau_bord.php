@@ -2,6 +2,7 @@
 
 	include_once("modele/events.php");
 	include_once("modele/co_in.php");
+	include("modele/connexion_bdd.php");
 
 
 	$user_id =($_SESSION["id_user"]);

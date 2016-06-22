@@ -18,7 +18,7 @@ if(isset($_SESSION["id_user"])){
 	include_once("vue/recherche.html");
 }else{
 	$message = "Connectez-vous pour accéder à cette page";
-	include_once("vue/connexion.php");
+	include_once("controleur/connexion.php");
 }
 
 

@@ -15,7 +15,7 @@ if(!isset($_SESSION["id_user"])){
 				if (is_numeric($retour)){
 					$_SESSION["id_user"] = $retour;
 					$_SESSION["login_user"] = $_POST["login"];
-					include_once("controleur/events.php");
+					include_once("controleur/tableau_bord.php");
 				}else{
 					
 					$message = $retour;

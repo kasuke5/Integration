@@ -14,7 +14,7 @@ if(!isset($_SESSION["id_user"])){
 				}else{
 					$_SESSION["id_user"] = $id_user;
 					$_SESSION["login_user"] = $_POST["login"];
-					include_once("controleur/events.php");
+					include_once("controleur/tableau_bord.php");
 				}
 	}else{
 		include_once("vue/connexion.php");
