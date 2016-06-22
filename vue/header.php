@@ -9,39 +9,80 @@
 
   <link rel="stylesheet" href="vue/css/bootstrap.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+  <!--JS Bootstrap-->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="vue/css/perso.css">
-  <script src="vue/js/japix.js"></script>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <!--<link rel="stylesheet" href="vue/css/perso.css">-->
+  
+  <!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="fa fa-home fa-3x" id="home" href="index.html"></a>
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- animate.css -->
+<link rel="stylesheet" href="vue/assets/animate/animate.css" />
+<link rel="stylesheet" href="vue/assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="vue/assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="vue/assets/style.css">
+
+<?php 
+include ('./jappix.php');
+?>
+</head>
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+      <!-- Nav Starts -->
+
+      <!--Il faut mettre variable php pour <li class="active" selon la page -->
+      <div class="navbar-collapse  collapse">
+        <ul class="nav navbar-nav navbar-right scroll">
+            <li class="active"><a href="/">Accueil</a></li>
+            <?php
+            if(isset($_SESSION["id_user"])){
+              echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li> ';
+            }else{
+              echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li>';
+            }
+            ?>
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="/">Accueil</a></li>
-        <?php
-        if(isset($_SESSION["id_user"])){
-          echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li> ';
-        }else{
-          echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li>';
-        }
-        ?>
+<!-- #Header Starts -->
+
        
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+

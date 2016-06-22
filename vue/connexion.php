@@ -17,11 +17,10 @@ include 'header.php';
       <input type="password" name="pass" required class="form-control" id="pass" placeholder="Enter password">
     </div>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" class="btn btn-default"name="action">Submit</button>
-    </div>
-  </div>
+
+
+      <button type="submit" class="btn btn-default" name="action" style="margin-left: 20%;">Submit</button>
+
 </form>
 </div>
 <?php
