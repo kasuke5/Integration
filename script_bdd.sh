@@ -18,25 +18,26 @@ fi
 if [ $1 = 1 ]
 then
 
-requete=$(mysql -u $mysql_login -p$mysql_pass -e "SELECT user FROM mysql.user WHERE user='$2';")
+requete=$(mysql --user=$mysql_login --password=$mysql_pass -e "SELECT user FROM mysql.user WHERE user='$3';")
 nom=`echo $requete | awk '{ print $2}'`
+echo $nom
 
 
 
-	if [ -z $nom ]
+	if [ ! -z $nom ]
 		then
 		mysql --user=$mysql_login --password=$mysql_pass << EOF
 		CREATE DATABASE IF NOT EXISTS $2;
 		GRANT ALL PRIVILEGES ON $2.* TO '$3'@'localhost';
-		EOF
+EOF
 	else
 		mysql --user=$mysql_login --password=$mysql_pass << EOF 
 		CREATE USER '$3'@'localhost' IDENTIFIED BY '$3'; 
 		GRANT USAGE ON *.* TO '$3'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 		CREATE DATABASE IF NOT EXISTS $2;
 		GRANT ALL PRIVILEGES ON $2.* TO '$3'@'localhost';
-		EOF
-
+EOF
+	fi
 else
 
 mysql --user=$mysql_login --password=$mysql_pass << EOF

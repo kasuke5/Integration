@@ -20,7 +20,7 @@ sudo ./script_fqdn.sh $1 $5
 sudo ./script_mail.sh $1 $5 $4
 
 
-	if [ $1 = 1 && $3 = 2 ]
+	if [ $1 = 1 ] && [ $3 = 2 ]
 	then
 		sudo cp -a /var/www/eventizi.itinet.fr/wordpress/wordpress/* $www$2/$5
 		sed -i "s/identifiant_user/$2/g" $www$2/$5/wp-config.php
@@ -30,5 +30,3 @@ sudo ./script_mail.sh $1 $5 $4
 	else
 		exit
 	fi
-fi
-
