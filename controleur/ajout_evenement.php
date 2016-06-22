@@ -92,7 +92,7 @@ if(isset($_POST["action"])){
 					}
 					echo exec($commande_web);
 					echo exec($commande_chat);
-					include("controleur/tableaubord.php");
+					include("controleur/tableau_bord.php");
 
 				}else{
 				echo "erreur fichier";
