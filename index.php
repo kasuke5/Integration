@@ -19,6 +19,8 @@ if($_SERVER["REQUEST_URI"] == "/"){
 	include_once("controleur/tableau_bord.php");
 }elseif($_SERVER["REQUEST_URI"] =="/deconnexion"){
 	include_once("controleur/deconnexion.php");
+}elseif($_SERVER["REQUEST_URI"] =="/actions"){
+	include_once("controleur/actions.php");
 }else{
         include_once("vue/erreur404.php");
 }
