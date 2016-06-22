@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="vue/assets/style.css">
 
 <?php 
-include ('../jappix.php');
+include ('jappix.php');
 ?>
 </head>
 <body>
