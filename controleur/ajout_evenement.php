@@ -90,8 +90,8 @@ if(isset($_POST["action"])){
 							$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 							break;
 					}
-					echo exec($commande_web);
-					echo exec($commande_chat);
+					exec($commande_web);
+					exec($commande_chat);
 					include("controleur/tableau_bord.php");
 
 				}else{
