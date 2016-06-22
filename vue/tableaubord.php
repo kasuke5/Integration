@@ -6,7 +6,7 @@ include ('header.php');
 <table class="table table-striped">
     <thead>
       <tr>
-        <th>Nom evenement</th>
+        <th>Nom évènement</th>
         <th>Date/heure début</th>
         <th>Nombre de participants</th>
         <th>Site associé</th>
@@ -29,7 +29,7 @@ include ('header.php');
   </table>
   <a href="./ajout_evenement" class="btn"><i class="fa fa-plus"></i></a>
 
-<h3>Evenements auxquelles je suis inscrit</h3>
+<h3>Evénements auxquels je suis inscrit</h3>
 <table class="table table-striped">
   <tr>
     <th>Nom évenement</th>
