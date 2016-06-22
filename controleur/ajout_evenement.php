@@ -83,11 +83,11 @@ if(isset($_POST["action"])){
 							break;
 						case 2:
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
-							#$commande_chat = "./script_orga.sh 1 ".$_POST["nom"];
+							$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 							break;
 						case 3:
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
-							#$commande_chat = "./script_orga.sh 1 ".$_POST["nom"];
+							$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 							break;
 					}
 					echo exec($commande_web);
