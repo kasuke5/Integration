@@ -50,6 +50,7 @@ include ('../jappix.php');
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
+            <h2 style="color:orange;margin:18px auto auto;">Event'izi</h2>
 
 
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">

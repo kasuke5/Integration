@@ -1,96 +1,32 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Event'izi</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <link rel="stylesheet" href="vue/css/bootstrap.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
-   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="vue/css/perso.css">
-  <script src="vue/js/japix.js"></script>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="fa fa-home fa-3x" id="home" href="#myPage"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="#">Evenements</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div id="formulaire">
-<h2>Recherche</h2>
-
- <form class="form-horizontal" role="form" method="post">
- 
- <h3> Trouver un évènement </h3>
-                    <select id='c'>
-                    <option value="0" selected >toutes catégories</option>
-                    <?php for($i=0;$i<count($categories);$i++){
-                                echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
-                            }
-                            echo "</select>";
-                            ?>
-
-    <div class="form-group">                       
-    <label class="control-label col-sm-2" for="login"></label>
-    <div class="col-sm-5">
-      <input type="text" name="recherche" id="recherche" required class="form-control" id="login" placeholder="Entrez du texte">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" id="submit" class="btn btn-default"name="nom">Submit</button>
-    </div>
-  </div>
-</form>
-
 <?php
-  /*$nb = count($tags);
-  for($i=0;$i<$nb;$i++){
-    echo'<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" id="submit" class="btn btn-default tag" value='.$tags[$i]["tag_id"].'>'.$tags[$i]["tag_name"].'</button>
-    </div>
-  </div>';
-  }*/
+include ('header.php');
 ?>
+<div id="formulaire">
 
-
-<h1 class="page-header">Evenements récents
-                    <small>#sportif #soirée</small>
-                </h1>
-            </div>
+<h2 style="margin-top:80px">Recherche</h2>
+   <form class="form-horizontal" role="form" method="post">
+   
+     <h3> Trouver un évènement </h3>
+        <div class="form-group">                       
+        <label class="control-label col-sm-2" for="login"></label>
+        <div class="col-sm-5">
+        <select id='c'>
+                        <option value="0" selected >toutes catégories</option>
+                        <?php for($i=0;$i<count($categories);$i++){
+                                    echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
+                                }
+                                echo "</select>";
+                                ?>
+        <div class="input-group">
+          <input type="text" name="recherche" id="recherche" required class="form-control" id="login" placeholder="Entrez du texte">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit" style="padding-left: 15px; padding-right: 15px; margin-left: -20px;z-index:10;"><i class="glyphicon glyphicon-search"></i></button>
+          </div>
         </div>
+        </div>
+      </div>
+    </form>
+</div>
         <!-- /.row -->
 
         <?php
@@ -189,9 +125,6 @@ $(document).ready(function(){
 })
 </script>
 
-</body>
-</html>
-
 <script type="text/javascript">
           var c = $('#c').val();
           $('#c').change(function(){
@@ -250,14 +183,3 @@ $(document).ready(function(){
 
               });
         </script>
-
-
-    </body>
-
-
-
-
-</html>
-
-
-
