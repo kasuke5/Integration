@@ -2,14 +2,14 @@
 
 # vérifier que la bdd existe
 
-# 1-> ajouter/supprimer 2-> évènement 3-> organisateur 4-> si l'utilisateur existe ou pas 
+# 1-> ajouter/supprimer 2-> évènement 3-> organisateur
 
 source /var/www/eventizi.itinet.fr/scripts/source.sh
 
 #mysql_login=root
 #mysql_pass=Event1z1GFJ2016
 
-if [ $# != 4 ]
+if [ $# != 3 ]
 then
 echo "missing arguments"
 exit
