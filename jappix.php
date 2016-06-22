@@ -56,7 +56,7 @@
         JappixMini.disconnect();
         });
         </script>/-->      
-        <script src1="vue/js/japix.js"></script>
+        <script src="vue/js/japix.js"></script>
 <?php        
       }
 ?>
