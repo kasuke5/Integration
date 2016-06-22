@@ -20,7 +20,7 @@ include ('header.php');
         <div class="input-group">
           <input type="text" name="recherche" id="recherche" required class="form-control" id="login" placeholder="Entrez du texte">
           <div class="input-group-btn">
-            <button class="btn btn-default" type="submit" style="padding-left: 15px; padding-right: 15px; margin-left: -20px;z-index:10;"><i class="glyphicon glyphicon-search"></i></button>
+            <button class="btn btn-default" type="submit" id="submit" style="padding-left: 15px; padding-right: 15px; margin-left: -20px;z-index:10;"><i class="glyphicon glyphicon-search"></i></button>
           </div>
         </div>
         </div>
