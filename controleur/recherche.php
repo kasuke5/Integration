@@ -13,7 +13,7 @@ if(isset($_SESSION["id_user"])){
 	}elseif (isset($_POST["stags"])) {
 	$events = get_events_by_tags($_POST["tags"]);
 	}
-	include_once("vue/recherche.html");
+	include_once("vue/recherche.php");
 }else{
 	$message = "Connectez-vous pour accéder à cette page";
 	include_once("controleur/connexion.php");
