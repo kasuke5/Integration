@@ -60,7 +60,6 @@ if(isset($_POST["action"])){
 								if($role == 0){
 										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
 										exec($commande_mss);
-									}
 								}else{
 									if($site == 1 || $site == 3){
 								
