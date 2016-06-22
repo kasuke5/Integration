@@ -58,19 +58,12 @@ if(isset($_POST["action"])){
 				if(move_file($_FILES["photo"])){
 					add_events($_POST,$site);
 								if($role == 0){
-									if($site == 2 || $site ==3){
 										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
 										exec($commande_mss);
-									}
-									if($site == 1 || $site == 3){
-								
-									$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"]." 0";
-									exec($commande_bdd);
-									}
 								}else{
 									if($site == 1 || $site == 3){
 								
-									$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"]." 1";
+									$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 									exec($commande_bdd);
 									}
 								}
