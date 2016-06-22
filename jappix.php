@@ -3,7 +3,7 @@
      include_once("modele/events.php");
         $nom = $_POST['login'];
         $passwd = $_POST['pass'];
-        $salon = get_event_by_name($events)."@muc.eventizi.itinet.fr";
+       # $salon = get_event_by_name($events)."@muc.eventizi.itinet.fr";
  ?>
  
 <?php
@@ -39,7 +39,7 @@
               suggest: ['admin@eventizi.itinet.fr']
             },
             groupchat: {
-              open: ['<?php echo $salon; ?>']
+              open: ['']
             },
     
             }
