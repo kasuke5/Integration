@@ -15,7 +15,7 @@
   <!--JS Bootstrap-->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!--<link rel="stylesheet" href="vue/css/perso.css">-->
-  
+
   <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 
@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="vue/assets/style.css">
 
 <?php 
-include ('./jappix.php');
+include ('../jappix.php');
 ?>
 </head>
 <body>
