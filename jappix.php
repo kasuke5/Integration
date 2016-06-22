@@ -1,17 +1,24 @@
+<?php 
+     
+     include_once("modele/events.php");
+        $nom = $_POST['login'];
+        $passwd = $_POST['pass'];
+       # $salon = get_event_by_name($events)."@muc.eventizi.itinet.fr";
+ ?>
+ 
 <?php
-
-echo 
-'
- jQuery.ajaxSetup({cache: true});
-      jQuery.getScript(\'http://chat.eventizi.itinet.fr/server/get.php?l=fr&t=js&g=mini.xml\', function() {
-        // Configure application & connect user
-        // Notice: exclude "user" and "password" if using anonymous login
-        JappixMini.launch({
+    if(isset($_SESSION["id_user"])) 
+      {
+?>
+          <script type="text/javascript">
+          jQuery.ajaxSetup({cache: true});
+          jQuery.getScript('http://chat.eventizi.itinet.fr/server/get.php?l=fr&t=js&g=mini.xml', function() {
+          JappixMini.launch({
           connection: {
-            domain: \'eventizi.itinet.fr\',
-            user: \'\',
-            password: \'\', 
-            resource: \'eventizi chat\'
+            domain: 'eventizi.itinet.fr',
+            user: '<?php echo $nom; ?>',
+            password: '<?php echo $passwd; ?>', 
+            resource: 'eventizi chat'
           },
 
           application: {
@@ -29,14 +36,29 @@ echo
             },
 
             chat: {
-              open: [\'admin@eventizi.itinet.fr\']
+              suggest: ['admin@eventizi.itinet.fr']
             },
             groupchat: {
-              open: [\'@eventizi.itinet.fr\']
+              open: ['']
             },
     
             }
           });
       });
-'
+          </script>
+    
+<?php      
+      }else 
+      {  
+?>       
+        <script type="text/javascript" >
+        jQuery.getScript('http://chat.eventizi.itinet.fr/server/get.php?l=fr&t=js&g=mini.xml', function() {
+        JappixMini.disconnect();
+       } 
+
+      });
+        </script>      
+        <script src="vue/js/japix.js"></script>;
+<?php        
+      }
 ?>
