@@ -54,7 +54,7 @@
         <script type="text/javascript" >
         jQuery.getScript('http://chat.eventizi.itinet.fr/server/get.php?l=fr&t=js&g=mini.xml', function() {
         JappixMini.disconnect();
-       } 
+      
 
       });
         </script>      
