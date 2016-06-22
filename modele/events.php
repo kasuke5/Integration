@@ -22,7 +22,7 @@ function add_events($details,$site){
 			)) or die ( print_r($req->errorInfo()) );
 				
 				$event_id = id_events($details["nom"])["event_id"];
-				$req = $bdd->prepare('INSERT INTO users_has_events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
+				$req = $bdd->prepare('INSERT INTO Users_has_Events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
    				$req->execute(array(
     			'user_id' => $organisateur,
     			'event_id' => $event_id,
@@ -68,7 +68,7 @@ function get_events_by_user($id){
 	$donnees = 0;
 	$i=0;
 	$renvoyer = [];
-	$req = $bdd->prepare('SELECT * FROM t_event e JOIN users_has_events ue ON e.event_id = ue.Events_idEvents AND ue.Users_idUsers = ?');
+	$req = $bdd->prepare('SELECT * FROM t_event e JOIN Users_has_Events ue ON e.event_id = ue.Events_idEvents AND ue.Users_idUsers = ?');
 	$req->execute(array($id)) or die ( print_r($req->errorInfo()) );
 	while($donnees = $req->fetch()){
 			$renvoyer[$i] = $donnees;
@@ -116,7 +116,7 @@ function get_event_by_id($id){
 
 function remove_event($id_event,$id_user){
 	global $bdd;
-	$req = $bdd->prepare('DELETE FROM users_has_events WHERE Events_idEvents = ? AND Users_idUsers = ?');
+	$req = $bdd->prepare('DELETE FROM Users_has_Events WHERE Events_idEvents = ? AND Users_idUsers = ?');
 	$req->execute(array($id_event,$id_user)) or die ( print_r($req->errorInfo()) );
 	$req = $bdd->prepare('DELETE FROM t_event WHERE event_id = ?');
 	$req->execute(array($id_event)) or die ( print_r($req->errorInfo()) );
