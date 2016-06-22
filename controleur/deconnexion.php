@@ -4,7 +4,7 @@
 	unset($_SESSION["id_user"]);
         unset($_SESSION["login_user"]);
 
-        include("vue/index.html");
+        include("vue/index.php");
 
 ?>
 
