@@ -84,7 +84,6 @@ if(isset($_POST["action"])){
 					exec($commande_chat);
 					exec($commande_bdd);
 					include("controleur/tableau_bord.php");
-					header("Location: controleur/tableau_bord.php");
 
 				}else{
 				echo "erreur fichier";
