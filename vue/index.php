@@ -35,41 +35,18 @@ include ('header.php');
     </div>
 <!-- #Slider Ends -->
 
-
 <!-- Container (The Band Section) -->
-<div id="band" class="container text-center">
+<div class="container text-center">
   <img src="../img/eventizi.png">
     <p><em>Créer votre évènement devient facile !</em></p>
     <p>Event'Izi vous permet d'héberger votre évènement et dispose de nombreuses fonctionnalités permettant de le promouvoir facilement.
     Une plateforme où vous pouvez créer et héberger votre site web pour votre évènement
     </p>
     <p>Si vous avez une compétence particulière vous pouvez aussi vous mettre en avant et participer à des évènements</p>
-    <br>
-  <div class="pic">
-    <div class="col-sm-3">
-      <p class="text-center"><strong>Florian Dugat</strong></p><br>
-        <img src="../img/flo.jpg" class="img-circle person" width="255" height="255">
-        <p>Membre de l'équipe</p>
-    </div>
-  </div>
-    <div class="col-sm-3">
-      <p class="text-center"><strong>Jean-Christophe Thiburce</strong></p><br>
-        <img src="../img/JC.jpg" class="img-circle person" width="255" height="255">
-      </a>
-        <p>Chef de projet</p>
-    </div>
-    <div class="col-sm-3">
-      <p class="text-center"><strong>Guillaume Jaufret</strong></p><br>
-        <img src="../img/gui.jpg" class="img-circle person" width="255" height="255">
-        <p>Membre de l'équipe</p>
-    </div>
-  </div>
-</div>
-
 
     <h3 class="text-center">NOS SERVICES</h3>
     <p class="text-center">Créer un site n'a jamais été aussi simple !</p>
-    
+  </div>
 <!-- works -->
 <div id="works"  class=" clearfix grid"> 
     <figure class="effect-oscar  wowload fadeInUp">
@@ -119,35 +96,28 @@ include ('header.php');
           </figcaption>
         </figure>
 </div> 
+<br>
+<div class="container text-center ">
+<h2>Notre équipe</h2>
+  <div id="pic">
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Florian Dugat</strong></p><br>
+        <img src="../img/flo.jpg" class="img-circle person" width="255" height="255">
+        <p>Membre de l'équipe</p>
+    </div>
 
-
-<div id="googleMap"></div>
-
-<!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(48.814346, 2.377839);
-
-function initialize() {
-var mapProp = {
-center:myCenter,
-zoom:15,
-scrollwheel:false,
-draggable:false,
-mapTypeId:google.maps.MapTypeId.ROADMAP
-};
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-position:myCenter,
-});
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Jean-Christophe Thiburce</strong></p><br>
+        <img src="../img/JC.jpg" class="img-circle person" width="255" height="255">
+      </a>
+        <p>Chef de projet</p>
+    </div>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Guillaume Jaufret</strong></p><br>
+        <img src="../img/gui.jpg" class="img-circle person" width="255" height="255">
+        <p>Membre de l'équipe</p>
+    </div>
+  </div>
 </div>
 
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->

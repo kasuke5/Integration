@@ -1,9 +1,7 @@
 <?php 
 include ('header.php');
 ?>
-<h3>Créez le site de votre évènement</h3>
-<?php //echo "<h2>".$message."</h2>"; ?>
-    <label class="control-label col-sm-2" for="email">Nom:</label>
+
 <link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
 <link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" />  
 
@@ -17,10 +15,9 @@ include ('header.php');
     webshims.setOptions('forms-ext', {types: 'date'});
     webshims.polyfill('forms forms-ext');
 </script>
-<h2>Creation d'evenement</h2>
+<h2 style="margin-top:80px">Creation d'evenement</h2>
  <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
-  <p>upload photo (super widget de la muerte)</p>
   <label class="control-label">Select File</label>
   <div class="col-sm-5">
       <input  type="file" name="photo">
@@ -66,7 +63,7 @@ include ('header.php');
 
 
     <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-5">
+    <div class="col-sm-offset-2 col-sm-0">
     <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser wordpress</option>
@@ -80,11 +77,11 @@ include ('header.php');
         <div class="col-sm-5">
           <textarea name="description" id="description" rows="4" cols="50"></textarea>
         </div>
-    </div>
+
 
   <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default" name="action">Submit</button>
+    <div class="col-sm-offset-2 col-sm-0">
+      <button type="submit" class="btn btn-default" name="action">Envoyer</button>
     </div>
   </div>
 </form>
