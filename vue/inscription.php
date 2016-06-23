@@ -2,7 +2,7 @@
 include 'header.php'; 
 ?>
 <div id="formulaire">
-<h3>Inscription</h3>
+<h3 style="margin-top:80px">Inscription</h3>
 <?php echo "<h2>".$message."</h2>"; ?>
  <form class="form-horizontal" role="form" method="post">
   <div class="form-group">
@@ -31,7 +31,7 @@ include 'header.php';
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" class="btn btn-default"name="action">Submit</button>
+      <button type="submit" class="btn btn-default" name="action">S'inscrire</button>
     </div>
   </div>
 </form>
