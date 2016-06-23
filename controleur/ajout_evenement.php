@@ -57,22 +57,18 @@ if(isset($_POST["action"])){
 			if(!get_event_by_name($_POST["nom"])){
 				if(move_file($_FILES["photo"])){
 					add_events($_POST,$site);
+					echo "role".$role;
 								if($role == 0){
 										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
 										exec($commande_mss);
-								}else{
-									if($site == 1 || $site == 3){
-								
-									$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
-									exec($commande_bdd);
-									}
 								}
-
+								
 					switch($site){
 						case 1:
 							echo $_SESSION["login_user"];
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 2 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
+							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							break;
 						case 2:
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
@@ -81,11 +77,14 @@ if(isset($_POST["action"])){
 						case 3:
 							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
+							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							break;
 					}
 					exec($commande_web);
 					exec($commande_chat);
-					include("controleur/tableau_bord.php");
+					exec($commande_bdd);
+					include_once("controleur/tableau_bord.php");
+					echo 'ESTCE QUE TU PASSE ICIIIIIIIIIIIIIIIIIIIII';
 
 				}else{
 				echo "erreur fichier";
