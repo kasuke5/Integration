@@ -20,5 +20,4 @@
 			$events_ins[$k] = $events[$i];
 			$k++;
 	}
-	echo 'si je passe ici je suis le roi des fdp';
 include_once("vue/tableaubord.php");
