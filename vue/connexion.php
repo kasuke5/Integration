@@ -2,7 +2,7 @@
 include 'header.php'; 
 ?>
 <div id="formulaire">
-<h3>Connexion</h3>
+<h3 style="margin-top:80px">Connexion</h3>
 
  <form class="form-horizontal" role="form" method="post">
   <div class="form-group">
@@ -19,7 +19,7 @@ include 'header.php';
   </div>
 
 
-      <button type="submit" class="btn btn-default" name="action" style="margin-left: 20%;">Submit</button>
+      <button type="submit" class="btn btn-default" name="action" style="margin-left: 20%;">Connexion</button>
 
 </form>
 </div>

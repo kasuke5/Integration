@@ -34,16 +34,16 @@ include ('header.php');
             $user = GetLoginById($events[$i]["event_organisateur"]);
               echo"<div id='events'>
               <div class='row'>
-              <div class='col-md-7'>
+              <div class='col-md-5'>
                   <a href='#''>
                       <img class='img-responsive' src='http://placehold.it/700x300' alt=''>
                   </a>
               </div>
               <div class='col-md-13'>
-                  <h4>".$events[$i]["event_title"]."</h4>
-                  <h3>Cet évènement commence le ".$events[$i]["event_date_debut"]."</h3>
+                  <h2>".$events[$i]["event_title"]."</h2>
+                  <p>Cet évènement commence le ".$events[$i]["event_date_debut"]."</p>
                   <p>".$events[$i]["event_description"]."</p>
-                  <a class='btn btn-primary' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr''>View Project <span class='glyphicon glyphicon-chevron-right'></span></a>
+                  <a class='btn' style='background-color:orange' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr''>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
               </div>
           </div>
           <!-- /.row -->
