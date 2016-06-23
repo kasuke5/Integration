@@ -14,18 +14,18 @@ sudo bash -c "echo 'missing arguments'"
 exit
 fi
 
-sudo ./script_vhosts.sh $1 $2 $5
-sudo ./script_fqdn.sh $1 $5
+sudo ./script_vhosts.sh $1 $5 $2
+sudo ./script_fqdn.sh $1 $2
 #sudo ./script_bdd.sh $1 $2
-sudo ./script_mail.sh $1 $5 $4
+sudo ./script_mail.sh $1 $2 $4
 
 
 	if [ $1 = 1 ] && [ $3 = 2 ]
 	then
-		sudo cp -a /var/www/eventizi.itinet.fr/wordpress/wordpress/* $www$2/$5
-		sed -i "s/identifiant_user/$2/g" $www$2/$5/wp-config.php
-		sed -i "s/identifiant_bdd/$5/g" $www$2/$5/wp-config.php
-		sed -i "s/mdp/$2/g" /var/www/$2/wp-config.php
+		sudo cp -a /var/www/eventizi.itinet.fr/wordpress/wordpress/* $www$5/$2
+		sed -i "s/identifiant_user/$2/g" $www$5/$2/wp-config.php
+		sed -i "s/identifiant_bdd/$5/g" $www$5/$2/wp-config.php
+		sed -i "s/mdp/$2/g" $www$5/$2/wp-config.php
 
 	else
 		exit
