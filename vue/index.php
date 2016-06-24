@@ -111,9 +111,8 @@ include ('header.php');
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-sm-6">
+   
+           <div class="col-md-4 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="#">
@@ -126,7 +125,7 @@ include ('header.php');
                 </div>
             </div>
         </div>
-    </div>
+ </div>
 </div>
 <br>
 <div class="container text-center ">
