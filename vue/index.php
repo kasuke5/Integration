@@ -47,7 +47,7 @@ include ('header.php');
     <h3 class="text-center">NOS SERVICES</h3>
     <p class="text-center">Créer un site n'a jamais été aussi simple !</p>
   </div>
-<!-- works -->
+<!-- works 
 <div id="works"  class=" clearfix grid"> 
     <figure class="effect-oscar  wowload fadeInUp">
           <img src="../img/postfix.png" alt="Postfix">
@@ -95,7 +95,26 @@ include ('header.php');
             <p>Votre adresse sera votre nom d'evenement .eventizi.itinet.fr</p>
           </figcaption>
         </figure>
-</div> 
+</div> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="serviceBox">
+                <div class="service-icon1">
+                    <strong></strong>
+                    <span></span>
+                    <em class="icons">
+                        <i class="fa fa-laptop"></i>
+                    </em>
+                </div>
+                <div class="service-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices sapien vel quam luctus pulvinar. Etiam at.</p>
+                    <a class="read" href="#">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <br>
 <div class="container text-center ">
 <h2>Notre équipe</h2>
