@@ -16,8 +16,9 @@ include ('header.php');
     <tbody>
 
       <?php
-      $fqdn = url_transform($events_org[$i]["event_title"]);
+      
       for($i=0;$i<count($events_org);$i++){
+        $fqdn = url_transform($events_org[$i]["event_title"]);
         echo"<tr>
         <td>".$events_org[$i]["event_title"]."</td>
         <td>".$events_org[$i]["event_date_debut"]."</td>
