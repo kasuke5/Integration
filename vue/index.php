@@ -109,8 +109,20 @@ include ('header.php');
                     <h3>Hébergement Web</h3>
                     <p>Ici, vous pouvez héberger votre site d'évenement avec un template prédéfini spécialement élaboré pour tout type d'évènement, ou d'importer votre propre site. Vous avez la possibilité d'héberger autant de sites que vous le souhaitez qui seront du type "évènement".eventizi.itinet.fr</p>
                 </div>
-                <div class="read">
-                    <a href="#">MORE</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="service-content">
+                    <h3>Hébergement Mail</h3>
+                    <p>Dès la création d'un compte utilisateur, vous disposez d'une boîte mail personnel "utilisateur"@eventizi.itinet.fr et d'un alias du type "évènement"@eventizi.itinet.fr qui renverra à votre évènement</p>
                 </div>
             </div>
         </div>
