@@ -45,7 +45,6 @@ if(isset($_POST["action"])){
 		$password = $infos_user["user_password"];
 		$role = $infos_user["user_role"];
 
-
 		if($_POST["choix"] == "wordpress"){
 			$site = 1;
 		}elseif ($_POST["choix"]=="importer") {
@@ -83,21 +82,15 @@ if(isset($_POST["action"])){
 					exec($commande_web);
 					exec($commande_chat);
 					exec($commande_bdd);
-					include("controleur/tableau_bord.php");
-
+					include_once("controleur/tableau_bord.php");
 				}else{
 				echo "erreur fichier";
 				}
 			}else{
 				echo"erreur existe déjà";
 			}
-		
-
-		
-		
 	}else
 	include_once("vue/ajout_evenement.php");
-	
 }else
 	include_once("vue/ajout_evenement.php");
 
