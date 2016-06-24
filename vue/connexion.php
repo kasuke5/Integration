@@ -48,16 +48,14 @@ include('header.php');
         <label for="mail">Adresse Email</label>
         <div class="bar"></div>
       </div>
-      <div class="button-container">
         <button type="submit" class="btn btn-default" name="action"><span>Suivant</span></button>
-      </div>
     </form>
   </div>
 </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
         <script src="vue/js/index.js"></script>  
-        
+
 <script>
 $(document).ready(function(){
   // Initialize Tooltip
