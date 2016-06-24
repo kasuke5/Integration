@@ -129,7 +129,7 @@ include ('header.php');
 
 <br>
 
-<
+
 <h2>Notre équipe</h2>
   <div id="pic">
     <div class="col-sm-3">
