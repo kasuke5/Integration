@@ -98,18 +98,19 @@ include ('header.php');
 </div> -->
 <div class="container">
     <div class="row">
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
             <div class="serviceBox">
-                <div class="service-icon1">
-                    <strong></strong>
-                    <span></span>
-                    <em class="icons">
-                        <i class="fa fa-laptop"></i>
-                    </em>
+                <div class="service-icon">
+                    <a href="#">
+                        <i class="fa fa-globe"></i>
+                    </a>
                 </div>
                 <div class="service-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices sapien vel quam luctus pulvinar. Etiam at.</p>
-                    <a class="read" href="#">more</a>
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales eros sed interdum pretium. Pellentesque sed sem cursus ipsum convallis.</p>
+                </div>
+                <div class="read">
+                    <a href="#">MORE</a>
                 </div>
             </div>
         </div>
