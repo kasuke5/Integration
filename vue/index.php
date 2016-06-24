@@ -126,8 +126,9 @@ include ('header.php');
         </div>
  </div>
 </div>
-</div>
+
 <br>
+
 <div class="container text-center ">
 <h2>Notre équipe</h2>
   <div id="pic">
@@ -150,7 +151,7 @@ include ('header.php');
     </div>
   </div>
 </div>
-
+</div>
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
     <!-- The container for the modal slides -->
