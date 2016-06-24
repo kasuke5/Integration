@@ -45,8 +45,7 @@ include ('header.php');
     <p>Si vous avez une compétence particulière vous pouvez aussi vous mettre en avant et participer à des évènements</p>
 
     <h3 class="text-center">NOS SERVICES</h3>
-    <p class="text-center">Créer un site n'a jamais été aussi simple !</p>
-  </div>
+  
 <!-- works 
 <div id="works"  class=" clearfix grid"> 
     <figure class="effect-oscar  wowload fadeInUp">
@@ -96,7 +95,7 @@ include ('header.php');
           </figcaption>
         </figure>
 </div> -->
-<div class="container">
+
     <div class="row">
         <div class="col-md-4 col-sm-6">
             <div class="serviceBox">
@@ -126,6 +125,7 @@ include ('header.php');
             </div>
         </div>
  </div>
+</div>
 </div>
 <br>
 <div class="container text-center ">
