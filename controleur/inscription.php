@@ -19,18 +19,18 @@ if(!isset($_SESSION["id_user"])){
 				}else{
 					
 					$message = $retour;
-					include_once("vue/inscription.php"); // Ajouter le message de $retour
+					include_once("vue/connexion.php"); // Ajouter le message de $retour
 				}
 			}else{
 				$message = "Les deux mots de passe ne sont pas identiques";
-				include("vue/inscription.php"); // Ajouter un message
+				include("vue/connexion.php"); // Ajouter un message
 			}
 		}else{
 			$message = "Le mot de passe doit faire entre 4 et 8 caractères";
-			include_once("vue/inscription.php"); // Ajouter un message
+			include_once("vue/connexion.php"); // Ajouter un message
 		}
 	}else{
-		include_once("vue/inscription.php");
+		include_once("vue/connexion.php");
 
 	}
 }else

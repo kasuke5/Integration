@@ -1,11 +1,6 @@
-
-<head>
- <link rel="stylesheet" href="vue/css/reset.css">
-
-    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
-<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
- <link rel="stylesheet" href="vue/css/style.css">
-</head>
+<?php
+include('header.php');
+?>
   <body>
 <div class="container">
   <div class="card"></div>
@@ -46,6 +41,11 @@
       <div class="input-container">
         <input type="password" id="pass2" required="required"/>
         <label for="pass2">Confirmez votre mot de passe</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="text" id="mail" required="required"/>
+        <label for="mail">Adresse Email</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
