@@ -23,11 +23,11 @@ sudo ./script_mail.sh $1 $2 $4
 	if [ $1 = 1 ] && [ $3 = 2 ]
 	then
 		sudo cp -a /var/www/eventizi.itinet.fr/wordpress/wordpress/* $www$5/$2
-		sudo chown -R www-data	$www$5
+		sudo chown -R www-data $www$5
 		sudo sed -i "s/identifiant_user/$5/g" $www$5/$2/wp-config.php
 		sudo sed -i "s/identifiant_bdd/$2/g" $www$5/$2/wp-config.php
 		sudo sed -i "s/mdp/$5/g" $www$5/$2/wp-config.php
-		sudo chown -R $5:www-data	$www$5
+		sudo chown -R $5:www-data $www$5
 
 	else
 		exit
