@@ -2,30 +2,35 @@
 include 'header.php'; 
 ?>
 <div id="formulaire">
-<h3 style="margin-top:80px">Connexion</h3>
+    <h3>Login</h3>
 
- <form class="form-horizontal" role="form" method="post">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="login">Pseudo:</label>
-    <div class="col-sm-5">
-      <input type="text" name="login" required class="form-control" id="login" placeholder="Enter pseudo">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pass">Mot de passe:</label>
-    <div class="col-sm-5">
-      <input type="password" name="pass" required class="form-control" id="pass" placeholder="Enter password">
-    </div>
-  </div>
+    <fieldset>
 
+      <form action="javascript:void(0);" method="get">
 
-      <button type="submit" class="btn btn-default" name="action" style="margin-left: 20%;">Connexion</button>
+        <input type="email" required value="Email" onBlur="if(this.value=='')this.value='Email'" onFocus="if(this.value=='Email')this.value='' "> <!-- JS because of IE support; better: placeholder="Email" -->
 
-</form>
+        <input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "> <!-- JS because of IE support; better: placeholder="Password" -->
+
+        <input type="submit" value="Login">
+
+        <footer class="clearfix">
+
+          <p><span class="info">?</span><a href="#">Forgot Password</a></p>
+
+        </footer>
+
+      </form>
+
+    </fieldset>
+
+  </div> <!-- end login-form -->
+
 </div>
-<?php
-include 'footer.php';
-?>
+</div>
+<!--<?php
+    //include 'footer.php';
+?>-->
 
 <script>
 $(document).ready(function(){
