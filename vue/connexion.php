@@ -1,5 +1,7 @@
 <?php
 // Mixins
+include('header.php');
+?>
 mixin input(type, label)
   .input-container
     input(type='#{type}' id='#{label}' required)
