@@ -62,7 +62,7 @@ if(isset($_POST["action"])){
 										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
 										exec($commande_mss);
 								}
-								
+					$name = trim($_POST["nom"]);			
 					switch($site){
 						case 1:
 							#echo $_SESSION["login_user"];
@@ -71,7 +71,7 @@ if(isset($_POST["action"])){
 							$commande_bdd = "./script_bdd.sh 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
 							break;
 						case 2:
-							$commande_web = "./script_web.sh 1 ".$_POST["nom"]." 1 ".$_POST["nom"]." ".$_SESSION["login_user"];
+							$commande_web = "./script_web.sh 1 ".$name." 1 ".$name." ".$_SESSION["login_user"];
 							$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 							break;
 						case 3:
