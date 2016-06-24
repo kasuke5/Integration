@@ -106,7 +106,7 @@ include ('header.php');
                 </div>
                 <div class="service-content">
                     <h3>Hébergement Web</h3>
-                    <p>Ici, vous pouvez héberger votre site d'évenement avec un template prédéfini spécialement élaboré pour tout type d'évènement, ou d'importer votre propre site. Vous avez la possibilité d'héberger autant de sites que vous le souhaitez qui seront du type "évènement".eventizi.itinet.fr</p>
+                    <p>Ici, vous pouvez héberger votre site d'évenement avec le choix de templates pour tout type d'évènement, ou d'importer votre propre site. Vous avez la possibilité d'héberger autant de sites que vous le souhaitez qui seront du type "évènement".eventizi.itinet.fr</p>
                 </div>
             </div>
         </div>
@@ -119,8 +119,21 @@ include ('header.php');
                     </a>
                 </div>
                 <div class="service-content">
-                    <h3>Hébergement Mail</h3>
+                    <h3>Hébergement Mail (Rainloop) </h3>
                     <p>Dès la création d'un compte utilisateur, vous disposez d'une boîte mail personnel "utilisateur"@eventizi.itinet.fr et d'un alias du type "évènement"@eventizi.itinet.fr qui renverra à votre évènement</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <a href="http://jappix.com">
+                        <i class="fa fa-users"></i>
+                    </a>
+                </div>
+                <div class="service-content">
+                    <h3>Service de chat (Jappix Mini) </h3>
+                    <p>Dès la création d'un compte utilisateur, vous disposez d'un compte chat "utilisateur"@eventizi.itinet.fr qui vous permettra de discuter avec les organisateurs et les participants d'un évènement</p>
                 </div>
             </div>
         </div>
