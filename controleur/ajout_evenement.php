@@ -62,7 +62,7 @@ if(isset($_POST["action"])){
 										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
 										exec($commande_mss);
 								}
-					$name = trim($_POST["nom"]);			
+					$name = url_transform($_POST["nom"]);		
 					switch($site){
 						case 1:
 							#echo $_SESSION["login_user"];
