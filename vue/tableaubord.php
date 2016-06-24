@@ -16,12 +16,13 @@ include ('header.php');
     <tbody>
 
       <?php
+      $fqdn = url_transform($events_org[$i]["event_title"]);
       for($i=0;$i<count($events_org);$i++){
         echo"<tr>
         <td>".$events_org[$i]["event_title"]."</td>
         <td>".$events_org[$i]["event_date_debut"]."</td>
         <td>".$nb_event[$i]."</td>
-        <td><a href='http://".$events_org[$i]["event_title"].".eventizi.itinet.fr' target='_blank'>".$events_org[$i]["event_title"].".eventizi.itinet.fr</a></td>
+        <td><a href='http://".$fqdn.".eventizi.itinet.fr' target='_blank'>".$fqdn.".eventizi.itinet.fr</a></td>
         <td><form action='actions' method='post'><input type='hidden' name='id' value='".$events_org[$i]["event_id"]."'><input type='hidden' name='action' value='supprimer'><button class='btn-danger'><i class='fa fa-trash'></i></button></td></tr></form>";
       }
       ?>

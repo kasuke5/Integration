@@ -78,12 +78,4 @@ function get_events_by_tags($tags){
 	return $renvoyer;
 }
 
-function url_transform($str)
-{
-  		$str    =       preg_replace('#[^\\p{L}\d]+#u', '-', $str);
-        $str    =       trim($str, '-');
-        $str    =       iconv(mb_detect_encoding($str), 'us-ascii//TRANSLIT', $str);
-        $str    =       strtolower($str);
-        $str    =       preg_replace('#[^-\w]+#', '', $str);
-        return  $str;
-}
+

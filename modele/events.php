@@ -123,3 +123,12 @@ function remove_event($id_event,$id_user){
 	$donnees = $req->fetch();
 	return $donnees;
 }
+function url_transform($str)
+{
+  		$str    =       preg_replace('#[^\\p{L}\d]+#u', '-', $str);
+        $str    =       trim($str, '-');
+        $str    =       iconv(mb_detect_encoding($str), 'us-ascii//TRANSLIT', $str);
+        $str    =       strtolower($str);
+        $str    =       preg_replace('#[^-\w]+#', '', $str);
+        return  $str;
+}
