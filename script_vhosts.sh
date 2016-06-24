@@ -2,8 +2,6 @@
 # mettre server name dans une variable
 # $1 => créer ou supprimer ; $2 => nom organisateur : $3 => nom évènement
 
-
-
 source /var/www/eventizi.itinet.fr/scripts/source.sh
 
 if [ $# != 3 ]
@@ -34,12 +32,9 @@ case $1 in
 	mkdir $www$2/$3
 	else
 	mkdir $www$2
-	sudo chown $2:www-data $www$2
 	mkdir $www$2/$3
 	fi
-
-
-	sudo chown -R www-data:www-data $www$2/$3
+	sudo chown -R $2:www-data $www$2
 	edquota -p tournoi $2
 	#touch /var/www/$2/index.html
 	#echo 'Ca marche toujours' >> /var/www/$2/index.html # A supprimer
