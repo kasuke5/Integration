@@ -6,7 +6,7 @@ include('header.php');
   <div class="card"></div>
   <div class="card">
     <h1 class="title">Connexion</h1>
-    <form>
+    <form role="form" method="post">
       <div class="input-container">
         <input type="text" id="login" required="required"/>
         <label for="login">Pseudo</label>
@@ -27,7 +27,7 @@ include('header.php');
     <h1 class="title">Inscription
       <div class="close"></div>
     </h1>
-    <form>
+    <form role="form" method="post">
       <div class="input-container">
         <input type="text" id="login" required="required"/>
         <label for="login">Pseudo</label>
