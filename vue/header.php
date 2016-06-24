@@ -44,6 +44,23 @@
 <?php 
 include ('jappix.php');
 ?>
+
+<style>
+.autocomplete-suggestions {
+font-weight: light;
+border: 2px solid #3079ED;
+background: white ;
+overflow: auto;
+border-top-left-radius: 5pt 5pt;
+border-bottom-left-radius: 5pt 5pt;
+border-top-right-radius: 5pt 5pt;
+border-bottom-right-radius: 5pt 5pt;
+ }
+.autocomplete-suggestion { font-weight: light; padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #D4E3FB; }
+.autocomplete-suggestions strong { font-weight: bold; color: black; }
+</style>
+
 </head>
 <body>
 <div class="topbar animated fadeInLeftBig"></div>
@@ -91,21 +108,6 @@ include ('jappix.php');
 <!-- #Header Starts -->
 
 
-<style>
-.autocomplete-suggestions {
-font-weight: light;
-border: 2px solid #3079ED;
-background: white ;
-overflow: auto;
-border-top-left-radius: 5pt 5pt;
-border-bottom-left-radius: 5pt 5pt;
-border-top-right-radius: 5pt 5pt;
-border-bottom-right-radius: 5pt 5pt;
- }
-.autocomplete-suggestion { font-weight: light; padding: 2px 5px; white-space: nowrap; overflow: hidden; }
-.autocomplete-selected { background: #D4E3FB; }
-.autocomplete-suggestions strong { font-weight: bold; color: black; }
-</style>
 
        
 
