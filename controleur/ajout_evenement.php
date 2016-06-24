@@ -83,8 +83,7 @@ if(isset($_POST["action"])){
 					exec($commande_web);
 					exec($commande_chat);
 					exec($commande_bdd);
-					include_once("controleur/tableau_bord.php");
-					echo 'ESTCE QUE TU PASSE ICIIIIIIIIIIIIIIIIIIIII';
+					include("controleur/tableau_bord.php");
 
 				}else{
 				echo "erreur fichier";
