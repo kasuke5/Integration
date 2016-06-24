@@ -2,7 +2,7 @@
 include ('header.php');
 ?>
 <div class="container"> 
-<h1> Erreur 404 : page non trouvee </h1>
+<h1> Erreur 404 : page non trouvée </h1>
 </div>
 <?php
 include ('footer.php');
