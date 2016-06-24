@@ -106,8 +106,8 @@ include ('header.php');
                     </a>
                 </div>
                 <div class="service-content">
-                    <h3>Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales eros sed interdum pretium. Pellentesque sed sem cursus ipsum convallis.</p>
+                    <h3>Hébergement Web</h3>
+                    <p>Ici, vous pouvez héberger votre site d'évenement avec un template prédéfini spécialement élaboré pour tout type d'évènement, ou d'importer votre propre site. Vous avez la possibilité d'héberger autant de sites que vous le souhaitez qui seront du type "évènement".eventizi.itinet.fr</p>
                 </div>
                 <div class="read">
                     <a href="#">MORE</a>
