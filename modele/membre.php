@@ -78,32 +78,12 @@ function get_events_by_tags($tags){
 	return $renvoyer;
 }
 
-function url_transform($url)
+function url_transform($str)
 {
-   $lettre = array(
-      'a'=>array('à', 'á', 'â', 'ã', 'ä', 'å'),
-      'e'=>array('è', 'é', 'ê', 'ë'),
-      'i'=>array('ì', 'í', 'î', 'ï'),
-      'o'=>array('ò', 'ó', 'ô', 'õ', 'ö'),
-      'u'=>array('ù', 'ú', 'û', 'ü'),
-      'y'=>array('ý', 'ÿ'));
- 
-   $url = strtolower($url); // on met en minuscule
-   $url = trim($rul); // on enlève les caractères blancs au début et à la fin de l'url
-   $url = preg_replace('#\s#', '-', $url); // on remplace les caractères blancs par des tirrests
-   $url = preg_replace('#-{2,}#', '-', $url); // on enlève les tirrets qui sont les uns à coté des autres
- 
-   // on remplace tous les accents
-   $url = str_replace($lettre['a'], 'a', $url);
-   $url = str_replace($lettre['e'], 'e', $url);
-   $url = str_replace($lettre['i'], 'i', $url);
-   $url = str_replace($lettre['o'], 'o', $url);
-   $url = str_replace($lettre['u'], 'u', $url);
-   $url = str_replace($lettre['y'], 'y', $url);
-   $url = str_replace(array('ç', 'ñ'), array('c', 'n'), $url);
- 
-   $url = preg_replace('#[^a-z0-9-]#', '', $url);
- 
-   return $url;
+  		$str    =       preg_replace('#[^\\p{L}\d]+#u', '-', $str);
+        $str    =       trim($str, '-');
+        $str    =       iconv(mb_detect_encoding($str), 'us-ascii//TRANSLIT', $str);
+        $str    =       strtolower($str);
+        $str    =       preg_replace('#[^-\w]+#', '', $str);
+        return  $str;
 }
-?>
