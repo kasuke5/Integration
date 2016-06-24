@@ -125,12 +125,7 @@ include ('header.php');
             </div>
         </div>
  </div>
-</div>
-
-<br>
-
-<div class="container text-center ">
-<h2>Notre équipe</h2>
+ <h2>Notre équipe</h2>
   <div id="pic">
     <div class="col-sm-3">
       <p class="text-center"><strong>Florian Dugat</strong></p><br>
@@ -141,7 +136,6 @@ include ('header.php');
     <div class="col-sm-3">
       <p class="text-center"><strong>Jean-Christophe Thiburce</strong></p><br>
         <img src="../img/JC.jpg" class="img-circle person" width="255" height="255">
-      </a>
         <p>Chef de projet</p>
     </div>
     <div class="col-sm-3">
@@ -150,8 +144,8 @@ include ('header.php');
         <p>Membre de l'équipe</p>
     </div>
   </div>
-</div>
-</div>
+ </div>
+
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
     <!-- The container for the modal slides -->
