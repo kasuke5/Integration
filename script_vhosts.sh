@@ -34,7 +34,7 @@ case $1 in
 	mkdir $www$2/$3
 	else
 	mkdir $www$2
-	sudo chown www-data:www-data $www$2
+	sudo chown $2:www-data $www$2
 	mkdir $www$2/$3
 	fi
 
