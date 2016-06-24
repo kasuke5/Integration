@@ -94,14 +94,14 @@ function get_users_by_event($id){
 
 
 
-function GetLoginById($id){
+/*function GetLoginById($id){
 	global $bdd;
 	$donnees = 0;
 	$req = $bdd->prepare('SELECT user_login, user_password FROM t_user WHERE user_id = ?');
 	$req->execute(array($id));
 	$donnees = $req->fetch();
 	return $donnees;
-}
+}*/
 
 
 function get_event_by_id($id){
