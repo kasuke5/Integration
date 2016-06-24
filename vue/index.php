@@ -97,7 +97,7 @@ include ('header.php');
 </div> -->
 
     <div class="row">
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-3 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="#">
@@ -111,7 +111,7 @@ include ('header.php');
             </div>
         </div>
    
-           <div class="col-md-4 col-sm-6">
+           <div class="col-md-3 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="#">
@@ -124,7 +124,7 @@ include ('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-3 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="http://jappix.com">
