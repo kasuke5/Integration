@@ -49,7 +49,7 @@ include('header.php');
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button><span>Suivant</span></button>
+        <button type="submit" class="btn btn-default" name="action"><span>Suivant</span></button>
       </div>
     </form>
   </div>
