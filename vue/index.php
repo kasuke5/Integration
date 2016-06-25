@@ -97,7 +97,7 @@ include ('header.php');
 </div> -->
 
     <div class="row">
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-2 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="#">
