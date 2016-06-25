@@ -97,7 +97,7 @@ include ('header.php');
 </div> -->
 
     <div class="row">
-        <div class="col-md-3 col-md-offset-1 text-center">
+        <div class="col-md-2 col-md-offset-1 text-center">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="#">
@@ -111,7 +111,7 @@ include ('header.php');
             </div>
         </div>
    
-           <div class="col-md-3 text-center">
+           <div class="col-md-2 text-center">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://rainloop.com">
@@ -124,7 +124,7 @@ include ('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://jappix.com">
@@ -137,7 +137,7 @@ include ('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
          <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://www.google.com/intx/fr/work/mapsearth/products/mapsapi.html">
@@ -153,18 +153,18 @@ include ('header.php');
  </div>
  <h2>Notre équipe</h2>
   <div id="pic">
-    <div class="col-sm-3">
+    <div class="col-sm-3 col-sm-offset-1 text-center">
       <p class="text-center"><strong>Florian Dugat</strong></p><br>
         <img src="../img/flo.jpg" class="img-circle person" width="255" height="255">
         <p>Membre de l'équipe</p>
     </div>
 
-    <div class="col-sm-3">
+    <div class="col-sm-3 text-center">
       <p class="text-center"><strong>Jean-Christophe Thiburce</strong></p><br>
         <img src="../img/JC.jpg" class="img-circle person" width="255" height="255">
         <p>Chef de projet</p>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-3 text-center">
       <p class="text-center"><strong>Guillaume Jaufret</strong></p><br>
         <img src="../img/gui.jpg" class="img-circle person" width="255" height="255">
         <p>Membre de l'équipe</p>
