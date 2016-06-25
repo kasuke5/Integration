@@ -6,7 +6,7 @@ include('header.php');
 <div class="login">
   <div class="login-triangle"></div>
   
-  <h2 class="login-header">Log in</h2>
+  <h2 class="form-horizontal">Connexion</h2>
 
   <form class="login-container">
     <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
