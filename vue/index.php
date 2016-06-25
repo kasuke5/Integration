@@ -114,7 +114,7 @@ include ('header.php');
            <div class="col-md-3 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
-                    <a href="#">
+                    <a href="https://rainloop.com">
                         <i class="fa fa-envelope"></i>
                     </a>
                 </div>
@@ -127,13 +127,26 @@ include ('header.php');
         <div class="col-md-3 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
-                    <a href="http://jappix.com">
+                    <a href="https://jappix.com">
                         <i class="fa fa-users"></i>
                     </a>
                 </div>
                 <div class="service-content">
                     <h3>Service de chat</h3>
                     <p>Dès la création d'un compte utilisateur, vous disposez d'un compte chat "utilisateur"@eventizi.itinet.fr qui vous permettra de discuter avec les organisateurs et les participants d'un évènement</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <div class="serviceBox">
+                <div class="service-icon">
+                    <a href="https://www.google.com/intx/fr/work/mapsearth/products/mapsapi.html">
+                        <i class=" fa fa-map-marker"></i>
+                    </a>
+                </div>
+                <div class="service-content">
+                    <h3>Service de Géolocalisation</h3>
+                    <p>Dès la création d'un site évènement, vous pourrez géolocaliser votre sur une carte via Google Maps qui permettra aux participants d'un évènement de se renseigner sur comment se rendre à un évènement</p>
                 </div>
             </div>
         </div>
