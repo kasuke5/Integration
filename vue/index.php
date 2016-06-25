@@ -111,7 +111,7 @@ include ('header.php');
             </div>
         </div>
    
-           <div class="col-md-3 col-sm-6">
+           <div class="col-md-2 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://rainloop.com">
@@ -124,7 +124,7 @@ include ('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-2 col-sm-6">
             <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://jappix.com">
@@ -137,7 +137,7 @@ include ('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-2 col-sm-6">
          <div class="serviceBox">
                 <div class="service-icon">
                     <a href="https://www.google.com/intx/fr/work/mapsearth/products/mapsapi.html">
