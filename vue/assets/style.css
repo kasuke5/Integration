@@ -216,9 +216,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 .login {
   width: 400px;
-  margin: 16px auto;
+  margin: 100px auto;
   font-size: 16px;
 }
 
