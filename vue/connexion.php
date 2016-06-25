@@ -2,59 +2,23 @@
 include('header.php');
 ?>
   <body>
-<div class="containerconnexion">
-  <div class="card"></div>
-  <div class="card">
-    <h1 class="title">Connexion</h1>
-    <form role="form" method="post">
-      <div class="input-container">
-        <input type="text" id="login" required="required"/>
-        <label for="login">Pseudo</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" id="pass" required="required"/>
-        <label for="pass">Mot de passe</label>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <button type="submit" class="btn btn-default" name="action"><span>Connexion</span></button>
-      </div>
-    </form>
-  </div>
-  <div class="card alt">
-    <div class="toggle"></div>
-    <h1 class="title">Inscription
-      <div class="close"></div>
-    </h1>
-    <form role="form" method="post">
-      <div class="input-container">
-        <input type="text" id="login" required="required"/>
-        <label for="login">Pseudo</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" id="pass1" required="required"/>
-        <label for="pass">Mot de passe</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" id="pass2" required="required"/>
-        <label for="pass2">Confirmez votre mot de passe</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="text" id="mail" required="required"/>
-        <label for="mail">Adresse Email</label>
-        <div class="bar"></div>
-      </div>
-        <button type="submit" class="btn btn-default" name="action"><span>Suivant</span></button>
-    </form>
-  </div>
+
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Log in</h2>
+
+  <form class="login-container">
+    <p><input type="text" name="login" required class="form-control" id="login" placeholder="Pseudo"></p>
+    <p><input type="password" name="pass" required class="form-control" id="pass" placeholder="Mot de passe"></p>
+    <p><input type="submit" class="btn btn-default" name="action" value="Connexion"></p>
+  </form>
 </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-        <script src="vue/js/index.js"></script>  
+    
+    
+    
 
 <script>
 $(document).ready(function(){
