@@ -18,7 +18,7 @@ include ('header.php');
 <div class="event">
 <h2 class="login-header">Creation d'évènement</h2>
   <form class="form-horizontal" role="form" method="post">
-    <div class="col-sm-5">
+    <div class="col-md-5">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
     <label class="control-label">Date/heure Début</label>
@@ -28,7 +28,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     </div>
-    <div class="col-sm-5">
+    <div class="col-md-5">
     <label class="control-label" for="lieu">Lieu</label>
     <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     <label class="control-label">Date/heure Fin</label>
