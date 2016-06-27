@@ -154,20 +154,21 @@ include ('header.php');
  <h2>Notre équipe</h2>
         <div class="col-md-3 col-sm-6">
             <div class="our-team">
+                <div class="pic">
                     <img src="../img/flo.jpg" alt="">
-                    <div class="social_media_team">
-                        <ul class="team_social">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="team-prof">
-                    <h3 class="post-title"><a href="#">Florian Dugat</a></h3>
+                    <h3 class="post-title">Florian Dugat</h3>
                     <span class="post">Membre de l'équipe</span>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris.</p>
+ 
+                    <ul class="team_social">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
                 </div>
+            </div>
             </div>
     </div>
 
