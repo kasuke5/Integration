@@ -61,7 +61,7 @@ border-bottom-right-radius: 5pt 5pt;
 .autocomplete-suggestions strong { font-weight: bold; color: black; }
 </style>
 <style>
-/*Style general de la page*/
+/*Style general de la page
 body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight:bold;}
 /*Styles relatifs à la shadow box*/
 /*Style du masque recouvrant la page au chargement de la shadow box*/
