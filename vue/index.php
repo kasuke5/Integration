@@ -17,7 +17,7 @@ include ('header.php');
      <div class="item">
         <img src="../img/2.jpg" >
         <div class="carousel-caption">
-          <h2 class="page-pres">Monteur de recherche</h2>
+          <h2 class="page-pres">Moteur de recherche</h2>
           <h3 class="page-pres">Avec notre moteur de recherche intégré, trouver l'évènement qui vous correspond à votre univers. Si vous avez une compétence particulière vous pouvez aussi vous mettre en avant et participer à des évènements</h3>
         </div>      
       </div>
