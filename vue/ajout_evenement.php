@@ -19,7 +19,6 @@ include ('header.php');
 <div class="login-triangle"></div>
 <h2 class="login-header">Creation d'évènement</h2>
   <form class="form-horizontal" role="form" method="post">
-    <div class="col-md-2">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
     <label class="control-label">Date/heure Début</label>
@@ -28,9 +27,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
-    </div>
-    <div class="col-md-2">
-    <label class="control-label" for="lieu">Lieu</label>
+       <label class="control-label" for="lieu">Lieu</label>
     <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     <label class="control-label">Date/heure Fin</label>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
@@ -39,7 +36,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
    
-</div>
+
   <!--  <div class="col-md-6">-->
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
