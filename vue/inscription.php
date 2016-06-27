@@ -2,7 +2,6 @@
 include 'header.php'; 
 ?>
 <div class="login">
-<h3 style="margin-top:80px">Inscription</h3>
 <?php echo "<h3>".$message."</h3>"; ?>
   <div class="login-triangle"></div>
   <h2 class="login-header">Inscription</h2>
