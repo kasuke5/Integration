@@ -32,8 +32,8 @@ include ('header.php');
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
-</div>
-</div>
+    </div>
+  </div>
 <div class="col-sm-4">
 <label class="control-label">Date/heure Fin</label>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
@@ -60,7 +60,7 @@ include ('header.php');
     <p><input type="submit" name="action" value="Créer"></p>
   </div>
   </form>
- 
+</div>
  <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
   <label class="control-label">Select File</label>
@@ -130,7 +130,7 @@ include ('header.php');
     </div>
   </div>
 </form>-->
-</div>
+
 <?php
 include 'footer.php';
 ?>
@@ -142,7 +142,6 @@ include 'footer.php';
         minuteStep: 10
     });
 </script>   
-
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
