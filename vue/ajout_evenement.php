@@ -22,6 +22,7 @@ include ('header.php');
   <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
   <label class="control-label">Photo de l'évènement</label>
   <input  type="file" name="photo">
+  <br><br>
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
     <br><br>
