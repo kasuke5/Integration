@@ -137,7 +137,7 @@ include ('header.php');
                 </div>
             </div>
         </div>
-
+<br>
  <h2>Notre équipe</h2>
         <div class="col-md-3 col-md-offset-1 text-center">
             <div class="our-team">
