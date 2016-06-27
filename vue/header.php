@@ -93,7 +93,7 @@ border-bottom-right-radius: 5pt 5pt;
             if(isset($_SESSION["id_user"])){
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
-              echo'<div class="modal"><li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
+              echo'<li><a href="/connexion" data-reveal-id="myModal">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
             }
             ?>
               </ul>
