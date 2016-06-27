@@ -215,6 +215,9 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
     .serviceBox p{
         margin: 20px 0;
     }
+    .our-team{
+        margin-bottom: 30px;
+    }
 }
 body {
   font-family: 'Open Sans', sans-serif;
@@ -367,9 +370,4 @@ body {
 }
 .pic:hover .social_media_team{
     top:0;
-}
-@media screen and (max-width: 990px){
-    .our-team{
-        margin-bottom: 30px;
-    }
 }
