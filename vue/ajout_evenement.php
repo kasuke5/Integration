@@ -19,7 +19,9 @@ include ('header.php');
 <div class="event">
 <div class="login-triangle"></div>
 <h2 class="login-header">Creation d'évènement</h2>
-  <form class="form-horizontal" role="form" method="post">
+  <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+  <label class="control-label">Photo de l'évènement</label>
+  <input  type="file" name="photo">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
     <br><br>
