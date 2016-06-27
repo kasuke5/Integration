@@ -54,8 +54,6 @@ include ('header.php');
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser wordpress</option>
   </select>
-  </div>
-  <div class="col-sm-5">
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
     <input type="submit" name="action" value="Créer">
   </div>
