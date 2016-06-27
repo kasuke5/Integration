@@ -40,7 +40,7 @@ include ('header.php');
     </div>
    
 </div>
-    <div class="col-md-6">
+  <!--  <div class="col-md-6">-->
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
@@ -56,8 +56,8 @@ include ('header.php');
     <input type="submit" name="action" value="Créer">
   </div>
   </form>
-</div>
- <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+<!-- </div>--> 
+<!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
   <label class="control-label">Select File</label>
   <div class="col-sm-5">
