@@ -43,7 +43,7 @@ include ('header.php');
                   <h2>".$events[$i]["event_title"]."</h2>
                   <p>Cet évènement commence le ".$events[$i]["event_date_debut"]."</p>
                   <p>".$events[$i]["event_description"]."</p>
-                  <a class='btn' style='background-color:orange' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr''>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
+                  <a class='btn' style='background-color:orange' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr'' target='_blank'>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
               </div>
           </div>
           <!-- /.row -->
@@ -59,7 +59,7 @@ include ('header.php');
 
         
 
-        <!-- Pagination -->
+        <!-- Pagination 
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -87,6 +87,7 @@ include ('header.php');
                 </ul>
             </div>
         </div>
+        -->
         <!-- /.row -->
 
         <hr>

@@ -77,10 +77,10 @@ if(isset($_GET["term"])){
 	                </a>
 	            </div>
 	            <div class='col-md-13'>
-	                <h4>".$renvoyer[$i]["event_title"]."</h4>
-	                <h3>Cet évènement commence le ".$renvoyer[$i]["event_date_debut"]."</h3>
+	                <h2>".$renvoyer[$i]["event_title"]."</h2>
+	                <p>Cet évènement commence le ".$renvoyer[$i]["event_date_debut"]."</p>
 	                <p>".$renvoyer[$i]["event_description"]."</p>
-	                <a class='btn btn-primary' href='http://".$renvoyer[$i]["event_title"].".eventizi.itinet.fr''>View Project <span class='glyphicon glyphicon-chevron-right'></span></a>
+	                <a class='btn' style='background-color:orange' href='http://".$renvoyer[$i]["event_title"].".eventizi.itinet.fr''>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
 	            </div>
 	        </div>
 	        <!-- /.row -->
