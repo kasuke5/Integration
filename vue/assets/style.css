@@ -141,9 +141,20 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	.navbar-brand{padding: 7px;}
 	.navbar-brand img{height: 37px;}
 	.navbar-toggle{margin-top: 12px;}
-  
+
 
 	.carousel-caption,.carousel-control,.carousel-indicators{display: none;}
+   .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      min-width: 100%; /* Set width to 100% */
+      max-height: auto;
+      margin: auto;
+      box-sizing: border-box;
+  }
+  .carousel-caption h3 {
+      color: orange !important;
+  }
 
 	h2.text-center{text-align: left;font-size: 1.7em;}
 	h4 {font: 300 1.2em Roboto,Arial,Helvetica;}
