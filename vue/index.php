@@ -23,7 +23,7 @@ include ('header.php');
       </div>
     
       <div class="item">
-        <img src="../img/3.jpg">
+        <img src="../img/google-maps.png">
         <div class="carousel-caption">
           <h2 class="page-pres">Géolocalisation</h2>
           <h3 class="page-pres">Vous pouvez géolocaliser votre évènement afin que les participants puissent reperer facilement le lieu de votre évènement</h3>
