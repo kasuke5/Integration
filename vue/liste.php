@@ -71,12 +71,12 @@ if(isset($_GET["term"])){
 		}else{
 			for($i=0;$i<count($renvoyer);$i++){
 	            echo"<div class='row'>
-	            <div class='col-md-7'>
+	            <div class='col-md-5'>
 	                <a href='#''>
 	                    <img class='img-responsive' src='http://placehold.it/700x300' alt=''>
 	                </a>
 	            </div>
-	            <div class='col-md-13'>
+	            <div class='col-lg-5'>
 	                <h2>".$renvoyer[$i]["event_title"]."</h2>
 	                <p>Cet évènement commence le ".$renvoyer[$i]["event_date_debut"]."</p>
 	                <p>".$renvoyer[$i]["event_description"]."</p>

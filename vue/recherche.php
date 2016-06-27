@@ -39,7 +39,7 @@ include ('header.php');
                       <img class='img-responsive' src='http://placehold.it/700x300' alt=''>
                   </a>
               </div>
-              <div class='col-md-13'>
+              <div class='col-lg-5'>
                   <h2>".$events[$i]["event_title"]."</h2>
                   <p>Cet évènement commence le ".$events[$i]["event_date_debut"]."</p>
                   <p>".$events[$i]["event_description"]."</p>
