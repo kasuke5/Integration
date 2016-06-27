@@ -8,7 +8,7 @@ include 'header.php';
   <form class="form-horizontal" role="form" method="post">
     <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
     <p><input type="password" name="pass1" id="pass" placeholder="Mot de passe"></p>
-    <p><input type="password" name="pass2" id="pass" placeholder="Confirmez Mot de passe"></p>
+    <p><input type="password" name="pass2" id="pass" placeholder="Confirmez mot de passe"></p>
     <p><input type="email" name="mail" id="pass" placeholder="Email"></p>
     <p><input type="submit" name="action" value="Connexion"></p>
   </form>
