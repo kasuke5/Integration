@@ -160,7 +160,7 @@ include ('header.php');
           </div>
           <div class="col-md-3 text-center">
             <div class="our-team">
-                <img src="../img/gui1.jpg" alt="">
+                <img src="../img/gui.jpg" alt="">
                 <div class="team-prof">
                     <h3>Guillaume Jauffret</h3>
                     <span>Membre de l'équipe</span>
