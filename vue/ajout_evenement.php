@@ -57,7 +57,7 @@ include ('header.php');
   </div>
   <div class="col-sm-4">
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
-    <p><input type="submit" name="action" value="Créer"></p>
+    <input type="submit" name="action" value="Créer">
   </div>
   </form>
 </div>
