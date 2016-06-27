@@ -132,14 +132,6 @@ include ('header.php');
 <?php
 include 'footer.php';
 ?>
-<script type="text/javascript">
-    $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii",
-        autoclose: true,
-        todayBtn: true,
-        minuteStep: 10
-    });
-</script>   
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
