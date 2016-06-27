@@ -21,6 +21,8 @@ include ('header.php');
     <div class="col-sm-5">
     <label class="control-label" for="lieu">Nom:</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
+    </div>
+    <div class="col-sm-5">
     <label class="control-label" for="lieu">Lieu de l'évènement:</label>
     <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     </div>
