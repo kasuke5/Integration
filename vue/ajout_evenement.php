@@ -81,11 +81,11 @@ include ('header.php');
             <label for="date_fin" class="col-sm-2 control-label">Catégorie</label>
             <div class="col-sm-5">
              <select name="categorie">
-                    <?php //for($i=0;$i<count($categories);$i++){
+                   // <?php //for($i=0;$i<count($categories);$i++){
                              //   echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
-                            }
+                           // }
                             //echo "</select>";
-                            ?>
+                      //      ?>
             </div>
     </div>
     <br>
@@ -126,6 +126,7 @@ include 'footer.php';
         minuteStep: 10
     });
 </script>   
+
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
