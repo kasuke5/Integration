@@ -137,41 +137,24 @@ include ('header.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-         <div class="serviceBox">
-                <div class="service-icon">
-                    <a href="https://www.google.com/intx/fr/work/mapsearth/products/mapsapi.html">
-                        <i class=" fa fa-map-marker"></i>
-                    </a>
-                </div>
-                <div class="service-content">
-                    <h3>Service de Géolocalisation</h3>
-                    <p>Dès la création d'un site évènement, vous pourrez géolocaliser votre sur une carte via Google Maps qui permettra aux participants d'un évènement de se renseigner sur comment se rendre à un évènement</p>
-                </div>
-            </div>
-        </div>
- </div>
- <h2>Notre équipe</h2>
-        <div class="col-md-3 col-sm-6">
-            <div class="our-team">
-                <div class="pic">
-                    <img src="../img/flo.jpg" alt="">
-                </div>
-                <div class="team-prof">
-                    <h3 class="post-title">Florian Dugat</h3>
-                    <span class="post">Membre de l'équipe</span>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris.</p>
- 
-                    <ul class="team_social">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-    </div>
 
+ <h2>Notre équipe</h2>
+        <div class="col-md-3 col-md-offset-1 text-center">
+            <div class="our-team">
+                <img src="../img/flo.jpg" alt="">
+                <div class="team-prof">
+                    <h3>Florian Dugat</h3>
+                    <span>Membre de l'équipe</span>
+                </div>
+                <ul class="social-links">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul>
+            </div>
+          </div>
+    </div>
+ </div>
 
     <!--<div class="col-sm-3 text-center">
       <p class="text-center"><strong>Jean-Christophe Thiburce</strong></p><br>

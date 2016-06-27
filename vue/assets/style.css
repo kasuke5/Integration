@@ -22,7 +22,7 @@ h4 i{margin-right: 0.5em;}
 .row {
     margin-right: -15px;
     margin-left: -15px;
-    width: 1400px;
+    width: 1170px;
 }
 
 .page-pres {
@@ -307,64 +307,59 @@ body {
 .login input[type="submit"]:focus {
   border-color: #05a;
 }
-.our-team{
-    text-align: center;
-    background: #222;
-    transition: all 0.3s ease 0s;
+.our-team img{
+    width: 100%;
+    height: auto;
+    border: 2px solid #b4afaf;
+    border-radius: 5px;
+    transition: all 0.30s linear 0s;
 }
-.pic img{
-    width: 100%;
-    height: auto;
-    transition: all 0.3s ease 0s;
+.our-team:hover img{
+    border:2px solid #14b8b1;
 }
-.post-title{
-    color: #ffffff;
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 5px;
+.our-team .team-prof h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+    text-transform: uppercase;
 }
-.post{
-    font-size: 13px;
-    font-weight: 500;
-    color:#bbb;
-    display: block;
-    margin: 5px 0 10px 0;
-    text-transform: uppercase;
+.our-team .team-prof span{
+    font-size: 14px;
+    color: #808080;
+    display: block;
+    margin-bottom: 20px;
+    text-transform: capitalize;
 }
-.our-team .description{
-    color:#777;
-    padding: 0 30px;
-    margin-bottom: 20px;
+.our-team .social-links{
+    padding:0;
+    margin:0;
+    list-style: none;
 }
-.team_social{
-    list-style: none;
-    border-top: 1px solid #e67e22;
-    padding: 28px 0 20px 0;
+.our-team .social-links li{
+    display: inline-block;
+    margin-right: 15px;
 }
-.team_social > li{
-    display: inline-block;
-    margin: 0 4px;
+.our-team .social-links li a{
+    color: #6a6060;
+    font-size: 18px;
+    transition: all 0.30s linear 0s;
 }
-.team_social > li > a{
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: block;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 36px;
-    border: 1px solid #fff;
+.our-team .social-links li a:hover{
+    color: #14b8b1;
+    text-decoration: none;
 }
-.team_social > li > a:hover{
-    background: #e67e22;
-    border: 1px solid #e67e22;
+.our-team .social-links:after{
+    content: "";
+    display: block;
+    width: 20%;
+    margin-top: 20px;
+    border-bottom: 2px solid #fff;
+    transition: all 0.30s linear 0s;
 }
-.our-team:hover{
-    background: #272727;
-    transition: all 0.3s ease 0s;
+.our-team:hover .social-links:after{
+    border-bottom: 2px solid #14b8b1;
 }
-.our-team:hover .pic{
-    transform: translateY(3px);
-    transition: all 0.3s ease 0s;
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom:20px; }
 }
