@@ -9,24 +9,24 @@ include ('header.php');
       <div class="item active">
         <img src="../img/1.jpeg">
         <div class="carousel-caption">
-          <h3 class="page-pres">Héberger votre évenement sportif</h3>
-          <p class="page-pres">Eventizi c'est la champions league</p>
+          <h2 class="page-pres">Héberger votre évenement en toute tranquilité</h2>
+          <h3 class="page-pres">Laisser parler votre créativité grâce à nos services proposés (compte mail : alias par évènement,compte chat)</h3>
         </div>      
       </div>
 
      <div class="item">
         <img src="../img/2.jpg" >
         <div class="carousel-caption">
-          <h3 class="page-pres">Soirée</h3>
-          <p class="page-pres">Super soirée !</p>
+          <h2 class="page-pres">Monteur de recherche</h2>
+          <h3 class="page-pres">Avec notre moteur de recherche intégré, trouver l'évènement qui vous correspond à votre univers. Si vous avez une compétence particulière vous pouvez aussi vous mettre en avant et participer à des évènements</h3>
         </div>      
       </div>
     
       <div class="item">
         <img src="../img/3.jpg">
         <div class="carousel-caption">
-          <h3 class="page-pres">DJ</h3>
-          <p class="page-pres">Faites vous connaitre !</p>
+          <h2 class="page-pres">Géolocalisation</h2>
+          <h3 class="page-pres">Vous pouvez géolocaliser votre évènement afin que les participants puissent reperer facilement le lieu de votre évènement</h3>
         </div>      
       </div>
     </div>
@@ -42,7 +42,6 @@ include ('header.php');
     <p>Event'Izi vous permet d'héberger votre évènement et dispose de nombreuses fonctionnalités permettant de le promouvoir facilement.
     Une plateforme où vous pouvez créer et héberger votre site web pour votre évènement
     </p>
-    <p>Si vous avez une compétence particulière vous pouvez aussi vous mettre en avant et participer à des évènements</p>
 
     <h3 class="text-center">NOS SERVICES</h3>
   

@@ -1,8 +1,8 @@
 <?php 
 include ('header.php');
 ?>
-<div class="row">
-<h3 style="margin-top:80px">Mes évenements</h3>
+<div class="container">
+<h3 style="margin-top:150px">Mes évenements</h3>
 <table class="table table-striped">
     <thead>
       <tr>
