@@ -40,7 +40,7 @@ include ('header.php');
     </div>
    
 </div>
-    <div class="col-md-2">
+    <div class="col-md-6">
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
