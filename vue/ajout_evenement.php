@@ -15,8 +15,37 @@ include ('header.php');
     webshims.setOptions('forms-ext', {types: 'date'});
     webshims.polyfill('forms forms-ext');
 </script>
-<h2 style="margin-top:80px">Creation d'evenement</h2>
- <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+<div class="event">
+<h2 class="login-header">Creation d'evenement</h2>
+  <form class="form-horizontal" role="form" method="post">
+    <p><input type="text" name="nom" placeholder="Nom de l'évènement"></p>
+    <p><input type="text" name="adresse" placeholder="Lieu de l'évènement"></p>
+   <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
+    <input size="16" type="text" id="debut" name="debut" value="" readonly>
+    <span class="add-on"><i class="icon-remove"></i></span>
+    <span class="add-on"><i class="icon-calendar"></i></span>
+</div>
+<div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
+    <input size="16" type="text" id="fin" name="fin" value="" readonly>
+    <span class="add-on"><i class="icon-remove"></i></span>
+    <span class="add-on"><i class="icon-calendar"></i></span>
+</div>
+    <select name="categorie">
+                    <?php for($i=0;$i<count($categories);$i++){
+                                echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
+                            }
+                            echo "</select>";
+                            ?>
+            </div>
+            <select id='c' name="choix">
+        <option value="importer" >Importer votre site</option>
+        <option value="wordpress" selected >Utiliser wordpress</option>
+  </select>
+   <textarea name="description" id="description" rows="4" cols="50"></textarea>
+
+    <p><input type="submit" name="action" value="Créer"></p>
+  </form>
+ <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
   <label class="control-label">Select File</label>
   <div class="col-sm-5">
@@ -52,10 +81,10 @@ include ('header.php');
             <label for="date_fin" class="col-sm-2 control-label">Catégorie</label>
             <div class="col-sm-5">
              <select name="categorie">
-                    <?php for($i=0;$i<count($categories);$i++){
-                                echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
+                    <?php //for($i=0;$i<count($categories);$i++){
+                             //   echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
                             }
-                            echo "</select>";
+                            //echo "</select>";
                             ?>
             </div>
     </div>
@@ -84,12 +113,19 @@ include ('header.php');
       <button type="submit" class="btn btn-default" name="action">Envoyer</button>
     </div>
   </div>
-</form>
+</form>-->
 </div>
 <?php
 include 'footer.php';
 ?>
-
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        minuteStep: 10
+    });
+</script>   
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
