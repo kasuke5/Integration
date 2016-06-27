@@ -68,7 +68,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
 #page {position:absolute;left:0;top:0;z-index:9000;background-color:#000;display:none;}
 /*Positionnement et dimensions de la shadow box*/
 #boxes .window {position:absolute;left:0;top:0;width:440px;height:200px;display:none;z-index:9999;padding:20px;}
-#boxes #dialog {width:375px;height:203px;padding:10px;color:#00008B;border:3px solid #fff;background-color:#C0C0C0;}
+#boxes #dialog {width:400px;height:400px;padding:10px;color:#00008B;border:3px solid #fff;background-color:#C0C0C0;}
 /*Style du bouton*/
 .shadowbox{position:absolute;left:50%;top:50%;width:100px;}
 </style>
@@ -146,7 +146,7 @@ jQuery(".window").hide();
 <div id="boxes"/>
 <!--La box-->
 <div id="dialog" class="window"/>
-<center> 
+
  <div class="login">
   <div class="login-triangle"></div>
   
@@ -159,8 +159,7 @@ jQuery(".window").hide();
   </form>
 </div>
 <input type="button" class="close" value="Quitter" />
-</center>
-</div>
+  </div>
 <!--Le masque-->
 <div id="page">
 </div>
