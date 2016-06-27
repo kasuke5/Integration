@@ -42,7 +42,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
 </div>
 </div>
-    <div class="col-sm-5">
+    <div class="col-md-5">
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
