@@ -139,10 +139,9 @@ jQuery(".window").hide();
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
               #echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
-              echo '<title>Concevoir facilement une shadow box, jQuery</title>
+              echo '
 <!--Bouton de la page-->
-<a href="/connexion">Connexion
-<input type="button" value="Shadow box" class="shadowbox" /></a>
+<a href="/connexion" value="Shadow box" class="shadowbox">Connexion
 <!--Div incluant la box et le masque-->
 <div id="boxes"/>
 <!--La box-->
