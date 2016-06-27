@@ -9,8 +9,8 @@ include ('header.php');
       <div class="item active">
         <img src="../img/1.jpeg">
         <div class="carousel-caption">
-          <h2 class="page-pres">Héberger votre évenement en toute tranquilité</h2>
-          <h3 class="page-pres">Laisser parler votre créativité grâce à nos services proposés (compte mail : alias par évènement,compte chat)</h3>
+          <h2 class="page-pres">Héberger votre évènement en toute tranquilité</h2>
+          <h3 class="page-pres">Laissez parler votre créativité grâce à nos services proposés (compte mail : alias par évènement,compte chat)</h3>
         </div>      
       </div>
 
