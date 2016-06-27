@@ -44,6 +44,7 @@ include ('header.php');
                             }
                             echo "</select>";
                             ?>
+                            <br><br>
            <label class="control-label">Choix d'importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
@@ -110,7 +111,7 @@ include ('header.php');
 	</select>
 	</div>
 	</div>
-    <br></br>
+    <br><br>
     <div id="bdd">
     </div>      
       <label for="description" class="col-sm-2 control-label">Description : </label>
