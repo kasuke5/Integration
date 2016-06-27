@@ -18,15 +18,15 @@ include ('header.php');
 <div class="event">
 <h2 class="login-header">Creation d'évènement</h2>
   <form class="form-horizontal" role="form" method="post">
-    <div class="col-sm-4">
+    <div class="col-sm-5">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-5">
     <label class="control-label" for="lieu">Lieu</label>
     <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-5">
    <label class="control-label">Date/heure Début</label>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
@@ -34,7 +34,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
   </div>
-<div class="col-sm-4">
+<div class="col-sm-5">
 <label class="control-label">Date/heure Fin</label>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="fin" name="fin" value="" readonly>
@@ -42,7 +42,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
 </div>
 </div>
-    <div class="col-sm-4">
+    <div class="col-sm-5">
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
@@ -55,7 +55,7 @@ include ('header.php');
         <option value="wordpress" selected >Utiliser wordpress</option>
   </select>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-5">
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
     <input type="submit" name="action" value="Créer">
   </div>
