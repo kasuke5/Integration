@@ -3,7 +3,8 @@ include ('header.php');
 ?>
 
 <link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
-<link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" />  
+<link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" /> 
+<link href="vue/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen"> 
 
 <script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-1.11.3.min.js"></script>
@@ -36,13 +37,14 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
   <!--  <div class="col-md-6">-->
+    <label class="control-label">Catégorie</label>
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
                             }
                             echo "</select>";
                             ?>
-           
+           <label class="control-label">Choix d'importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser wordpress</option>
