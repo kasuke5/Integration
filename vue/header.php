@@ -147,7 +147,7 @@ jQuery(".window").hide();
 <!--La box-->
 <div id="dialog" class="window"/>
 
- <div class="login">
+ 
   <div class="login-triangle"></div>
   
   <h2 class="login-header">Connexion</h2>
@@ -163,7 +163,7 @@ jQuery(".window").hide();
 <!--Le masque-->
 <div id="page">
 </div>
-</div>';
+';
             }
             ?>
               <!-- Bouton execution modal -->
