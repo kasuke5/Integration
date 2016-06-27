@@ -36,7 +36,7 @@ include ('header.php');
                             }
                             echo "</select>";
                             ?>
-            </div>
+           
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser wordpress</option>
@@ -45,6 +45,7 @@ include ('header.php');
 
     <p><input type="submit" name="action" value="Créer"></p>
   </form>
+ </div>
  <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
   <label class="control-label">Select File</label>
