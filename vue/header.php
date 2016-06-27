@@ -141,7 +141,7 @@ jQuery(".window").hide();
               #echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
               echo '
 <!--Bouton de la page-->
-<li><a href="/connexion" value="Shadow box" class="shadowbox">Connexion</a></li>
+<li><input type="button" value="Connexion" class="shadowbox" /></li>
 <!--Div incluant la box et le masque-->
 <div id="boxes"/>
 <!--La box-->
