@@ -152,24 +152,25 @@ include ('header.php');
         </div>
  </div>
  <h2>Notre équipe</h2>
-  <div id="pic">
         <div class="col-md-3 col-sm-6">
             <div class="our-team">
-                <div class="pic">
                     <img src="../img/flo.jpg" alt="">
+                    <div class="social_media_team">
+                        <ul class="team_social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="team-prof">
-                    <h3 class="post-title">Florian Dugat</h3>
-                  <!--  <div class="border">Florian Dugat</div>-->
-                    <span class="post"></span>
-                    <ul class="team_social">
-                        <li><a href="#"><i class="fa fa-school"></i></a></li>
-                    </ul>
+                    <h3 class="post-title"><a href="#">Florian Dugat</a></h3>
+                    <span class="post">Membre de l'équipe</span>
                 </div>
             </div>
-        </div>
     </div>
-</div>
+
 
     <!--<div class="col-sm-3 text-center">
       <p class="text-center"><strong>Jean-Christophe Thiburce</strong></p><br>
