@@ -21,22 +21,24 @@ include ('header.php');
     <div class="col-sm-5">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
-    </div>
-    <div class="col-sm-5">
-    <label class="control-label" for="lieu">Lieu</label>
-    <input type="text" name="adresse" placeholder="Ajoutez un lieu">
-    </div>
-   <label class="control-label">Date/heure Début</label>
+    <label class="control-label">Date/heure Début</label>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
-<label class="control-label">Date/heure Fin</label>
+    </div>
+    <div class="col-sm-5">
+    <label class="control-label" for="lieu">Lieu</label>
+    <input type="text" name="adresse" placeholder="Ajoutez un lieu">
+    <label class="control-label">Date/heure Fin</label>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="fin" name="fin" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
+    </div>
+   
+
 </div>
 
     
