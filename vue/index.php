@@ -139,8 +139,8 @@ include ('header.php');
         </div>
         </div>
  <h2>Notre équipe</h2>
+       <div class="row">
         <div class="col-md-3 col-md-offset-1 text-center">
-          <div class="row">
             <div class="our-team">
                 <img src="../img/flo.jpg" alt="">
                 <div class="team-prof">
