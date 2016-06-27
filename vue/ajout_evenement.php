@@ -19,11 +19,11 @@ include ('header.php');
 <h2 class="login-header">Creation d'evenement</h2>
   <form class="form-horizontal" role="form" method="post">
     <div class="col-sm-5">
-    <label class="control-label col-sm-2" for="lieu">Nom:</label>
+    <label class="control-label" for="lieu">Nom:</label>
     <input type="text" name="nom" placeholder="Nom de l'évènement">
     </div>
     <div class="col-sm-5">
-    <label class="control-label col-sm-2" for="lieu">Lieu de l'évènement:</label>
+    <label class="control-label" for="lieu">Lieu de l'évènement:</label>
     <input type="text" name="adresse" placeholder="Lieu de l'évènement">
     </div>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
