@@ -141,7 +141,8 @@ jQuery(".window").hide();
               #echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
               echo '<title>Concevoir facilement une shadow box, jQuery</title>
 <!--Bouton de la page-->
-<input type="button" value="Shadow box" class="shadowbox" />
+<a href="/connexion">Connexion
+<input type="button" value="Shadow box" class="shadowbox" /></a>
 <!--Div incluant la box et le masque-->
 <div id="boxes"/>
 <!--La box-->
