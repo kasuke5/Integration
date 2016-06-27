@@ -47,8 +47,10 @@ include ('header.php');
            <label class="control-label">Choix d'importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
-        <option value="wordpress" selected >Utiliser wordpress</option>
+        <option value="wordpress" selected >Utiliser un template défini</option>
   </select>
+  <div id="bdd"></div>
+  <label class="control-label">Description</label>      
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
     <input type="submit" name="action" value="Créer">
   </div>
