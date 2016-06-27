@@ -42,7 +42,7 @@ include ('header.php');
               <div class='col-lg-5'>
                   <h2>".$events[$i]["event_title"]."</h2>
                   <p>Cet évènement commence le ".$events[$i]["event_date_debut"]."</p>
-                  <p>".$events[$i]["event_description"]."</p>
+                  <div class='col-lg-5'>".$events[$i]["event_description"]."</div>
                   <a class='btn' style='background-color:orange' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr'' target='_blank'>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
               </div>
           </div>
