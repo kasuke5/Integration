@@ -22,20 +22,24 @@ include ('header.php');
   <form class="form-horizontal" role="form" method="post">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
+    <br><br>
        <label class="control-label" for="lieu">Lieu</label>
     <input type="text" name="adresse" placeholder="Ajoutez un lieu">
+    <br><br>
     <label class="control-label">Date/heure Début</label>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
+    <br><br>
     <label class="control-label">Date/heure Fin</label>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="fin" name="fin" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
+    <br><br>
   <!--  <div class="col-md-6">-->
     <label class="control-label">Catégorie</label>
     <select name="categorie">
@@ -51,6 +55,7 @@ include ('header.php');
         <option value="wordpress" selected >Utiliser un template défini</option>
   </select>
   <div id="bdd"></div>
+  <br><br>
   <label class="control-label">Description</label>      
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
     <input type="submit" name="action" value="Créer">
