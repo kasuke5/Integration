@@ -34,7 +34,7 @@ body {
   .carousel-inner img {
       -webkit-filter: grayscale(90%);
       filter: grayscale(90%); /* make all photos black and white */ 
-      width: 100%; /* Set width to 100% */
+      min-width: 100%; /* Set width to 100% */
       max-height: auto;
       margin: auto;
       box-sizing: border-box;
