@@ -21,22 +21,20 @@ include ('header.php');
   <form class="form-horizontal" role="form" method="post">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
+       <label class="control-label" for="lieu">Lieu</label>
+    <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     <label class="control-label">Date/heure Début</label>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
-       <label class="control-label" for="lieu">Lieu</label>
-    <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     <label class="control-label">Date/heure Fin</label>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="fin" name="fin" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
-   
-
   <!--  <div class="col-md-6">-->
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
@@ -127,6 +125,15 @@ include ('header.php');
 <?php
 include 'footer.php';
 ?>
+<script type="text/javascript">
+    $(".form_datetime").datepicker({
+        format: "dd MM yyyy - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        startDate: "2013-02-14 10:00",
+        minuteStep: 10
+    });
+</script>  
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
