@@ -15,7 +15,7 @@ include ('header.php');
     webshims.setOptions('forms-ext', {types: 'date'});
     webshims.polyfill('forms forms-ext');
 </script>
-<div class="elogin">
+<div class="login">
 <h2 class="login-header">Creation d'évènement</h2>
   <form class="form-horizontal" role="form" method="post">
     <div class="col-sm-5">
