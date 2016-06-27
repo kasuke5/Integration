@@ -147,11 +147,24 @@ include ('header.php');
                     <h3>Florian Dugat</h3>
                     <span>Membre de l'équipe</span>
                 </div>
-                <ul class="social-links">
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                </ul>
+            </div>
+          </div>
+          <div class="col-md-3 text-center">
+            <div class="our-team">
+                <img src="../img/JC.jpg" alt="">
+                <div class="team-prof">
+                    <h3>Jean-Christophe Thiburce</h3>
+                    <span>Chef de projet</span>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3 text-center">
+            <div class="our-team">
+                <img src="../img/gui.jpg" alt="">
+                <div class="team-prof">
+                    <h3>Guillaume Jauffret</h3>
+                    <span>Membre de l'équipe</span>
+                </div>
             </div>
           </div>
     </div>
