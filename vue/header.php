@@ -139,7 +139,7 @@ jQuery(".window").hide();
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
               #echo'<li><a href="vue/modal.php">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
-              echo'<li><a class="page-scroll" href="#modal-2" data-toggle="modal">connexion</a></li>';
+              echo'<li><a href="#modal-2" data-toggle="modal">connexion</a></li>';
             }
             ?>
               <!-- Bouton execution modal -->
