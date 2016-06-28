@@ -47,20 +47,19 @@ if (isset($info)) {
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-			<?php
+		<?php
           for($j=0;$j<count($users);$j++){;
-              echo"<td>".$users[$j]["event_title"]."</td>
+			echo"<tr>
+			
+              <td>".$users[$j]["event_title"]."</td>
                   <td>".$users[$j]["event_mail"]."</td>
                   <td>".$users[$j]["user_login"]."</td>
                   <td><form method='post'>
                   	<button class='btn-danger' name='event_id' value='".$users[$j]["event_id"]."'><i class='fa fa-trash'></i></button>
                   	</form></td>
-                  "
-                  ;
-          }
+			</tr>";
+			  }
             ?>
-			</tr>
 		</tbody>
 	</table>
 
