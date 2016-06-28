@@ -151,8 +151,6 @@ jQuery(".window").hide();
                     </div>
                     <div class="modal-body">
                       <form class="form-horizontal" role="form" method="post">
-                      <div class="row">
-                                                <div class="col-md-6">
                             <input type="text" name="login" id="login" placeholder="Pseudo">
                             <br />
                             <input type="password" name="pass" id="pass" placeholder="Mot de passe">
