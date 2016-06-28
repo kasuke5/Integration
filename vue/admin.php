@@ -5,9 +5,9 @@ if (isset($info)) {
 }
 ?>
 
-<h3>Gestion des utilisateurs</h3>
+<h3 style="margin-top:80px">Gestion des utilisateurs</h3>
 
-	<table class="table table-striped" style="margin-top:80px">
+	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Nom utilisateur</th>
