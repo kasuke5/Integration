@@ -139,7 +139,9 @@ jQuery(".window").hide();
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
               #echo'<li><a href="vue/modal.php">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
-              echo'<div class="modal fade" tabindex="-1" role="dialog">
+              echo'
+              <li><a href="#modal-2" data-toggle="modal">connexion</a></li>
+              <div class="modal fade" id="#modal-2" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
