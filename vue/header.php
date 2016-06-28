@@ -140,7 +140,7 @@ jQuery(".window").hide();
             }else{
               #echo'<li><a href="vue/modal.php">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
               echo'
-              <li><a data-toggle="modal" href="/connexion" data-target="#myModal">Connexion</a></li>
+              <li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
