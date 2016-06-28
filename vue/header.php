@@ -144,17 +144,17 @@ jQuery(".window").hide();
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      <div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Connexion</h2>
+
+  <form class="form-horizontal" role="form" method="post">
+    <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
+    <p><input type="password" name="pass" id="pass" placeholder="Mot de passe"></p>
+    <p><input type="submit" name="action" value="Connexion"></p>
+  </form>
+</div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->';
