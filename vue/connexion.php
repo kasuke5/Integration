@@ -1,6 +1,4 @@
-<?php
-include('header.php');
-?>
+
   <body>
 
 <div class="login">
@@ -14,9 +12,6 @@ include('header.php');
     <p><input type="submit" name="action" value="Connexion"></p>
   </form>
 </div>
-<?php
-include 'footer.php';
-?>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   </body>
 
