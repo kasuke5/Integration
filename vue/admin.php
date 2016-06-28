@@ -7,7 +7,7 @@ if (isset($info)) {
 
 <h3>Gestion des utilisateurs</h3>
 
-	<table class="table table-striped">
+	<table class="table table-striped" style="margin-top:80px">
 		<thead>
 			<tr>
 				<th>Nom utilisateur</th>
