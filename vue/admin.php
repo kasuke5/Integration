@@ -24,10 +24,10 @@ if (isset($info)) {
               echo"<td>".$users[$i]["user_login"]."</td>
                   <td>".$users[$i]["user_chat"]."</td>
                   <td>".$users[$i]["event_title"]."</td>
-                  <td>".$users[$i]["event_mail"]."</td>"
-                  "<form role='post' action=''>
-                  	<button class='btn-danger' name='".$users[$i]["user_id"]."'><i class='fa fa-trash'></i></button>
-                  	</form>
+                  <td>".$users[$i]["event_mail"]."</td>
+                  <td><form method='post'>
+                  	<button class='btn-danger' name='id' value='".$users[$i]["user_id"]."'><i class='fa fa-trash'></i></button>
+                  	</form></td>
                   "
                   ;
           }
@@ -47,10 +47,18 @@ if (isset($info)) {
 		</thead>
 		<tbody>
 			<tr>
-				<td>Digidix</td>
-				<td>digidix.eventizi.itinet.fr</td>
-				<td>Kebab</td>
-				<td><button class="btn-danger"><i class="fa fa-trash"></i></button></td>
+			<?php
+          for($j=0;$j<count($users);$j++){;
+              echo"<td>".$users[$j]["event_title"]."</td>
+                  <td>".$users[$j]["event_mail"]."</td>
+                  <td>".$users[$j]["user_login"]."</td>
+                  <td><form method='post'>
+                  	<button class='btn-danger' name='event_id' value='".$users[$j]["event_id"]."'><i class='fa fa-trash'></i></button>
+                  	</form></td>
+                  "
+                  ;
+          }
+            ?>
 			</tr>
 		</tbody>
 	</table>

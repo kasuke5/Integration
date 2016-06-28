@@ -16,3 +16,20 @@ function get_users(){
 	}
 	return $renvoyer;
 }
+
+function delete_user($id){
+	global $bdd;
+	$req = $bdd->prepare('DELETE FROM t_user WHERE user_id = ?');
+	$req->execute(array($id)) or die ( print_r($req->errorInfo()) );
+	$donnees = $req->fetch();
+	return $donnees;
+}
+
+function delete_event($id){
+	global $bdd;
+	$req = $bdd->prepare('DELETE FROM t_event WHERE event_id = ?');
+	$req->execute(array($id)) or die ( print_r($req->errorInfo()) );
+	$donnees = $req->fetch();
+	return $donnees;
+}
+
