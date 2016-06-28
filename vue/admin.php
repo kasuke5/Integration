@@ -18,21 +18,22 @@ if (isset($info)) {
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-			<?php
+					<?php
           for($i=0;$i<count($users);$i++){;
-              echo"<td>".$users[$i]["user_login"]."</td>
+			echo "<tr>
+
+             <td>".$users[$i]["user_login"]."</td>
                   <td>".$users[$i]["user_chat"]."</td>
                   <td>".$users[$i]["event_title"]."</td>
                   <td>".$users[$i]["event_mail"]."</td>
                   <td><form method='post'>
                   	<button class='btn-danger' name='id' value='".$users[$i]["user_id"]."'><i class='fa fa-trash'></i></button>
                   	</form></td>
-                  "
-                  ;
-          }
+                  
+          
+            </tr>";
+            }
             ?>
-            </tr>
 		</tbody>
 	</table>
 	<h3>Gestion des sites</h3>
