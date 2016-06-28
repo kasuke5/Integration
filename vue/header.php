@@ -138,8 +138,8 @@ jQuery(".window").hide();
             if(isset($_SESSION["id_user"])){
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
-              #echo'<li><a href="vue/modal.php">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
-              echo'
+              echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
+             /* echo'
               <li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
@@ -164,7 +164,7 @@ jQuery(".window").hide();
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->';
+</div><!-- /.modal -->';*/
             }
             ?>
               <!-- Bouton execution modal -->
