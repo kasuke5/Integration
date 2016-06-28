@@ -138,32 +138,8 @@ jQuery(".window").hide();
             if(isset($_SESSION["id_user"])){
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
-              #echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
-              echo '
-<!--Bouton de la page-->
-<li><input type="button" value="Connexion" class="shadowbox" /></li>
-<!--Div incluant la box et le masque-->
-<div id="boxes"/>
-<!--La box-->
-<div id="dialog" class="window"/>
-
- 
-  <div class="login-triangle"></div>
-  
-  <h2 class="login-header">Connexion</h2>
-
-  <form class="form-horizontal" role="form" method="post">
-    <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
-    <p><input type="password" name="pass" id="pass" placeholder="Mot de passe"></p>
-    <p><input type="submit" name="action" value="Connexion"></p>
-  </form>
-</div>
-<input type="button" class="close" value="Quitter" />
-  </div>
-<!--Le masque-->
-<div id="page">
-</div>
-';
+              echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
+              
             }
             ?>
               <!-- Bouton execution modal -->
