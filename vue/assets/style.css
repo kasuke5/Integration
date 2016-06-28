@@ -1,7 +1,7 @@
 body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../images/bg.jpg) right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;}
 
 figcaption { box-sizing: border-box; }
-a{color:#00a9c6; text-decoration:none;}
+a{color:orange; text-decoration:none;}
 a:hover{color:#666;}
 .btn,a,.btn:hover,a:hover {
 -webkit-transition: all 0.3s ease-in-out;
@@ -10,6 +10,12 @@ a:hover{color:#666;}
 -o-transition: all 0.3s ease-in-out;
 transition: all 0.3s ease-in-out;
 outline: none !important;
+}
+
+.tabcontainer {
+  width: 1200px;
+  margin: 200px auto;
+  font-size: 16px;
 }
 
 h1,h2,h3,h4{margin: 0;line-height: 1em;}

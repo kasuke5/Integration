@@ -17,9 +17,12 @@ if(!isset($_SESSION["id_user"])){
 					include_once("controleur/tableau_bord.php");
 				}
 	}else{
+				
 		include_once("vue/connexion.php");
-	}
+		
+			}
 
 }else
 	include_once("controleur/tableau_bord.php");
 	
+?>

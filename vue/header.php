@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="vue/css/style.css">
   <link rel="stylesheet" href="vue/css/bootstrap.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-  
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script>(function($) {
     if (!$.curCSS) {
@@ -60,7 +60,52 @@ border-bottom-right-radius: 5pt 5pt;
 .autocomplete-selected { background: #D4E3FB; }
 .autocomplete-suggestions strong { font-weight: bold; color: black; }
 </style>
-
+<style>
+/*Style general de la page
+body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight:bold;}
+/*Styles relatifs à la shadow box*/
+/*Style du masque recouvrant la page au chargement de la shadow box*/
+#page {position:absolute;left:0;top:0;z-index:9000;background-color:#000;display:none;}
+/*Positionnement et dimensions de la shadow box*/
+#boxes .window {position:absolute;left:0;top:0;width:440px;height:200px;display:none;z-index:9999;padding:20px;}
+#boxes #dialog {width:400px;height:400px;padding:10px;color:#00008B;border:3px solid #fff;background-color:#C0C0C0;}
+/*Style du bouton*/
+.shadowbox{position:absolute;left:50%;top:50%;width:100px;}
+</style>
+<script type="text/javascript">
+//Utilisé pour éviter le conflit avec d’autres plugins qui seraient liés
+//à la page
+jQuery.noConflict();
+ 
+jQuery(document).ready(function() {
+//Evénement lié au clic du bouton de la page
+jQuery(".shadowbox").click(function() {
+//Récupération des dimensions de la page
+var xHeight = jQuery(document).height();
+var xWidth = jQuery(window).width();
+//Dimensionnement du masque recouvrant la page
+jQuery("#page").css({"width":xWidth,"height":xHeight});
+//Apparition du masque
+jQuery("#page").fadeIn();
+//Attribution à celui-ci d’une transparence de
+//façon à laisser la page légèrement visible 
+jQuery("#page").fadeTo("fast",0.6); 
+var xH = jQuery(window).height();
+var xW = jQuery(window).width();
+//Centrage de la shadow box
+jQuery("#dialog").css("top", xH/2-jQuery("#dialog").height()/2);
+jQuery("#dialog").css("left", xW/2-jQuery("#dialog").width()/2);
+//Apparition de la shadow box
+jQuery("#dialog").fadeIn(); 
+ 
+});
+//Fermeture de la shadow box via le bouton qu’elle contient
+jQuery(".window .close").click(function () {
+jQuery("#page").hide();
+jQuery(".window").hide(); 
+}); 
+}); 
+</script>
 </head>
 <body>
 <div class="topbar animated fadeInLeftBig"></div>
@@ -93,9 +138,38 @@ border-bottom-right-radius: 5pt 5pt;
             if(isset($_SESSION["id_user"])){
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
-              echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li>';
+              echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
+             /* echo'
+              <li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
+              <div class="modal" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="login">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <div class="login-triangle"></div>
+                      <h2 class="login-header">Connexion</h2>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal" role="form" method="post">
+                            <input type="text" name="login" id="login" placeholder="Pseudo">
+                            <br />
+                            <input type="password" name="pass" id="pass" placeholder="Mot de passe">
+                            <br />
+                                                </div>
+                                            </div>
+                                                <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-primary">Fermer</button>
+                                                    <input type="submit" name="action" value="Connexion">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->';*/
             }
             ?>
+              <!-- Bouton execution modal -->
+
+
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -106,7 +180,7 @@ border-bottom-right-radius: 5pt 5pt;
       </div>
     </div>
 <!-- #Header Starts -->
-
+</body>
 
 
        
