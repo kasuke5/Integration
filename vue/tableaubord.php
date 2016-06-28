@@ -1,7 +1,7 @@
 <?php 
 include ('header.php');
 ?>
-<div class="row">
+<div class="row center">
 <h3 style="margin-top:150px">Mes évenements</h3>
 <table class="table table-striped">
     <thead>
