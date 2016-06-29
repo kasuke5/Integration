@@ -156,11 +156,7 @@ include 'footer.php';
         startDate: "2013-02-14 10:00",
         minuteStep: 10
     });
-</script>     
-<?php
-include 'footer.php';
-?>
-   
+</script>        
 
 <script>
   $('#c').change(function(){
