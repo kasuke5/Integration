@@ -143,12 +143,11 @@ include ('header.php');
     </div>
   </div>
 </form>-->
-<<<<<<< HEAD
+
 
 <?php
 include 'footer.php';
 ?>
-=======
 <script type="text/javascript">
     $(".form_datetime").datetimepicker({
         format: "dd MM yyyy - hh:ii",
@@ -162,7 +161,7 @@ include 'footer.php';
 include 'footer.php';
 ?>
    
->>>>>>> 84c38e7af357a1d8bfea07628669099cc7af36f0
+
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
