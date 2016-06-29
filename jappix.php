@@ -1,11 +1,14 @@
-
- 
+ <?php
+ include_once("modele/co_in.php");
+include_once("modele/events.php");
+include_once("modele/connexion_bdd.php");
+?>
 <?php
     if(isset($_SESSION["id_user"])) 
       {
-      	include_once("modele/events.php");
+      	
         $nom = $_SESSION["login"];
-        $passwd = $_SESSION["passwordpass"];
+        $passwd = $_SESSION["password"];
 ?>
           <script type="text/javascript">
           jQuery.ajaxSetup({cache: true});
