@@ -51,14 +51,9 @@ include ('header.php');
           }
             ?>
           </div>
-
-
-
-
-
         
 
-        <!-- Pagination 
+        <!-- Pagination -->
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -86,8 +81,8 @@ include ('header.php');
                 </ul>
             </div>
         </div>
-        -->
-        <!-- /.row -->
+        
+        /.row 
 
         <hr>
 
