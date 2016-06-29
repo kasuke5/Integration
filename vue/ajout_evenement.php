@@ -56,7 +56,7 @@ include ('header.php');
                             <div class="col-lg-6">
 
                <label class="control-label" for="lieu">Tags</label>
-               <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags">
+               <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
                 <br><br>
                <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
          <div id="tags">
