@@ -73,10 +73,10 @@ include ('header.php');
   <div id="bdd"></div>
   
      <br><br>
-   
+   </div>
   <label class="control-label">Description</label>      
    <textarea name="description" id="description" rows="4" cols="40"></textarea>
-    </div>
+    
     <input type="submit" name="action" value="Créer">
     
   </form>
