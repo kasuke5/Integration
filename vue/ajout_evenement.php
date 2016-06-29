@@ -74,8 +74,8 @@ include ('header.php');
   
      <br><br>
    </div>
-  <label class="control-label">Description</label>      
-   <textarea name="description" id="description" rows="4" cols="40"></textarea>
+  <label class="control-label">Description     
+   <textarea name="description" id="description" rows="4" cols="40"></textarea></label> 
     
     <input type="submit" name="action" value="Créer">
     
