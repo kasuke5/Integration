@@ -146,7 +146,7 @@ include 'footer.php';
         startDate: "2013-02-14 10:00",
         minuteStep: 10
     });
-</script>  
+</script>        
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
