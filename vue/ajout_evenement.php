@@ -20,15 +20,15 @@ include ('header.php');
 <div class="login-triangle"></div>
 <h2 class="login-header">Creation d'évènement</h2>
   <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
-  <label class="control-label">Photo de l'évènement</label>
-  <input  type="file" name="photo">
-  <br><br>
+    <div class="col-lg-4">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
     <br><br>
        <label class="control-label" for="lieu">Lieu</label>
     <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     <br><br>
+    </div>
+    <div class="col-lg-4">
     <label class="control-label">Date/heure Début</label>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
@@ -41,6 +41,7 @@ include ('header.php');
     <input size="16" type="text" id="fin" name="fin" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
+    </div>
     </div>
     <br><br>
   <div class="col-lg-4">
@@ -62,7 +63,8 @@ include ('header.php');
          <div id="tags">
         </div>
  </div> 
-
+<label class="control-label">Photo de l'évènement</label>
+  <input  type="file" name="photo">
            <label class="control-label">Choix d'importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
