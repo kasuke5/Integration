@@ -5,7 +5,7 @@ include ('header.php');
 <link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
 <link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" /> 
 <link href="vue/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen"> 
-
+<script type="text/javascript" src="vue/js/locales/bootstrap-datetimepicker.de.js" charset="UTF-8"></script>
 <script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-ui.min.js"></script>
@@ -138,14 +138,14 @@ include ('header.php');
 <?php
 include 'footer.php';
 ?>
-<!--<script type="text/javascript">
-    $(".form_datetime").datepicker({
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
         format: "dd MM yyyy - hh:ii",
         autoclose: true,
         todayBtn: true,
         startDate: "2013-02-14 10:00",
         minuteStep: 10
-    });-->
+    });
 </script>  
 <script>
   $('#c').change(function(){
