@@ -393,7 +393,6 @@ body {
 .event input {
   box-sizing: border-box;
   display: block;
-  width: 100%;
   border-width: 1px;
   border-style: solid;
   padding: 16px;

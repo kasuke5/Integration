@@ -43,7 +43,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     <br><br>
-  <!--  <div class="col-md-6">-->
+  <div class="col-md-6">
     <label class="control-label">Catégorie</label>
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
