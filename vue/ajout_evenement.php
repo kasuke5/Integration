@@ -64,7 +64,7 @@ include ('header.php');
         </div>
  </div> 
  <div class="col-lg-4">
-           <label class="control-label">Choix d'importation du site</label>
+   <label class="control-label">Choix d'importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser un template défini</option>
@@ -77,8 +77,9 @@ include ('header.php');
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
     <input type="submit" name="action" value="Créer">
   </form>
+ </div>
   </div>
-  </div>
+
 
 
 <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
