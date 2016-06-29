@@ -2,7 +2,6 @@
 include ('header.php');
 ?>
 <div id="formulaire">
-
 <h2 style="margin-top:80px">Recherche</h2>
    <form class="form-horizontal" role="form" method="post">
    
