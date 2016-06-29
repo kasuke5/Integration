@@ -68,7 +68,7 @@ function get_events_by_user($id){
 	$donnees = 0;
 	$i=0;
 	$renvoyer = [];
-	$req = $bdd->prepare('SELECT * FROM t_event e JOIN users_has_events ue ON e.event_id = ue.Events_idEvents AND ue.Users_idUsers = ?');
+	$req = $bdd->prepare('SELECT * FROM t_event e JOIN Users_has_Events ue ON e.event_id = ue.Events_idEvents AND ue.Users_idUsers = ?');
 	$req->execute(array($id)) or die ( print_r($req->errorInfo()) );
 	while($donnees = $req->fetch()){
 			$renvoyer[$i] = $donnees;
