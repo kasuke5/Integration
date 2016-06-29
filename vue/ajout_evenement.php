@@ -51,14 +51,17 @@ include ('header.php');
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
                             }
                             ?>
-    </select>
+      </select>
                             <br><br>
+                            </div>
+                            <div class="col-lg-4">
+
                <label class="control-label" for="lieu">Tags</label>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
                <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
          <div id="tags">
         </div>
-   </div>
+ </div> 
  <div class="col-lg-4">
    <label class="control-label">Importation du site</label>
             <select id='c' name="choix">
@@ -69,10 +72,11 @@ include ('header.php');
   <input  type="file" name="photo">
   <div id="bdd"></div>
    </div>
+   <div class="col-lg-4">
   <label class="control-label">Description</label>      
    <textarea name="description" id="description" rows="4" cols="40"></textarea>
     <input type="submit" name="action" value="Créer">
-
+</div>
   </form>
 
   </div>
