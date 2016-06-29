@@ -9,8 +9,7 @@ include_once("modele/connexion_bdd.php");
       	
         $nom = $_SESSION["login_user"];
         $passwd = $_SESSION["password"];
-        var_dump($nom);
-        var_dump($passwd);
+       
 ?>
           <script type="text/javascript">
           jQuery.ajaxSetup({cache: true});
