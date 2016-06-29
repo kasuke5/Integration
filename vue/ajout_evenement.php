@@ -52,6 +52,15 @@ include ('header.php');
                             echo "</select>";
                             ?>
                             <br><br>
+
+               <label class="control-label" for="lieu">Tags</label>
+               <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags">
+                <br><br>
+               <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
+         <div id="tags">
+        </div>
+
+
            <label class="control-label">Choix d'importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
@@ -138,15 +147,6 @@ include ('header.php');
 <?php
 include 'footer.php';
 ?>
-<!--<script type="text/javascript">
-    $(".form_datetime").datepicker({
-        format: "dd MM yyyy - hh:ii",
-        autoclose: true,
-        todayBtn: true,
-        startDate: "2013-02-14 10:00",
-        minuteStep: 10
-    });-->
-</script>  
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){
@@ -155,4 +155,25 @@ include 'footer.php';
 	$('#bdd').html("");
 	}
       });
+
+  var i;
+
+$(document).on("click", "#addtags",  function(e){
+  e.preventDefault();
+  i++;
+  var html = $("#tags").html();
+  $("#tags").html(html+"     <button class='btn btn-default tags' value='"+i+"'>"+$('#newtag').val()+"</button> <input type='hidden' name='tags[]' id='tag"+i+"' value='"+$("#newtag").val()+"'>");
+
+
+  }); 
+
+$(document).on("click", ".tags",  function(e){
+  e.preventDefault();
+  var val = $(this).val();
+  $(this).remove();
+  $("#tag"+val).remove();
+});
+
+
+
 </script>
