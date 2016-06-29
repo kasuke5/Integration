@@ -60,23 +60,25 @@ include ('header.php');
          <div id="tags">
         </div>
  </div> 
- <div class="col-xs-4 col-sm-3">
+   <br><br>
+ <div class="col-xs-4 col-sm-6">
    <label class="control-label">Importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser un template défini</option>
   </select>
+    <br><br>
   <label class="control-label">Photo de l'évènement</label>
   <input  type="file" name="photo">
   <div id="bdd"></div>
-   </div>
-   <div class="col-xs-4 col-sm-3">
+  
+     <br><br>
+   
   <label class="control-label">Description</label>      
    <textarea name="description" id="description" rows="4" cols="40"></textarea>
     <input type="submit" name="action" value="Créer">
     </div>
   </form>
-
   </div>
 
 
