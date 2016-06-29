@@ -5,48 +5,35 @@ if (isset($info)) {
 }
 ?>
 
-<div class="container">
-<h3>Gestion des services réseaux</h3>
-<form method="post">
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Service</th>
-				<th>Action</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Postfix</td>
-				<td><button name="postfix">Relancer</button></td>
-			</tr>
-			<tr>
-				<td>Nginx</td>
-				<td><button name="nginx">Relancer</button></td>
-			</tr>
-			<tr>
-				<td>Mysql</td>
-				<td><button name="mysql">Relancer</button></td>
-			</tr>
-		</tbody>
-	</table>
-<h3>Gestion des utilisateurs</h3>
+<h3 style="margin-top:80px">Gestion des utilisateurs</h3>
+
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Nom utilisateur</th>
 				<th>Compte chat</th>
+				<th>Evenement</th>
 				<th>Mail lié aux evenements</th>
 				<th>Supp.</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Kebab78</td>
-				<td>kebab.jappix</td>
-				<td>eventKebab@eventizi.itinet.fr</td>
-				<td><button class="btn-danger"><i class="fa fa-trash"></i></button></td>
-			</tr>
+					<?php
+          for($i=0;$i<count($users);$i++){;
+			echo "<tr>
+
+             <td>".$users[$i]["user_login"]."</td>
+                  <td>".$users[$i]["user_chat"]."</td>
+                  <td>".$users[$i]["event_title"]."</td>
+                  <td>".$users[$i]["event_mail"]."</td>
+                  <td><form method='post'>
+                  	<button class='btn-danger' name='id' value='".$users[$i]["user_id"]."'><i class='fa fa-trash'></i></button>
+                  	</form></td>
+                  
+          
+            </tr>";
+            }
+            ?>
 		</tbody>
 	</table>
 	<h3>Gestion des sites</h3>
@@ -60,16 +47,22 @@ if (isset($info)) {
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Digidix</td>
-				<td>digidix.eventizi.itinet.fr</td>
-				<td>Kebab</td>
-				<td><button class="btn-danger"><i class="fa fa-trash"></i></button></td>
-			</tr>
+		<?php
+          for($j=0;$j<count($users);$j++){;
+			echo"<tr>
+			
+              <td>".$users[$j]["event_title"]."</td>
+                  <td>".$users[$j]["event_mail"]."</td>
+                  <td>".$users[$j]["user_login"]."</td>
+                  <td><form method='post'>
+                  	<button class='btn-danger' name='event_id' value='".$users[$j]["event_id"]."'><i class='fa fa-trash'></i></button>
+                  	</form></td>
+			</tr>";
+			  }
+            ?>
 		</tbody>
 	</table>
-</form>
-</div>
+
 
 <?php
 include ('footer.php');
