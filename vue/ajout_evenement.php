@@ -52,8 +52,7 @@ include ('header.php');
                             echo "</select>";
                             ?>
                             <br><br>
-</div>  
-<div class="col-lg-6">
+                            <div class="col-lg-6">
 
                <label class="control-label" for="lieu">Tags</label>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags">
@@ -74,8 +73,9 @@ include ('header.php');
   <label class="control-label">Description</label>      
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
     <input type="submit" name="action" value="Créer">
-  </div>
   </form>
+</div>  
+ </div> 
 <!-- </div>--> 
 <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
@@ -146,7 +146,7 @@ include ('header.php');
     </div>
   </div>
 </form>-->
-</div>
+
 
 <?php
 include 'footer.php';
