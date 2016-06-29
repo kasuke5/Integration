@@ -52,6 +52,7 @@ include ('header.php');
                             echo "</select>";
                             ?>
                             <br><br>
+                            </div>
                             <div class="col-lg-6">
 
                <label class="control-label" for="lieu">Tags</label>
@@ -67,14 +68,14 @@ include ('header.php');
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser un template défini</option>
   </select>
-  </div>
+  
   <div id="bdd"></div>
   <br><br>
   <label class="control-label">Description</label>      
    <textarea name="description" id="description" rows="4" cols="50"></textarea>
     <input type="submit" name="action" value="Créer">
   </form>
-</div>  
+  </div>
 
 <!-- </div>--> 
 <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
