@@ -64,7 +64,7 @@ include ('header.php');
         </div>
  </div> 
  <div class="col-lg-4">
-   <label class="control-label">Choix d'importation du site</label>
+   <label class="control-label">Importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser un template défini</option>
@@ -72,7 +72,6 @@ include ('header.php');
   <label class="control-label">Photo de l'évènement</label>
   <input  type="file" name="photo">
   <div id="bdd"></div>
-  <br><br>
    </div>
    <div class="col-lg-4">
   <label class="control-label">Description</label>      
