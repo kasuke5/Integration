@@ -2,7 +2,7 @@
      
      include_once("modele/events.php");
         $nom = $_SESSION['login'];
-        $passwd = $_SESSION['pass'];
+        $passwd = $_SESSION['passwordpass'];
        # $salon = get_event_by_name($events)."@muc.eventizi.itinet.fr";
  ?>
  
