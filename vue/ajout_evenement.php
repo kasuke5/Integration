@@ -50,15 +50,14 @@ include ('header.php');
                     <?php for($i=0;$i<count($categories);$i++){
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
                             }
-                            echo "</select>";
                             ?>
+    </select>
                             <br><br>
                             </div>
                             <div class="col-lg-4">
 
                <label class="control-label" for="lieu">Tags</label>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
-                <br><br>
                <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
          <div id="tags">
         </div>
@@ -79,8 +78,8 @@ include ('header.php');
     <input type="submit" name="action" value="Créer">
 </div>
   </form>
-</div>
-  
+
+  </div>
 
 
 
