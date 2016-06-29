@@ -44,7 +44,7 @@ include ('header.php');
     </div>
     </div>
     <br><br>
-  <div class="col-xs-4 col-sm-3">
+  <div class="col-xs-4 col-sm-4">
     <label class="control-label">Catégorie</label>
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
@@ -53,8 +53,6 @@ include ('header.php');
                             ?>
       </select>
                             <br><br>
-                            </div>
-                            <div class="col-xs-4 col-sm-3">
 
                <label class="control-label" for="lieu">Tags</label>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
