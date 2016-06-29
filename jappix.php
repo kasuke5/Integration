@@ -7,7 +7,7 @@ include_once("modele/connexion_bdd.php");
     if(isset($_SESSION["id_user"])) 
       {
       	
-        $nom = $_SESSION["login"];
+        $nom = $_SESSION["login_user"];
         $passwd = $_SESSION["password"];
         var_dump($nom);
         var_dump($passwd);
