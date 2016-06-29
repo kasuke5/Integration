@@ -43,7 +43,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     <br><br>
-  <div class="col-lg-8">
+  <div class="col-lg-4">
     <label class="control-label">Catégorie</label>
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
@@ -53,7 +53,7 @@ include ('header.php');
                             ?>
                             <br><br>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
 
                <label class="control-label" for="lieu">Tags</label>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
