@@ -20,7 +20,7 @@ include ('header.php');
 <div class="login-triangle"></div>
 <h2 class="login-header">Creation d'évènement</h2>
   <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
-    <div class="col-sm-5">
+    <div class="col-xs-5">
     <label class="control-label" for="lieu">Nom</label>
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules">
     <br><br>
@@ -28,7 +28,7 @@ include ('header.php');
     <input type="text" name="adresse" placeholder="Ajoutez un lieu">
     <br><br>
     </div>
-    <div class="col-sm-5">
+    <div class="col-xs-5">
     <label class="control-label">Date/heure Début</label>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
@@ -44,7 +44,7 @@ include ('header.php');
     </div>
     </div>
     <br><br>
-  <div class="col-sm-5">
+  <div class="col-xs-5">
     <label class="control-label">Catégorie</label>
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
@@ -53,6 +53,8 @@ include ('header.php');
                             ?>
       </select>
                             <br><br>
+                            </div>
+                            <div class="col-xs-5">
 
                <label class="control-label" for="lieu">Tags</label>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
@@ -60,7 +62,7 @@ include ('header.php');
          <div id="tags">
         </div>
  </div> 
- <div class="col-sm-5">
+ <div class="col-xs-5">
    <label class="control-label">Importation du site</label>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
