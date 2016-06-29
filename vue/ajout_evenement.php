@@ -43,7 +43,7 @@ include ('header.php');
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     <br><br>
-  <div class="col-lg-15">
+  <div class="col-lg-8">
     <label class="control-label">Catégorie</label>
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
@@ -60,7 +60,7 @@ include ('header.php');
                <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
          <div id="tags">
         </div>
-
+ </div> 
 
            <label class="control-label">Choix d'importation du site</label>
             <select id='c' name="choix">
@@ -75,7 +75,7 @@ include ('header.php');
     <input type="submit" name="action" value="Créer">
   </form>
 </div>  
- </div> 
+
 <!-- </div>--> 
 <!--<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
