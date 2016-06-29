@@ -5,16 +5,16 @@ include ('header.php');
 <link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
 <link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" /> 
 <link href="vue/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen"> 
-
+<script type="text/javascript" src="vue/js/locales/bootstrap-datetimepicker.de.js" charset="UTF-8"></script>
 <script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="vue/js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="vue/js/fileinput.js"></script>
 <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
-<script>
+<!--<script>
     webshims.setOptions('forms-ext', {types: 'date'});
-    webshims.polyfill('forms forms-ext');
+    webshims.polyfill('forms forms-ext');-->
 </script>
 <div class="event">
 <div class="login-triangle"></div>
@@ -143,10 +143,26 @@ include ('header.php');
     </div>
   </div>
 </form>-->
+<<<<<<< HEAD
 
 <?php
 include 'footer.php';
 ?>
+=======
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        startDate: "2013-02-14 10:00",
+        minuteStep: 10
+    });
+</script>     
+<?php
+include 'footer.php';
+?>
+   
+>>>>>>> 84c38e7af357a1d8bfea07628669099cc7af36f0
 <script>
   $('#c').change(function(){
       if($('#c').val() == "importer"){

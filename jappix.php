@@ -1,14 +1,15 @@
-<?php 
-     
-     include_once("modele/events.php");
-        $nom = $_POST['login'];
-        $passwd = $_POST['pass'];
-       # $salon = get_event_by_name($events)."@muc.eventizi.itinet.fr";
- ?>
- 
+ <?php
+ include_once("modele/co_in.php");
+include_once("modele/events.php");
+include_once("modele/connexion_bdd.php");
+?>
 <?php
     if(isset($_SESSION["id_user"])) 
       {
+      	
+        $nom = $_SESSION["login_user"];
+        $passwd = $_SESSION["password"];
+       
 ?>
           <script type="text/javascript">
           jQuery.ajaxSetup({cache: true});
@@ -51,11 +52,6 @@
       }else 
       {  
 ?>       
-        <!-- <script type="text/javascript" >
-        jQuery.getScript('http://chat.eventizi.itinet.fr/server/get.php?l=fr&t=js&g=mini.xml', function() {
-        JappixMini.disconnect();
-        });
-        </script>/-->      
         <script src="vue/js/japix.js"></script>
 <?php        
       }

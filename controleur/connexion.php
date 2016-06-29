@@ -14,6 +14,7 @@ if(!isset($_SESSION["id_user"])){
 				}else{
 					$_SESSION["id_user"] = $id_user;
 					$_SESSION["login_user"] = $_POST["login"];
+					$_SESSION["password"] = $_POST["pass"];
 					include_once("controleur/tableau_bord.php");
 				}
 	}else{

@@ -2,7 +2,6 @@
 include ('header.php');
 ?>
 <div id="formulaire">
-
 <h2 style="margin-top:80px">Recherche</h2>
    <form class="form-horizontal" role="form" method="post">
    
@@ -52,14 +51,9 @@ include ('header.php');
           }
             ?>
           </div>
-
-
-
-
-
         
 
-        <!-- Pagination 
+        <!-- Pagination -->
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -87,8 +81,8 @@ include ('header.php');
                 </ul>
             </div>
         </div>
-        -->
-        <!-- /.row -->
+        
+        /.row 
 
         <hr>
 
@@ -98,7 +92,7 @@ include ('header.php');
 <script>
 $(document).ready(function(){
   // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
+ // $('[data-toggle="tooltip"]').tooltip(); 
   
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
