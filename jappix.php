@@ -1,8 +1,8 @@
 <?php 
      
      include_once("modele/events.php");
-        $nom = $_POST['login'];
-        $passwd = $_POST['pass'];
+        $nom = $_SESSION['login'];
+        $passwd = $_SESSION['pass'];
        # $salon = get_event_by_name($events)."@muc.eventizi.itinet.fr";
  ?>
  
