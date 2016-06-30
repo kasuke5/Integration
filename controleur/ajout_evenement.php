@@ -93,7 +93,7 @@ if(isset($_SESSION["id_user"])){
 						if(move_file($_FILES["photo"],$verif)){
 							add_events($_POST,$site);
 							add_tags($_POST);
-							/*if($role == 0){
+							if($role == 0){
 										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
 										exec($commande_mss); 
 									}
@@ -117,7 +117,7 @@ if(isset($_SESSION["id_user"])){
 								exec($commande_web);
 								exec($commande_chat);*/
 								include("controleur/tableau_bord.php");
-							//}
+							}
 						}else{
 						$message = "erreur fichier";
 						include"vue/ajout_evenement.php";
