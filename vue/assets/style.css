@@ -451,7 +451,7 @@ body {
   display: none; /*--masqué par défaut--*/
   background: #fff;
   padding: 20px;
-  border: 20px solid #ddd;
+  /*border: 20px solid #ddd;*/
   float: left;
   font-size: 1.2em;
   position: fixed;
