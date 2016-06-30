@@ -449,7 +449,7 @@ body {
 }
 .popup_block{
   display: none; /*--masqué par défaut--*/
-  padding: 20px;
+  padding: 80px;
   /*border: 20px solid #ddd;
    background: #fff;*/
   float: left;
