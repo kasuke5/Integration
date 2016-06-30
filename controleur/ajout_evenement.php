@@ -97,7 +97,7 @@ if(isset($_SESSION["id_user"])){
 										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
 										exec($commande_mss); 
 									}
-									$name=url_transform($_POST["login_user"]);
+									$name=url_transform($_POST["nom"]);
 							switch($site){
 								case 1:
 									$commande_web = "./script_web.sh 1 ".$name." 2 ".$name." ".$_SESSION["login_user"];
@@ -115,10 +115,10 @@ if(isset($_SESSION["id_user"])){
 									$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 									exec($commande_bdd);
 									break;
-								exec($commande_web);
-								exec($commande_chat);
-								include("controleur/tableau_bord.php");
 							}
+							exec($commande_web);
+							exec($commande_chat);
+							include("controleur/tableau_bord.php");
 						}else{
 						$message = "erreur fichier";
 						include"vue/ajout_evenement.php";
