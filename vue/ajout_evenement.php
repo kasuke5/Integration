@@ -22,18 +22,22 @@ include ('header.php');
   <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
     <div class="col-xs-4 col-sm-3">
     <label class="control-label" for="nom">Nom</label>
+    <br>
     <input type="text" name="nom" id="nom" placeholder="Ajoutez un nom court sans majuscules">
     <label class="control-label" for="lieu">Lieu</label>
+    <br>
     <input type="text" name="adresse" id="lieu" placeholder="Ajoutez un lieu">
     </div>
     <div class="col-xs-4 col-sm-3">
     <label class="control-label" for="debut">Date/heure Début</label>
+    <br>
    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="debut" name="debut" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
     <label class="control-label" for="fin">Date/heure Fin</label>
+    <br>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
     <input size="16" type="text" id="fin" name="fin" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
@@ -42,16 +46,18 @@ include ('header.php');
     </div>
   <div class="col-xs-4 col-sm-2">
     <label class="control-label">Catégorie</label>
+    <br>
     <select name="categorie">
                     <?php for($i=0;$i<count($categories);$i++){
                                 echo"<option value='".$categories[$i]["categorie_id"]."'>".$categories[$i]["categorie_name"]."</option>";
                             }
                             ?>
       </select>
-                            <br><br>
+                            
 </div> 
 <div class="col-xs-4 col-sm-2">
                <label class="control-label" for="newtag">Tags</label>
+               <br>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
                <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
          <div id="tags">
@@ -59,16 +65,19 @@ include ('header.php');
  </div>
  <div class="col-xs-4 col-sm-6">
    <label class="control-label">Importation du site</label>
+   <br>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser un template défini</option>
   </select>
     <br><br>
   <label class="control-label">Photo de l'évènement</label>
+  <br>
   <input  type="file" id="photo" name="photo">
   <div id="bdd"></div>
    </div>
   <label class="control-label" for="description">Description</label>     
+   <br>
    <textarea name="description" id="description" rows="4" cols="40"></textarea> 
     <input type="submit" name="action" value="Créer">
   </form>
