@@ -1,6 +1,5 @@
 <?php
 
-	include("modele/connexion_bdd.php");
 	include("modele/events.php");
 
 	if($_POST["action"] == "supprimer"){
@@ -18,6 +17,10 @@
 		exec($commande_bdd);
 	}
 	exec($commande_web);
+	include "controleur/tableau_bord.php";
+}elseif($_POST["action"] == "inscrire"){
+	inscription_event($_SESSION["id_user"],$_POST["query"]);
+}elseif ($_POST["action"] =="desinscrire") {
+	desinscription($_POST["id"],$_SESSION["id_user"]);
+	include "controleur/tableau_bord.php";
 }
-
-include("controleur/tableau_bord.php");
