@@ -27,7 +27,7 @@ function nb_event_user($id){
 
 function get_user() {
 	global $bdd;
-	$req = $bdd->query('SELECT * FROM t_user');
+	$req = $bdd->query('SELECT * FROM t_user WHERE user_admin != 1');
 	$donnees = $req->fetchAll();
 	return $donnees;
 }
