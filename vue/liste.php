@@ -4,7 +4,7 @@ try
 
 {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=Event1z1;charset=utf8', 'root', 'Event1z1GFJ2016');
+    $bdd = new PDO('mysql:host=localhost;dbname=event1z1;charset=utf8', 'root', '');
 
 
 }
@@ -100,7 +100,7 @@ if(isset($_GET["term"])){
 	            echo"<div class='row'>
 	            <div class='col-md-7'>
 	                <a href='#''>
-	                    <img class='img-responsive' src='http://placehold.it/700x300' alt=''>
+	                    <img class='img-responsive' src='".$renvoyer[$i]["image"]."' alt=''>
 	                </a>
 	            </div>
 	            <div class='col-md-13'>
