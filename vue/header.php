@@ -107,7 +107,18 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
               #echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
-              echo '<li><a href="/connexion" data-width="500" data-rel="popup1" class="poplight">Connexion</a></li>';             
+              echo '<li><a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a></li>
+              <div id="popup1" class="popup_block">
+              <div class="login">
+  <div class="login-triangle"></div>
+  <h2 class="login-header">Connexion</h2>
+  <form class="form-horizontal" role="form" method="post">
+    <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
+    <p><input type="password" name="pass" id="pass" placeholder="Mot de passe"></p>
+    <p><input type="submit" name="action" value="Connexion"></p>
+  </form>
+</div>
+</div>';             
               /*<li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
