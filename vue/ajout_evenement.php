@@ -53,13 +53,14 @@ include ('header.php');
                             ?>
       </select>
                             <br><br>
-
+</div> 
+<div class="col-xs-4 col-sm-4">
                <label class="control-label" for="lieu">Tags</label>
                <input type="text" id="newtag" name="adresse" placeholder="Ajouter des tags" style="width: 142px;">
                <a id="addtags" href="" class="btn"><i class="fa fa-plus"></i></a>
          <div id="tags">
         </div>
- </div> 
+ </div>
    <br><br>
  <div class="col-xs-4 col-sm-6">
    <label class="control-label">Importation du site</label>
