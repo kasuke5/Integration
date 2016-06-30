@@ -115,7 +115,7 @@ if(isset($_SESSION["id_user"])){
 									exec($commande_bdd);
 									break;
 								exec($commande_web);
-								exec($commande_chat);*/
+								exec($commande_chat);
 								include("controleur/tableau_bord.php");
 							}
 						}else{
