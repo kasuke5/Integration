@@ -64,14 +64,14 @@ include ('header.php');
         </div>
  </div>
  <div class="col-xs-4 col-sm-6">
-   <label class="control-label">Importation du site</label>
+   <label class="control-label" for="c">Importation du site</label>
    <br>
             <select id='c' name="choix">
         <option value="importer" >Importer votre site</option>
         <option value="wordpress" selected >Utiliser un template défini</option>
   </select>
     <br><br>
-  <label class="control-label">Photo de l'évènement</label>
+  <label class="control-label" for="photo">Photo de l'évènement</label>
   <br>
   <input  type="file" id="photo" name="photo">
   <div id="bdd"></div>
