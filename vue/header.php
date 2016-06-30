@@ -118,6 +118,19 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
     <p><input type="submit" name="action" value="Connexion"></p>
   </form>
 </div>
+</div>
+<li><a href="#" data-width="500" data-rel="popup2" class="poplight">Inscription</a></li>
+<div id="popup2" class="popup_block">
+<div class="login">
+  <div class="login-triangle"></div>
+  <h2 class="login-header">Inscription</h2>
+  <form class="form-horizontal"  action="connexion" role="form" method="post">
+    <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
+    <p><input type="password" name="pass1" id="pass" placeholder="Mot de passe"></p>
+    <p><input type="password" name="pass2" id="pass" placeholder="Confirmez mot de passe"></p>
+    <p><input type="email" name="mail" id="pass" placeholder="Email"></p>
+    <p><input type="submit" name="action" value="Inscription"></p>
+  </form>
 </div>';             
               /*<li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
