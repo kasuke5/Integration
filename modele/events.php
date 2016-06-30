@@ -68,7 +68,7 @@ function get_events_by_user($id){
 	$donnees = 0;
 	$i=0;
 	$renvoyer = [];
-	$req = $bdd->prepare('SELECT * FROM t_event e JOIN users_has_events ue ON e.event_id = ue.Events_idEvents AND ue.Users_idUsers = ?');
+	$req = $bdd->prepare('SELECT * FROM t_event e JOIN Users_has_Events ue ON e.event_id = ue.Events_idEvents AND ue.Users_idUsers = ?');
 	$req->execute(array($id)) or die ( print_r($req->errorInfo()) );
 	while($donnees = $req->fetch()){
 			$renvoyer[$i] = $donnees;
@@ -116,9 +116,9 @@ function get_event_by_id($id){
 
 function remove_event($id_event,$id_user){
 	global $bdd;
-	$req = $bdd->prepare('DELETE FROM users_has_events WHERE Events_idEvents = ?');
+	$req = $bdd->prepare('DELETE FROM Users_has_Events WHERE Events_idEvents = ?');
 	$req->execute(array($id_event)) or die ( print_r($req->errorInfo()) );
-	$req = $bdd->prepare('DELETE FROM events_has_tags WHERE Events_idEvents = ?');
+	$req = $bdd->prepare('DELETE FROM Events_has_Tags WHERE Events_idEvents = ?');
 	$req->execute(array($id_event)) or die ( print_r($req->errorInfo()) );
 	$req = $bdd->prepare('DELETE FROM t_event WHERE event_id = ?');
 	$req->execute(array($id_event)) or die ( print_r($req->errorInfo()) );
@@ -129,7 +129,7 @@ function remove_event($id_event,$id_user){
 
 function inscription_event($id_user,$id_event){
 	global $bdd;
-	$req = $bdd->prepare('INSERT INTO users_has_events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
+	$req = $bdd->prepare('INSERT INTO Users_has_Events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
    	$req->execute(array(
     'user_id' => $id_user,
     'event_id' => $id_event,
@@ -141,7 +141,7 @@ function check_participation($id_user, $id_event){
 	global $bdd;
 	$donnees = 0;
 	$i=0;
-	$req = $bdd->prepare('SELECT role FROM users_has_events ue WHERE Users_idUsers = ? AND Events_idEvents = ?');
+	$req = $bdd->prepare('SELECT role FROM Users_has_Events ue WHERE Users_idUsers = ? AND Events_idEvents = ?');
 	$req->execute(array($id_user,$id_event)) or die ( print_r($req->errorInfo()) );
 	$donnees = $req->fetch();
 	if(empty($donnees)){
@@ -162,7 +162,7 @@ function add_tags($POST){
 			$id_tag = get_tag_by_name($value);
 			if($id_tag){
 				echo "hkk";
-				$req = $bdd->prepare("INSERT INTO events_has_tags (Events_idEvents, Tags_idTags) VALUES (:id, :id_tag)");
+				$req = $bdd->prepare("INSERT INTO Events_has_Tags (Events_idEvents, Tags_idTags) VALUES (:id, :id_tag)");
 				$req->execute(array(
     			'id' => $id,
    				'id_tag' => $id_tag )) or die ( print_r($req->errorInfo()) );
@@ -170,7 +170,7 @@ function add_tags($POST){
 				$req = $bdd->prepare("INSERT INTO t_tag (tag_name) VALUES (:nom)");
 				$req->execute(array('nom'=> $value)) or die ( print_r($req->errorInfo()) );
 				$id_tag = get_tag_by_name($value);
-				$req = $bdd->prepare("INSERT INTO events_has_tags (Events_idEvents, Tags_idTags) VALUES (:id, :id_tag)") or die ( print_r($req->errorInfo()) ) ;
+				$req = $bdd->prepare("INSERT INTO Events_has_Tags (Events_idEvents, Tags_idTags) VALUES (:id, :id_tag)") or die ( print_r($req->errorInfo()) ) ;
 				$req->execute(array(
     			'id' => $id,
    				'id_tag' => $id_tag )) or die ( print_r($req->errorInfo()) );
@@ -193,7 +193,7 @@ function url_transform($str)
 
 function desinscription($id_event,$id_user){
 	global $bdd;
-	$req = $bdd->prepare('DELETE FROM users_has_events WHERE Users_idUsers = :user_id AND Events_idEvents = :event_id ');    		
+	$req = $bdd->prepare('DELETE FROM Users_has_Events WHERE Users_idUsers = :user_id AND Events_idEvents = :event_id ');    		
    	$req->execute(array(
     'user_id' => $id_user,
     'event_id' => $id_event )) or die ( print_r($req->errorInfo()) );
