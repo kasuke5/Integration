@@ -131,6 +131,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
     <p><input type="email" name="mail" id="pass" placeholder="Email"></p>
     <p><input type="submit" name="action" value="Inscription"></p>
   </form>
+</div>
 </div>';             
               /*<li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
