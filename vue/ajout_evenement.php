@@ -71,8 +71,10 @@ include ('header.php');
    <div class="col-xs-4 col-sm-2">
   <label class="control-label">Description</label>     
    <textarea name="description" id="description" rows="4" cols="40"></textarea> 
+     </div>
+     <div class="col-xs-2">
     <input type="submit" name="action" value="Créer">
-  </div>
+ </div>
   </form>
   </div>
 
