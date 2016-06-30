@@ -111,7 +111,7 @@ if(isset($_SESSION["id_user"])){
 									break;
 								case 3:
 									$commande_web = "./script_web.sh 1 ".$name." 1 ".$name." ".$_SESSION["login_user"];
-									$commande_bdd = "./script_bdd.sh 1 ".$name" ".$_SESSION["login_user"];
+									$commande_bdd = "./script_bdd.sh 1 ".$name." ".$_SESSION["login_user"];
 									$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 									exec($commande_bdd);
 									break;
