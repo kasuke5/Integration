@@ -107,7 +107,11 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
             }else{
               #echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
-              echo '<a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a>';             
+              echo '<a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a>
+              <div id="popup_name" class="popup_block">
+  <h2>Developpez.com</h2>
+  <p>Soh Tanaka est traduit sur developpez.com.</p>
+</div>';             
               /*<li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog">
