@@ -22,7 +22,7 @@ function add_events($details,$site){
 			)) or die ( print_r($req->errorInfo()) );
 				
 				$event_id = id_events($details["nom"])["event_id"];
-				$req = $bdd->prepare('INSERT INTO users_has_events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
+				$req = $bdd->prepare('INSERT INTO Users_has_Events (Users_idUsers, Events_idEvents, role) VALUES (:user_id, :event_id, :role)');    		
    				$req->execute(array(
     			'user_id' => $organisateur,
     			'event_id' => $event_id,
