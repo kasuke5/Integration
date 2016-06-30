@@ -442,13 +442,13 @@ body {
 #fade { /*--Masque opaque noir de fond--*/
   display: none; /*--masqué par défaut--*/
   background: #000;
-  position: fixed; left: 0; top: 0;
+  position: fixed; left: 0; top: 1;
   width: 100%; height: 100%;
   opacity: .80;
   z-index: 9999;
 }
 .popup_block{
-  /*display: none; --masqué par défaut--*/
+  display: none; /*--masqué par défaut--*/
   padding: 20px;
   /*border: 20px solid #ddd;
    background: #fff;*/
