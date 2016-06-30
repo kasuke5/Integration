@@ -124,13 +124,14 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
 <div class="login">
   <div class="login-triangle"></div>
   <h2 class="login-header">Inscription</h2>
-  <form class="form-horizontal"  action="connexion" role="form" method="post">
+  <form class="form-horizontal" action="inscription" role="form" method="post">
     <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
     <p><input type="password" name="pass1" id="pass" placeholder="Mot de passe"></p>
     <p><input type="password" name="pass2" id="pass" placeholder="Confirmez mot de passe"></p>
     <p><input type="email" name="mail" id="pass" placeholder="Email"></p>
     <p><input type="submit" name="action" value="Inscription"></p>
   </form>
+</div>
 </div>';             
               /*<li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
               <div class="modal" id="myModal" tabindex="-1" role="dialog">
@@ -180,7 +181,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
     var popWidth = $(this).data('width'); //Trouver la largeur
 
     //Faire apparaitre la pop-up et ajouter le bouton de fermeture
-    $('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('<a href="#" class="close"><img src="../img/close-button.jpg" class="btn_close" title="Close Window" alt="Close" /></a>');
+    $('#' + popID).fadeIn().css({ 'width': popWidth}).prepend('<a href="#" class="close"><img src="img/close-button.jpg" class="btn_close" title="Close Window" alt="Close" /></a>');
     
     //Récupération du margin, qui permettra de centrer la fenêtre - on ajuste de 80px en conformité avec le CSS
     var popMargTop = ($('#' + popID).height() + 80) / 2;
