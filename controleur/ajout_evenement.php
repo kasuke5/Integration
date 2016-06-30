@@ -23,7 +23,7 @@ function verif_champs($champs){
 	}
 	return $erreur;
 }
-
+a
 
 function verif_upload($image){
 	if($image["size"] == 0){
