@@ -68,9 +68,11 @@ include ('header.php');
   <input  type="file" name="photo">
   <div id="bdd"></div>
    </div>
+   <div class="col-xs-4 col-sm-8">
   <label class="control-label">Description</label>     
    <textarea name="description" id="description" rows="4" cols="40"></textarea> 
     <input type="submit" name="action" value="Créer">
+  </div>
   </form>
   </div>
 
