@@ -1,7 +1,5 @@
 <?php
 include("header.php");
-$_SESSION['admin'];
-$admin;
 ?>
 <div class="login">
   <div class="login-triangle"></div>

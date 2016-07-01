@@ -3,7 +3,7 @@
 
 include_once("modele/admin.php");
 include_once("modele/connexion_bdd.php");
-include("modele/co_in.php");
+
 unset($info);
 if (isset($_SESSION['admin'])) {
 	if (isset($_POST['id'])){
