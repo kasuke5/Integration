@@ -7,7 +7,7 @@ include_once("modele/connexion_bdd.php");
 unset($info);
 if (isset($_SESSION['admin'])) {
 	if (isset($_POST['id'])){
-		remove_user_complete($_POST['user_id']);
+		remove_user_complete($_POST['id']);
 		$info = "Utilisateur et site(s) relié(s) supprimés";
 	}
 	if (isset($_POST['envoyer'])) {
