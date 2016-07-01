@@ -3,6 +3,7 @@
 
 include_once("modele/admin.php");
 include_once("modele/connexion_bdd.php");
+include_once("modele/events.php");
 
 unset($info);
 if (isset($_SESSION['admin'])) {
