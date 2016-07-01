@@ -5,8 +5,7 @@ if (isset($info)) {
 }
 ?>
 
-<div class="container">
-<h3 style="margin-top:80px">Gestion des utilisateurs</h3>
+<h3>Gestion des utilisateurs</h3>
 
 	<table class="table table-striped">
 		<thead>
@@ -72,7 +71,6 @@ if (isset($info)) {
             ?>
 		</tbody>
 	</table>
-</div>
 
 <?php
 include ('footer.php');
