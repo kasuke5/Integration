@@ -1,6 +1,14 @@
 <?php 
 include ('header.php');
+
+$nb_org = count($events_org);
+$nb_ins = count($events_ins);
+
 ?>
+
+<?php
+if($nb_org>0){
+  echo'
 <div class="tabcontainer">
 <h3>Mes évenements</h3>
 <table class="table table-striped">
@@ -13,11 +21,13 @@ include ('header.php');
         <th>Supp.</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody>';
+  }else{
 
-      <?php
+    echo"<div class='tabcontainer'><h2> Vous n'organisez pas d'évènement. </h2>";
+  }
       
-      for($i=0;$i<count($events_org);$i++){
+      for($i=0;$i<$nb_org;$i++){
         $fqdn = url_transform($events_org[$i]["event_title"]);
         echo"<tr>
         <td>".$events_org[$i]["event_title"]."</td>
@@ -31,7 +41,11 @@ include ('header.php');
   </table>
   <a href="./ajout_evenement" class="btn"><i class="fa fa-plus"></i></a>
 
-<h3>Evénements auxquels je suis inscrit</h3>
+
+<?php
+
+if($nb_ins>0){
+  echo'<h3>Evénements auxquels je suis inscrit</h3>
 <table class="table table-striped">
   <tr>
     <th>Nom évenement</th>
@@ -41,10 +55,12 @@ include ('header.php');
     <th>Organisateur</th>
     <th> Site associé</th>
     <th> Se désinscrire</th>
-  </tr>
- 
-<?php
-  for($i=0;$i<count($events_ins);$i++){
+  </tr>';
+}else{
+  echo"<h2> Vous n'êtes inscrit à aucun évènement. </h2>";
+}
+
+  for($i=0;$i<$nb_ins;$i++){
     echo"<tr>
             <td>".$events_ins[$i]["event_title"]."</td>
             <td>".$events_ins[$i]["event_date_debut"]."</td>
