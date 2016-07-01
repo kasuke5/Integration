@@ -71,6 +71,6 @@ if (isset($info)) {
             ?>
 		</tbody>
 	</table>
-
+</div>
 <?php
 include ('footer.php');
