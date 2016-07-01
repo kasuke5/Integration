@@ -39,9 +39,9 @@ function delete_user($id){
 	$donnees = $req->fetch();
 	return $donnees;
 }
-function remove_user_complete($id_event,$id_user){
+function remove_user_complete($id_user){
 	global $bdd;
-	$req = $bdd->prepare('DELETE FROM Users_has_Events WHERE Events_idEvents = ? AND Users_idUsers = ?');
+	$req = $bdd->prepare('DELETE FROM Users_has_Events WHERE Users_idUsers = ?');
 	$req->execute(array($id_event,$id_user)) or die ( print_r($req->errorInfo()) );
 	$req = $bdd->prepare('DELETE FROM t_event WHERE event_organisateur = ?');
 	$req->execute(array($id_user)) or die ( print_r($req->errorInfo()) );
