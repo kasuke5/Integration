@@ -8,6 +8,7 @@ include ('header.php');
  
  <h3> Trouver un évènement </h3>
                    <div class="input-group-btn">  
+                    <div class="col-sm-5 col-sm-push-3">
                     <select id='c'>
                     <option value="0" selected >toutes catégories</option>
                     <?php for($i=0;$i<count($categories);$i++){
@@ -17,7 +18,7 @@ include ('header.php');
                             ?>
 
                        
-    <div class="col-sm-5 col-sm-push-3">
+   
       <input type="text" name="recherche" id="recherche" required class="form-control" placeholder="Entrez du texte">
             <button class="btn btn-default" type="submit" id="submit" style="padding-left: 15px; padding-right: 15px; margin-left: -20px;z-index:10;"><i class="glyphicon glyphicon-search"></i></button>
           </div>
