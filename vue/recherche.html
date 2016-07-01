@@ -43,6 +43,7 @@ include ('header.php');
           for($i=0;$i<count($events);$i++){
             $user = GetLoginById($events[$i]["event_organisateur"]);
               echo"<div id='events'>
+              <div class="row">  
               <div class='col-md-5'>
                   <a href='#''>
                       <img class='img-responsive' src='".$events[$i]["image"]."' alt=''>
@@ -54,6 +55,7 @@ include ('header.php');
                   <p>".$events[$i]["event_description"]."</p>
                   <a class='btn btn-primary' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr''>View Project <span class='glyphicon glyphicon-chevron-right'></span></a>
                     ".afficher_participation($_SESSION["id_user"],$events[$i]["event_id"])."
+              </div>
               </div>
           </div>
           <!-- /.row -->
