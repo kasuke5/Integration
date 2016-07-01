@@ -123,7 +123,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
 </div>
 <li><a href="#" data-width="500" data-rel="popup2" class="poplight">Inscription</a></li>
 <div id="popup2" class="popup_block">
-<div class="inscription">
+<div class="login">
   <div class="login-triangle"></div>
   <h2 class="login-header">Inscription</h2>
   <form class="form-horizontal" action="inscription" role="form" method="post">
