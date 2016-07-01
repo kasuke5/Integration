@@ -4,7 +4,7 @@ if (isset($info)) {
 	echo $info;
 }
 ?>
-
+<div class="tabcontainer">
 <h3>Gestion des utilisateurs</h3>
 
 	<table class="table table-striped">
