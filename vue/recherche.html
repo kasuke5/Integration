@@ -39,12 +39,13 @@ include ('header.php');
             </div>
         </div>
         <!-- /.row -->
-<div id='events'>
+
         <?php
             
             for($i=0;$i<count($events);$i++){
             $user = GetLoginById($events[$i]["event_organisateur"]);
-              echo "<div class="row">
+              echo "<div id='events'>
+              <div class="row">
               <div class='col-md-5'>
                   <a href='#''>
                       <img class='img-responsive' src='".$events[$i]["image"]."' alt=''>
@@ -59,11 +60,12 @@ include ('header.php');
               </div>
           </div>
           <!-- /.row -->
-
-          <hr>";
+          </div>
+          <hr>
+          ";
           }
             ?>
-          </div>
+          
 
 
 
