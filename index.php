@@ -1,6 +1,6 @@
 <?php
 session_start();
-#echo $_SERVER["REQUEST_URI"];
+include("modele/connexion_bdd.php");
 if($_SERVER["REQUEST_URI"] == "/"){
         include_once("controleur/accueil.php");
 }elseif($_SERVER["REQUEST_URI"] == "/inscription"){

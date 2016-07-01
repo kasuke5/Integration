@@ -52,7 +52,7 @@ include ('header.php');
             <td>".$events_ins[$i]["event_adresse"]."</td>
             <td>".GetLoginById($events_ins[$i]["event_organisateur"])["user_login"]."</td>
             <td>".$events_ins[$i]["event_title"].".eventizi.itinet.fr</td>
-            <td><button class='btn-danger'><i class='fa fa-trash'></i></button></td></tr>";
+            <td><form action='actions' method='post'><input type='hidden' name='id' value='".$events_ins[$i]["event_id"]."'><input type='hidden' name='action' value='desinscrire'><button class='btn-danger'><i class='fa fa-trash'></i></button></td></tr></form>";
   }
 ?>
 

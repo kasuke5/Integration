@@ -3,18 +3,28 @@
 include_once("modele/membre.php");
 include_once("modele/events.php");
 include_once("modele/connexion_bdd.php");
-include("modele/co_in.php");
+include_once("modele/co_in.php");
+
+function afficher_participation($id_user,$id_event){
+	$val = check_participation($id_user,$id_event);
+		if($val == -1){
+			$inscription =  "<button type='submit'  class='btn btn-default inscrire'value='".$id_event."'>S'inscrire</button>";
+		}elseif ($val == 1) {
+			$inscription = "Vous êtes l'organisateur de cet évènement.";
+		}else{
+			$inscription = "Vous êtes inscrit à cet évènement.";
+		}
+		return $inscription;
+}
+
+
 if(isset($_SESSION["id_user"])){
 	$categories = get_categories();
 	$tags = get_tags();
 	$events = get_events();
-	if(isset($_POST["nom"])){
-	echo "Recherche ok".$_POST["nom"];
-	}elseif (isset($_POST["stags"])) {
-	$events = get_events_by_tags($_POST["tags"]);
-	}
-	include_once("vue/recherche.php");
+	include_once("vue/recherche.html");
+	
 }else{
 	$message = "Connectez-vous pour accéder à cette page";
-	include_once("controleur/connexion.php");
+	include_once("vue/connexion.php");
 }
