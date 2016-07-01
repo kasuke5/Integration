@@ -41,10 +41,10 @@ include ('header.php');
         <!-- /.row -->
 <div id='events'>
         <?php
-          for($i=0;$i<count($events);$i++){
+            
+            for($i=0;$i<count($events);$i++){
             $user = GetLoginById($events[$i]["event_organisateur"]);
-              echo"<div id='events'>
-              <div class='row'>
+              echo "<div class="row">
               <div class='col-md-5'>
                   <a href='#''>
                       <img class='img-responsive' src='".$events[$i]["image"]."' alt=''>
