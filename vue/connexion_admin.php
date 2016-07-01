@@ -3,7 +3,7 @@ include("header.php");
 $_SESSION['admin'];
 $admin;
 ?>
-<div class="login" style="margin:80px auto auto">
+<div class="login">
   <div class="login-triangle"></div>
   
   <h2 class="login-header">Connexion Admin</h2>
