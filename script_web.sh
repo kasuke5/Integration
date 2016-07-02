@@ -17,7 +17,17 @@ fi
 sudo ./script_vhosts.sh $1 $5 $2
 sudo ./script_fqdn.sh $1 $2
 #sudo ./script_bdd.sh $1 $2
-sudo ./script_mail.sh $1 $2 $4
+#sudo ./script_mail.sh $1 $2 $4
+
+
+	if [$1 = 1 ]
+	then
+		sudo bash -c "echo '$2@eventizi.itinet.fr $3/' >> /etc/postfix/vmailbox"
+		sudo postmap vmailbox
+	else
+		 sudo sed -i '/'"$2"'/d' /etc/postfix/vmailbox
+		 sudo postmap vmailbox
+	fi
 
 
 	if [ $1 = 1 ] && [ $3 = 2 ]
