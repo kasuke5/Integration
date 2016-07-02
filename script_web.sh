@@ -20,13 +20,13 @@ sudo ./script_fqdn.sh $1 $2
 #sudo ./script_mail.sh $1 $2 $4
 
 
-	if [$1 = 1 ]
+	if [ $1 = 1 ]
 	then
 		sudo bash -c "echo '$2@eventizi.itinet.fr $5/' >> /etc/postfix/vmailbox"
-		sudo postmap vmailbox
+		sudo postmap etc/postfix/vmailbox
 	else
 		 sudo sed -i '/'"$2"'/d' /etc/postfix/vmailbox
-		 sudo postmap vmailbox
+		 sudo postmap /etc/postfix/vmailbox
 	fi
 
 
