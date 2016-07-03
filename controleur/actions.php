@@ -5,7 +5,7 @@
 	if($_POST["action"] == "supprimer"){
 	$event = get_event_by_id($_POST["id"]);
 	remove_event($_POST["id"],$_SESSION["id_user"]);
-	$name = url_transform($event["event_title"];
+	$name = url_transform($event["event_title"]);
 	if($event["site"] ==1){
 		$commande_web = "./script_web.sh 2 ".$name." 2 ".$_SESSION["pass_user"]." ".$_SESSION["login_user"];
 		$commande_bdd = "./script_bdd.sh 2 ".$name." ".$_SESSION["login_user"]." ".$_SESSION["pass_user"];
