@@ -7,8 +7,6 @@ include ('header.php');
  <form class="form-horizontal" role="form" method="post">
  
  <h3> Trouver un évènement </h3>
-                   <div class="input-group-btn">  
-                    <div class="col-sm-5 col-sm-push-3">
                     <select id='c'>
                     <option value="0" selected >toutes catégories</option>
                     <?php for($i=0;$i<count($categories);$i++){
@@ -17,11 +15,11 @@ include ('header.php');
                             echo "</select>";
                             ?>
 
-                       
-   
+    <div class="form-group">                       
+    <label class="control-label col-sm-2" for="login"></label>
+    <div class="col-sm-5">
       <input type="text" name="recherche" id="recherche" required class="form-control" placeholder="Entrez du texte">
-            <button class="btn btn-default" type="submit" id="submit" style="padding-left: 15px; padding-right: 15px; margin-left: -20px;z-index:10;"><i class="glyphicon glyphicon-search"></i></button>
-          </div>
+    </div>
   </div>
 </form>
     <?php
@@ -33,25 +31,27 @@ include ('header.php');
 ?>
 
 
-  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-5">
+      <button type="submit" id="submit" class="btn btn-default"name="nom">Submit</button>
+    </div>
+  </div>
 
     
             </div>
         </div>
         <!-- /.row -->
-
+<div id='events'>
         <?php
-            
-            for($i=0;$i<count($events);$i++){
+          for($i=0;$i<count($events);$i++){
             $user = GetLoginById($events[$i]["event_organisateur"]);
-              echo "<div id='events'>
-              <div class='row'>
-              <div class='col-md-5'>
+              echo"<div class='row'>
+              <div class='col-md-7'>
                   <a href='#''>
                       <img class='img-responsive' src='".$events[$i]["image"]."' alt=''>
                   </a>
               </div>
-              <div class='col-lg-5'>
+              <div class='col-md-13'>
                   <h4>".$events[$i]["event_title"]."</h4>
                   <h3>Cet évènement commence le ".$events[$i]["event_date_debut"]."</h3>
                   <p>".$events[$i]["event_description"]."</p>
@@ -60,12 +60,11 @@ include ('header.php');
               </div>
           </div>
           <!-- /.row -->
-          </div>
-          <hr>
-          ";
+
+          <hr>";
           }
             ?>
-          
+          </div>
 
 
 
@@ -145,7 +144,10 @@ $(document).ready(function(){
           var c = $('#c').val();
           $('#c').change(function(){
             c = $("#c").val();
-        });
+
+          });
+
+          var tab = [];
 
             $(document).ready(function() {
                     $('#recherche').autocomplete({
@@ -155,7 +157,8 @@ $(document).ready(function(){
                             dataType: "json",
                             data: {
                                 term: request.term,
-                                categorie: c
+                                categorie: c,
+                                tags: JSON.stringify(tab),
                             },
                      success: function(data) {
                         response(data);
@@ -167,7 +170,7 @@ $(document).ready(function(){
             });
             });
 
-            var tab = [];
+
 
 
            
@@ -192,8 +195,7 @@ $(document).ready(function(){
               $(document).on("click", ".tags",  function(){
                   var color = $(this).css("background-color");
                   var val = $(this).val();
-                  //alert(color);
-                    if(color == "rgb(255, 175, 0)"){
+                    if(color == "rgb(255, 175, 0)" || color == "rgb(230, 230, 230)"){
                       $(this).css("background-color","#d34836");
                     }else{
                        $(this).css("background-color","rgb(255, 175, 0)");
@@ -236,7 +238,7 @@ $(document).ready(function(){
                             query : $("#recherche").val(),
                             categorie: c,
                             id: id,
-                            tags: tags
+                            tags: tags,
                           },
 
                           function(data){
