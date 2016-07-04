@@ -77,7 +77,6 @@ if(isset($_SESSION["id_user"])){
 			if($verif){
 				$infos_user = GetLoginById($_SESSION["id_user"]);
 				$login = $infos_user["user_login"];
-				$password = $infos_user["user_password"];
 				$role = $infos_user["user_role"];
 
 
@@ -94,24 +93,24 @@ if(isset($_SESSION["id_user"])){
 							add_events($_POST,$site);
 							add_tags($_POST);
 							if($role == 0){
-										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"];
+										$commande_mss = "./script_mss.sh 1 ".$_SESSION["login_user"]." ".$_SESSION["pass_user"];
 										exec($commande_mss); 
 									}
 									$name=url_transform($_POST["nom"]);
 							switch($site){
 								case 1:
-									$commande_web = "./script_web.sh 1 ".$name." 2 ".$name." ".$_SESSION["login_user"];
-									$commande_bdd = "./script_bdd.sh 1 ".$name." ".$_SESSION["login_user"];
+									$commande_web = "./script_web.sh 1 ".$name." 2 ".$_SESSION["pass_user"]." ".$_SESSION["login_user"];
+									$commande_bdd = "./script_bdd.sh 1 ".$name." ".$_SESSION["login_user"]." ".$_SESSION["pass_user"];
 									$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 									exec($commande_bdd);
 									break;
 								case 2:
-									$commande_web = "./script_web.sh 1 ".$name." 1 ".$name." ".$_SESSION["login_user"];
+									$commande_web = "./script_web.sh 1 ".$name." 1 ".$_SESSION["pass_user"]." ".$_SESSION["login_user"];
 									$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 									break;
 								case 3:
-									$commande_web = "./script_web.sh 1 ".$name." 1 ".$name." ".$_SESSION["login_user"];
-									$commande_bdd = "./script_bdd.sh 1 ".$name." ".$_SESSION["login_user"];
+									$commande_web = "./script_web.sh 1 ".$name." 1 ".$_SESSION["pass_user"]." ".$_SESSION["login_user"];
+									$commande_bdd = "./script_bdd.sh 1 ".$name." ".$_SESSION["login_user"]." ".$_SESSION["pass_user"];
 									$commande_chat = "./script_orga.sh 1 ".$_SESSION["login_user"];
 									exec($commande_bdd);
 									break;

@@ -15,6 +15,9 @@ if(!isset($_SESSION["id_user"])){
 				if (is_numeric($retour)){
 					$_SESSION["id_user"] = $retour;
 					$_SESSION["login_user"] = $_POST["login"];
+					$_SESSION["pass_user"] = $_POST["pass1"];
+					$commande_mail = " sudo ./script_mail.sh 1 ".$_POST["login"]." ".$_SESSION["pass_user"];
+					exec($commande_mail);
 					include_once("controleur/tableau_bord.php");
 				}else{
 					

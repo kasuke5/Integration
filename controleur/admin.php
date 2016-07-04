@@ -3,11 +3,12 @@
 
 include_once("modele/admin.php");
 include_once("modele/connexion_bdd.php");
+include_once("modele/events.php");
 
 unset($info);
 if (isset($_SESSION['admin'])) {
 	if (isset($_POST['id'])){
-		remove_user_complete($_POST['id_event'],$_POST['id_user']);
+		remove_user_complete($_POST['id']);
 		$info = "Utilisateur et site(s) relié(s) supprimés";
 	}
 	if (isset($_POST['envoyer'])) {
@@ -15,6 +16,7 @@ if (isset($_SESSION['admin'])) {
 			activate_event($_POST['id_event']);
 			$name = url_transform($_POST['event_name']);
 			$ac_event = './script_vhosts.sh 3 '. $_POST['user_name']. $name;
+			$ac_event = './script_vhosts.sh 3 '. $_POST['user_name'].$name;
 			exec($ac_event);
 			$info = 'Evenement'.$name.' bien activé';
 		} elseif ($_POST['envoyer'] == 0) {

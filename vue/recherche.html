@@ -144,7 +144,10 @@ $(document).ready(function(){
           var c = $('#c').val();
           $('#c').change(function(){
             c = $("#c").val();
-        });
+
+          });
+
+          var tab = [];
 
             $(document).ready(function() {
                     $('#recherche').autocomplete({
@@ -154,7 +157,8 @@ $(document).ready(function(){
                             dataType: "json",
                             data: {
                                 term: request.term,
-                                categorie: c
+                                categorie: c,
+                                tags: JSON.stringify(tab),
                             },
                      success: function(data) {
                         response(data);
@@ -166,7 +170,7 @@ $(document).ready(function(){
             });
             });
 
-            var tab = [];
+
 
 
            
@@ -191,8 +195,7 @@ $(document).ready(function(){
               $(document).on("click", ".tags",  function(){
                   var color = $(this).css("background-color");
                   var val = $(this).val();
-                  //alert(color);
-                    if(color == "rgb(255, 175, 0)"){
+                    if(color == "rgb(255, 175, 0)" || color == "rgba(0, 0, 0, 0.8)"){
                       $(this).css("background-color","#d34836");
                     }else{
                        $(this).css("background-color","rgb(255, 175, 0)");
@@ -235,7 +238,7 @@ $(document).ready(function(){
                             query : $("#recherche").val(),
                             categorie: c,
                             id: id,
-                            tags: tags
+                            tags: tags,
                           },
 
                           function(data){

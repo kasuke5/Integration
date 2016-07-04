@@ -52,7 +52,8 @@ if(isset($_GET["term"])){
 	 			$requete = $requete." (SELECT Events_idEvents FROM Events_has_Tags WHERE Tags_idTags =".$tags[$i].")";
 	 		}	
 		}
-		$requete = $requete." AND event_title LIKE :term";
+		$requete = $requete." AND (event_title LIKE :term OR event_description LIKE :term)";
+
 		if($_GET["categorie"] !=0){
 			$requete = $requete." AND e.Categories_idcategories = :c";
 			echo($requete);	
@@ -64,11 +65,11 @@ if(isset($_GET["term"])){
 		}
 
 	}elseif($_GET["categorie"] !=0){
-		$requete = $bdd->prepare('SELECT * FROM t_event e WHERE event_title LIKE :term AND e.Categories_idcategories = :c');
+		$requete = $bdd->prepare('SELECT * FROM t_event e WHERE (event_title LIKE :term OR event_description LIKE :term) AND e.Categories_idcategories = :c');
 		$requete->execute(array('term' => '%'.$term.'%','c' => $_GET["categorie"]));
 	}else{
 
-	$requete = $bdd->prepare('SELECT * FROM t_event WHERE event_title LIKE :term'); // j'effectue ma requête SQL grâce au mot-clé LIKE
+	$requete = $bdd->prepare('SELECT * FROM t_event WHERE event_title LIKE :term OR event_description LIKE :term'); // j'effectue ma requête SQL grâce au mot-clé LIKE
 
 	$requete->execute(array('term' => '%'.$term.'%'));
 	}

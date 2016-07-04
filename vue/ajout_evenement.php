@@ -4,12 +4,14 @@ include ('header.php');
 
 <link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
 <link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" /> 
-<link href="vue/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen"> 
+<link href="vue/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen"> 
 
-<script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
+
 <script type="text/javascript" src="vue/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="vue/js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="vue/js/moment.js"></script>
+<script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
 
 <div class="event">
 <div class="login-triangle"></div>
@@ -146,7 +148,9 @@ include 'footer.php';
 ?>
 <script type="text/javascript">
 $(function () {
-  $('#datetimepicker1').datetimepicker();
+  $('#datetimepicker1').datetimepicker({
+    locale: 'fr'
+  });
   $('#datetimepicker2').datetimepicker();
 });
 
