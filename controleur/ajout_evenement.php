@@ -9,8 +9,6 @@ include_once("modele/connexion_bdd.php");
 $categories = get_categories();
 $message = "";
 
-if(isset($_SESSION["login_user"])){
-
 
 function verif_champs($champs){
 	$erreur = 0;
@@ -148,8 +146,4 @@ if(isset($_SESSION["id_user"])){
 	$message = "Connectez-vous pour accéder à cette page";
 	include_once("vue/connexion.php");
 }
-
-}else{
-	include"vue/connexion.php";
-	}
 ?>
