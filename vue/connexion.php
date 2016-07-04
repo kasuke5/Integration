@@ -2,11 +2,16 @@
 include('header.php');
 ?>
   <body>
-
+<h2 style="margin:135px auto -120px; color:red;text-align:center">
+<?php
+echo $info
+?>
+</h2>
 <div class="login">
   <div class="login-triangle"></div>
   
   <h2 class="login-header">Connexion</h2>
+
 
   <form class="form-horizontal" role="form" method="post">
     <p><input type="text" name="login" id="login" placeholder="Pseudo"></p>
