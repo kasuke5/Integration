@@ -4,18 +4,14 @@ include ('header.php');
 
 <link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
 <link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" /> 
-<link href="vue/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen"> 
+<link href="vue/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen"> 
 
-<script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
+
 <script type="text/javascript" src="vue/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="vue/js/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="vue/js/fileinput.js"></script>
-<script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
-<script>
-    webshims.setOptions('forms-ext', {types: 'date'});
-    webshims.polyfill('forms forms-ext');
-</script>
+<script type="text/javascript" src="vue/js/moment.js"></script>
+<script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
 
 <div class="event">
 <div class="login-triangle"></div>
@@ -32,15 +28,16 @@ include ('header.php');
     <input type="text" name="adresse" placeholder="Ajoutez un lieu" value=<?php if (isset($_POST['adresse'])){echo $_POST['adresse'];} ?>>
     <br><br>
     <label class="control-label">Date/heure Début</label>
-   <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
-    <input size="16" type="text" id="debut" name="debut" value="" readonly>
-    <span class="add-on"><i class="icon-remove"></i></span>
-    <span class="add-on"><i class="icon-calendar"></i></span>
+   <div class="input-group date" id="datetimepicker1">
+    <input type='text' class="form-control" />
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
     </div>
     <br><br>
     <label class="control-label">Date/heure Fin</label>
 <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z">
-    <input size="16" type="text" id="fin" name="fin" value="" readonly>
+    <input size="16" type="text" id="datetimepciker2" name="fin" value="" readonly>
     <span class="add-on"><i class="icon-remove"></i></span>
     <span class="add-on"><i class="icon-calendar"></i></span>
     </div>
@@ -149,7 +146,14 @@ include ('header.php');
 <?php
 include 'footer.php';
 ?>
-<script>
+<script type="text/javascript">
+$(function () {
+  $('#datetimepicker1').datetimepicker({
+    locale: 'fr'
+  });
+  $('#datetimepicker2').datetimepicker();
+});
+
   $('#c').change(function(){
       if($('#c').val() == "importer"){
         $('#bdd').html("<input type='checkbox' name='bdd'> Utiliser aussi une bdd");
