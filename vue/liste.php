@@ -4,7 +4,7 @@ try
 
 {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=Event1z1;charset=utf8', 'root', 'Event1z1GFJ2016');
+    $bdd = new PDO('mysql:host=localhost;dbname=event1z1;charset=utf8', 'root', '');
 
 
 }
@@ -47,12 +47,13 @@ if(isset($_GET["term"])){
 		$nb = count($tags);
 		for($i=0;$i<$nb;$i++){
 			if($i != $nb-1){
-	 			$requete = $requete." (SELECT Events_idEvents FROM Events_has_Tags WHERE Tags_idTags =".$tags[$i].") AND event_id IN";
+	 			$requete = $requete." (SELECT Events_idEvents FROM events_has_tags WHERE Tags_idTags =".$tags[$i].") AND event_id IN";
 	 		}else{
-	 			$requete = $requete." (SELECT Events_idEvents FROM Events_has_Tags WHERE Tags_idTags =".$tags[$i].")";
+	 			$requete = $requete." (SELECT Events_idEvents FROM events_has_tags WHERE Tags_idTags =".$tags[$i].")";
 	 		}	
 		}
-		$requete = $requete." AND event_title LIKE :term";
+		$requete = $requete." AND (event_title LIKE :term OR event_description LIKE :term)";
+
 		if($_GET["categorie"] !=0){
 			$requete = $requete." AND e.Categories_idcategories = :c";
 			echo($requete);	
@@ -64,11 +65,11 @@ if(isset($_GET["term"])){
 		}
 
 	}elseif($_GET["categorie"] !=0){
-		$requete = $bdd->prepare('SELECT * FROM t_event e WHERE event_title LIKE :term AND e.Categories_idcategories = :c');
+		$requete = $bdd->prepare('SELECT * FROM t_event e WHERE (event_title LIKE :term OR event_description LIKE :term) AND e.Categories_idcategories = :c');
 		$requete->execute(array('term' => '%'.$term.'%','c' => $_GET["categorie"]));
 	}else{
 
-	$requete = $bdd->prepare('SELECT * FROM t_event WHERE event_title LIKE :term'); // j'effectue ma requête SQL grâce au mot-clé LIKE
+	$requete = $bdd->prepare('SELECT * FROM t_event WHERE event_title LIKE :term OR event_description LIKE :term'); // j'effectue ma requête SQL grâce au mot-clé LIKE
 
 	$requete->execute(array('term' => '%'.$term.'%'));
 	}
