@@ -47,9 +47,9 @@ if(isset($_GET["term"])){
 		$nb = count($tags);
 		for($i=0;$i<$nb;$i++){
 			if($i != $nb-1){
-	 			$requete = $requete." (SELECT Events_idEvents FROM events_has_tags WHERE Tags_idTags =".$tags[$i].") AND event_id IN";
+	 			$requete = $requete." (SELECT Events_idEvents FROM Events_has_Tags WHERE Tags_idTags =".$tags[$i].") AND event_id IN";
 	 		}else{
-	 			$requete = $requete." (SELECT Events_idEvents FROM events_has_tags WHERE Tags_idTags =".$tags[$i].")";
+	 			$requete = $requete." (SELECT Events_idEvents FROM Events_has_Tags WHERE Tags_idTags =".$tags[$i].")";
 	 		}	
 		}
 		$requete = $requete." AND (event_title LIKE :term OR event_description LIKE :term)";
