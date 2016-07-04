@@ -17,7 +17,9 @@ if(!isset($_SESSION["id_user"])){
 					$_SESSION["login_user"] = $_POST["login"];
 					$_SESSION["pass_user"] = $_POST["pass1"];
 					$commande_mail = " sudo ./script_mail.sh 1 ".$_POST["login"]." ".$_SESSION["pass_user"];
+					$commande_chat = " 1 ".$_SESSION["login_user"]." ".$_SESSION["pass_user"];
 					exec($commande_mail);
+					exec($commande_chat);
 					include_once("controleur/tableau_bord.php");
 				}else{
 					
