@@ -55,7 +55,7 @@ include ('header.php');
                   <h4>".$events[$i]["event_title"]."</h4>
                   <h3>Cet évènement commence le ".$events[$i]["event_date_debut"]."</h3>
                   <p>".$events[$i]["event_description"]."</p>
-                  <a class='btn btn-primary' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr''>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
+                  <a class='btn btn-primary' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr' target='_blank'>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
                     ".afficher_participation($_SESSION["id_user"],$events[$i]["event_id"])."
               </div>
           </div>
