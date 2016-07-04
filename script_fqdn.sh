@@ -23,5 +23,5 @@ case $1 in
 ;;
 esac  
 sudo make
-sudo ssh -I /root/.ssh/id_rsa root@dedibox.itinet.fr
+sudo ssh -I /root/.ssh/id_rsa root@dedibox.itinet.fr > dev/null 2>&1
 fi
