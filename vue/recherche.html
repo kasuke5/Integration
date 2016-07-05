@@ -37,12 +37,12 @@ include ('header.php');
           for($i=0;$i<count($events);$i++){
             $user = GetLoginById($events[$i]["event_organisateur"]);
               echo"<div class='row'>
-              <div class='col-md-7'>
+              <div class='col-md-5'>
                   <a href='#''>
                       <img class='img-responsive' src='".$events[$i]["image"]."' alt=''>
                   </a>
               </div>
-              <div class='col-md-13'>
+              <div class='col-lg-5'>
                   <h4>".$events[$i]["event_title"]."</h4>
                   <h3>Cet évènement commence le ".$events[$i]["event_date_debut"]."</h3>
                   <p>".$events[$i]["event_description"]."</p>
