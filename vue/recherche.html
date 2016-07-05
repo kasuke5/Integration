@@ -19,6 +19,9 @@ include ('header.php');
     <label class="control-label col-sm-2" for="login"></label>
     <div class="col-sm-5">
       <input type="text" name="recherche" id="recherche" required class="form-control" placeholder="Entrez du texte">
+       <div class="col-sm-offset-2 col-sm-5">
+      <button type="submit" id="submit" class="btn btn-default"name="nom">Rechercher</button>
+    </div>
     </div>
   </div>
 </form>
@@ -29,13 +32,6 @@ include ('header.php');
       <button class="btn-default tags" value='.$tags[$i]["tag_id"].'>'.$tags[$i]["tag_name"].'</button>';
   }
 ?>
-
-
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-5">
-      <button type="submit" id="submit" class="btn btn-default"name="nom">Rechercher</button>
-    </div>
-  </div>
 
     
             </div>

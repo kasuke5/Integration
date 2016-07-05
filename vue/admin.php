@@ -45,7 +45,7 @@ if (isset($info)) {
 				<th>Nom du site</th>
 				<th>Mail associé</th>
 				<th>Auteur</th>
-				<th>Modification</th>
+				<th>Etat</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -64,8 +64,6 @@ if (isset($info)) {
                   <td><form method='post' action='/admin'>
                   ".$bouton."
                   	<input type='hidden' name='id_event' value='".$users[$j]["event_id"]."'>
-                  	<input type='hidden' name='event_name' value='".$users[$j]["event_title"]."'>
-                  	<input type='hidden' name='user_name' value='".$users[$j]["user_login"]."'>
                   	</form></td>
 
 			</tr>";
