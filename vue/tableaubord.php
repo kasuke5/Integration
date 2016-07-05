@@ -61,13 +61,14 @@ if($nb_ins>0){
 }
 
   for($i=0;$i<$nb_ins;$i++){
+	$fqdn = url_transform($events_org[$i]["event_title"]);
     echo"<tr>
             <td>".$events_ins[$i]["event_title"]."</td>
             <td>".$events_ins[$i]["event_date_debut"]."</td>
             <td>".$events_ins[$i]["event_date_fin"]."</td>
             <td>".$events_ins[$i]["event_adresse"]."</td>
             <td>".GetLoginById($events_ins[$i]["event_organisateur"])["user_login"]."</td>
-            <td>".$events_ins[$i]["event_title"].".eventizi.itinet.fr</td>
+                    <td><a href='http://".$fqdn.".eventizi.itinet.fr' target='_blank'>".$fqdn.".eventizi.itinet.fr</a></td>
             <td><form action='actions' method='post'><input type='hidden' name='id' value='".$events_ins[$i]["event_id"]."'><input type='hidden' name='action' value='desinscrire'><button class='btn-danger'><i class='fa fa-trash'></i></button></td></tr></form>";
   }
 ?>
