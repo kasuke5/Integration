@@ -6,7 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.carousel-inner img {
+  /*filter:grayscale(70%);*/
+  filter:blur(5px);
+}
+.txt-carousel {
+  text-shadow: 2px 0 black, 3px 1px black, 1px 0 black, 0 -1px black;
+}
 /* Pen Title */
 .pen-title {
   padding: 50px 0;

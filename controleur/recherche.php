@@ -18,7 +18,7 @@ function afficher_participation($id_user,$id_event){
 }
 
 
-if(isset($_SESSION["id_user"])){
+if(isset($_SESSION["id_user"]) || isset($_SESSION['admin'])){
 	$categories = get_categories();
 	$tags = get_tags();
 	$events = get_events();

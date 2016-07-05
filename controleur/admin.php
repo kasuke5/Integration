@@ -2,11 +2,11 @@
 
 
 include_once("modele/admin.php");
-include_once("modele/connexion_bdd.php");
 include_once("modele/events.php");
 
-unset($info);
 if (isset($_SESSION['admin'])) {
+	include_once("modele/connexion_bdd.php");
+
 	if (isset($_POST['id'])){
 		remove_user_complete($_POST['id']);
 		$info = "Utilisateur et site(s) relié(s) supprimés";
