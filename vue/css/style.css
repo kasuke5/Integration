@@ -8,11 +8,15 @@ body {
 }
 .carousel-inner img {
   /*filter:grayscale(70%);*/
-  filter:blur(5px);
-  -webkit-filter:blur(5px);
+  /*filter:blur(5px);*/
+  /*-webkit-filter:blur(5px);*/
+  height: 100%;
 }
 .txt-carousel {
   text-shadow: 2px 0 black, 3px 1px black, 1px 0 black, 0 -1px black;
+}
+.btn-group {
+  display: -moz-box;
 }
 /* Pen Title */
 .pen-title {

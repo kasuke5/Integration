@@ -84,12 +84,6 @@ include ('header.php');
 include 'footer.php';
 ?>
 <script type="text/javascript">
-$(function () {
-  $('#datetimepicker1').datetimepicker({
-    locales: 'fr'
-  });
-  $('#datetimepicker2').datetimepicker();
-});
 
   $('#c').change(function(){
       if($('#c').val() == "importer"){
