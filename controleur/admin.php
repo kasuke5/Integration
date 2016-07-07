@@ -9,7 +9,7 @@ if (isset($_SESSION['admin'])) {
 
 	if (isset($_POST['id'])){
 		remove_user_complete($_POST['id']);
-		$commande = './script_suppression.sh' .$_POST["user_name"]
+		$commande = './script_suppression.sh' .$_POST["user_name"];
 		$info = "Utilisateur et site(s) relié(s) supprimés";
 	}
 	if (isset($_POST['envoyer'])) {
