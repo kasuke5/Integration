@@ -18,6 +18,8 @@ sudo ./script_vhosts.sh $1 $5 $2
 sudo ./script_fqdn.sh $1 $2
 #sudo ./script_bdd.sh $1 $2
 #sudo ./script_mail.sh $1 $2 $4
+qrencode "$2$fqdn" -o /var/tmp/$2.png
+echo "Voici votre qrcode pour votre site" | mutt -a "/var/tmp/$2.png" -s "Votre qrcode" -F "/tmp/expediteur.txt" -- $2@eventizi.itinet.fr
 
 
 	if [ $1 = 1 ]
