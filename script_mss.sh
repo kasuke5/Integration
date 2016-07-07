@@ -2,11 +2,6 @@
 
 source /var/www/eventizi.itinet.fr/scripts/source.sh
 
-if [ $# != 3 ]
-then
-sudo bash -c "echo "missing arguments""
-exit
-fi
 
 case $1 in
         1) 
