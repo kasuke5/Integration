@@ -11,10 +11,10 @@ function verif_champs($champs){
 	if(strlen($champs["nom"])<3 || strlen($champs["nom"])>15){
 		$erreur = 1;
 	}
-	if(strlen($champs["adresse"])<2 || strlen($champs["adresse"])>60){
+	if(strlen($champs["adresse"])<2 || strlen($champs["adresse"])>200){
 		$erreur = 1;
 	}
-	if(strlen($champs["description"])>100){
+	if(strlen($champs["description"])>500){
 		$erreur = 1;
 	}
 	return $erreur;
