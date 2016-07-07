@@ -4,9 +4,10 @@ include ('header.php');
 $nb_org = count($events_org);
 $nb_ins = count($events_ins);
 
-?>
+echo'<div class="tabcontainer">
+<h2 style="margin:135px auto -120px; color:red;text-align:center"></h2>
+<h2 class="ok">'.$message.'</h2> </div>';
 
-<?php
 if($nb_org>0){
   echo'
 <div class="tabcontainer">
@@ -61,7 +62,7 @@ if($nb_ins>0){
 }
 
   for($i=0;$i<$nb_ins;$i++){
-	$fqdn = url_transform($events_org[$i]["event_title"]);
+	$fqdn = url_transform($events_ins[$i]["event_title"]);
     echo"<tr>
             <td>".$events_ins[$i]["event_title"]."</td>
             <td>".$events_ins[$i]["event_date_debut"]."</td>
