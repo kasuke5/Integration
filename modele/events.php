@@ -216,19 +216,13 @@ function desinscription($id_event,$id_user){
 	
 function send_mail($action,$event,$user){
 	$nom = get_event_by_id($event)["event_title"];
-	if($action == "suppression"){
-		$participants = get_users_by_event($event);
-		$nb = count($participants);
-		for($i=0;$i<$nb;$i++){
-		$commande = 'echo  "Bonjour,\n Nous avons le regret de vous informer que l évènement '.$nom.' auquel vous étiez inscrit a été annulé par son organisateur." | mail -r noreply@$eventizi.itinet.fr -s "Infos" '.$participants[$i]["user_login"].'@eventizi.itinet.fr';
-		var_dump(participants[$i]["user_login"]);
-			exec($commande);
-
-		}
-	}elseif($action = "inscription"){
+	if($action = "inscription"){
+		$message = "Bonjour,\n Vous avez un nouveau participant à votre évènement, il s'agit de".$user.". Voici la liste actualisée des participants à votre évènement : \n"; 
+	}else{
+		$message = "Bonjour,\n Quelqu'un s'est désinscrit de votre évènement, il s'agit de".$user.". Voici la liste actualisée des participants à votre évènement : \n"; 
+	}
 		$participants = getusersbyevent($event);
 		$nb = count($participants);
-		$message = "Bonjour,\n Vous avez un nouveau participant à votre évènement, il s'agit de".$user.". Voici la liste actualisée des participants à votre évènement : \n"; 
 		$nb = count($participants);
 		for($i=0;$i<$nb;$i++){
 			$message = $message.$participants[$i]["user_login"]."\n";
@@ -236,10 +230,6 @@ function send_mail($action,$event,$user){
 		var_dump($participants);
 		 $commande = 'echo "'.$message.'" | mail -r noreply@$eventizi.itinet.fr -s "Infos" '.$nom.'@eventizi.itinet.fr';
 		exec($commande);
-	}else{
-		echo"";
-	}
-	
-
-
+		
 }
+
