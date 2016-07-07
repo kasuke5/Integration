@@ -4,16 +4,23 @@ include ('header.php');
 
 <link rel="stylesheet" type="text/css" href="vue/css/chosen.min.css" />  
 <link rel="stylesheet" type="text/css" href="vue/css/fileinput.css" /> 
-<link href="vue/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen"> 
+<link href="vue/css/bootstrap-datetimepicker.min.css" rel="stylesheet" > 
 
 
 <script type="text/javascript" src="vue/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="vue/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="vue/js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 <script type="text/javascript" src="vue/js/moment.js"></script>
 <script type="text/javascript" src="vue/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="vue/js/locales/fr.js"></script>
+ <!-- afarkas.github.io/webshim/demos/index.html q-->
+ <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
 
+<script>
+   webshims.setOptions('forms-ext', {types: 'date'});
+   webshims.polyfill('forms forms-ext');
+</script>
 <div class="event">
 <div class="login-triangle"></div>
 <?php echo $message; ?>
@@ -26,23 +33,21 @@ include ('header.php');
     <input type="text" name="nom" placeholder="Ajoutez un nom court sans majuscules" value=<?php if (isset($_POST['nom'])){echo $_POST['nom'];} ?>>
     <br><br>
        <label class="control-label" for="lieu">Lieu</label>
-    <input type="text" name="adresse" placeholder="Ajoutez un lieu" value=<?php if (isset($_POST['adresse'])){echo $_POST['adresse'];} ?>>
+    <input type="text" id="lieu" name="adresse" placeholder="Ajoutez un lieu" value=<?php if (isset($_POST['adresse'])){echo $_POST['adresse'];} ?>>
     <br><br>
-    <label class="control-label">Date/heure Début</label>
-   <div class="input-group date" id="datetimepicker1">
-    <input type='text' class="form-control" />
-        <span class="input-group-addon">
-          <span class="glyphicon glyphicon-calendar"></span>
-        </span>
-    </div>
+  <div class="form-group">
+    <label for="debut" class="col-sm-4 control-label">Date et heure début:</label>
+       <div class="col-sm-5">
+           <input type="datetime-local" id="debut" name="debut" value="" placeholder="2016-01-10T09:00"  class="form-control"/>        
+       </div>
+  </div>
     <br><br>
-    <label class="control-label">Date/heure Fin</label>
-   <div class="input-group date" id="datetimepicker2">
-    <input type='text' class="form-control" />
-        <span class="input-group-addon">
-          <span class="glyphicon glyphicon-calendar"></span>
-        </span>
-    </div>
+    <div class="form-group">
+      <label for="fin" class="col-sm-4 control-label">Date et heure fin:</label>  
+        <div class="col-sm-5">
+           <input type="datetime-local" id="fin" name="fin" value="" placeholder="2016-01-10T10:00"  class="form-control"/>
+        </div>
+      </div>
     <br><br>
   <!--  <div class="col-md-6">-->
     <label class="control-label">Catégorie</label>
@@ -79,12 +84,6 @@ include ('header.php');
 include 'footer.php';
 ?>
 <script type="text/javascript">
-$(function () {
-  $('#datetimepicker1').datetimepicker({
-    locale: 'fr'
-  });
-  $('#datetimepicker2').datetimepicker();
-});
 
   $('#c').change(function(){
       if($('#c').val() == "importer"){

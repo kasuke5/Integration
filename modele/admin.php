@@ -4,12 +4,14 @@ function get_users(){
 	$donnees = 0;
 	$i=0;
 	$renvoyer = [];
-	$req = $bdd->query('SELECT * 
+	/*$req = $bdd->query('SELECT * 
 						FROM t_event as e 
 							INNER JOIN Users_has_Events as ue
     							ON e.event_id = ue.Events_idEvents
     						INNER JOIN t_user as u
-    							ON u.user_id = ue.Users_idUsers');
+    							ON u.user_id = ue.Users_idUsers');*/
+	$req = $bdd->query('SELECT * FROM t_user');
+
 	while($donnees = $req->fetch()){
 			$renvoyer[$i] = $donnees;
 			$i++;

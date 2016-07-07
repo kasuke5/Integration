@@ -5,9 +5,11 @@
   <title>Event'izi</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/favicon.png" />
 
-    <link rel="stylesheet" href="vue/css/style.css">
+    
   <link rel="stylesheet" href="vue/css/bootstrap.css">
+  <link rel="stylesheet" href="vue/css/style.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -87,7 +89,7 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
-            <h2 style="color:orange;margin:18px auto auto;">Event'izi</h2>
+            <a href="/"><img src="../img/logo_accueil.png" style=" height:50px;margin-top:15px;"></a>
 
 
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -103,12 +105,14 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
       <!--Il faut mettre variable php pour <li class="active" selon la page -->
       <div class="navbar-collapse  collapse">
         <ul class="nav navbar-nav navbar-right scroll">
-            <li class="active"><a href="/">Accueil</a></li>
             <?php
             if(isset($_SESSION["id_user"])){
               echo'<li><a href="/recherche">Recherche</a></li><li><a href="/tableau_bord">Mes évènements</a></li><li><a href="/deconnexion">Se déconnecter</a></li><li><a href="http://mail.eventizi.itinet.fr" target="_blank">Boîte Mail</a></li> ';
-            }else{
-              #echo'<li><a href="/connexion">Connexion</a></li><li><a href="/inscription">Inscription</a></li></div>';
+            }elseif (isset($_SESSION['admin'])){
+              echo '<li><a href="/admin">Tableau d\'administration</a></li>
+                    <li><a href="/recherche">Recherche</a></li>
+                    <li><a href="/deconnexion">Se déconnecter</a></li>';
+            } else {
               echo '<li><a href="#" data-width="500" data-rel="popup1" class="poplight">Connexion</a></li>
               <div id="popup1" class="popup_block">
               <div class="login">
@@ -135,31 +139,6 @@ body {font:14px verdana, sans-serif;background:#000000;color:#C0C0C0;font-weight
   </form>
 </div>
 </div>';             
-              /*<li><a data-toggle="modal" data-target="#myModal">Connexion</a></li>
-              <div class="modal" id="myModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="login">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <div class="login-triangle"></div>
-                      <h2 class="login-header">Connexion</h2>
-                    </div>
-                    <div class="modal-body">
-                      <form class="form-horizontal" role="form" method="post">
-                            <input type="text" name="login" id="login" placeholder="Pseudo">
-                            <br />
-                            <input type="password" name="pass" id="pass" placeholder="Mot de passe">
-                            <br />
-                                                </div>
-                                            </div>
-                                                <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-primary">Fermer</button>
-                                                    <input type="submit" name="action" value="Connexion">
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->';*/
             }
             ?>
               <!-- Bouton execution modal -->

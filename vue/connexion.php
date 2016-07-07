@@ -4,7 +4,9 @@ include('header.php');
   <body>
 <h2 style="margin:135px auto -120px; color:red;text-align:center">
 <?php
-echo $info
+if (isset($info)){
+echo $info;
+}
 ?>
 </h2>
 <div class="login">
@@ -19,7 +21,7 @@ echo $info
   </form>
 </div>
 <?php
-include 'footer.php';
+include ('footer.php');
 ?>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   </body>

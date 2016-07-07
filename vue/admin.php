@@ -6,71 +6,87 @@ if (isset($info)) {
 ?>
 <div class="tabcontainer">
 <h3>Gestion des utilisateurs</h3>
-
-	<table class="table table-striped">
+	<table class="table">
 		<thead>
 			<tr>
 				<th>Nom utilisateur</th>
-				<th>Compte chat</th>
-				<th>Nombre d'évenement</th>
-				<th>Mail lié aux evenements</th>
-				<th>Supp.</th>
+				<th>Mail utilisateur</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
-		
-		<?php
-			$utilisateurs = get_user();
-		  foreach ($utilisateurs as $utilisateur => $value) {
-		  			echo "<tr>
-
-             	  <td>".$value['user_login']."</td>
-                  <td>".$value['user_chat']."</td>
-                  <td>".nb_event_user($value['user_id'])."</td>
-                  <td>".$value['user_email']."</td>
-                  <td><form method='post'>
-                  	<button class='btn btn-danger glyphicon glyphicon-trash' name='id' value='".$value['user_id']."'></button>
-                  	</form></td>
-                  
-          
-            </tr>";
-		  		}		
-            ?>
-		</tbody>
-	</table>
-	<h3>Gestion des sites</h3>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Nom du site</th>
-				<th>Mail associé</th>
-				<th>Auteur</th>
-				<th>Etat</th>
+		<?php $users = get_users(); ?>
+		<?php foreach ($users as $user): 
+			$events = get_events_by_user($user['user_id']); ?> 
+			<tr class="user info" >
+				<td><?= $user['user_login'] ?></td>
+				<td><?= $user['user_email'] ?></td>
+				<td>
+				<div class="btn-group">
+					<button class="btn btn-primary user-show-events glyphicon glyphicon-eye-open" target="#user-<?=$user['user_id']?>-events"> Voir les evenements de l'utilsateur</button>
+					<form method='post'>
+              			<button class='btn btn-danger glyphicon glyphicon-trash' name='id' value='<?=$user['user_id']?>'></button>
+              		</form>
+              	</div>
+              	</td>
 			</tr>
-		</thead>
-		<tbody>
-		<?php
-          for($j=0;$j<count($users);$j++){;
-          	if ($users[$j]["event_active"] == 0) {
-          		$bouton = "<button type='submit' name='envoyer' value='1' class='btn btn-success glyphicon glyphicon-ok'> Activer";
-          	} else {
-          		$bouton = "<button type='submit' name='envoyer' value='0' class='btn btn-danger glyphicon glyphicon-remove'> Desactiver";
-          	}
-			echo"<tr>
-			
-              <td>".$users[$j]["event_title"]."</td>
-                  <td>".$users[$j]["event_mail"]."</td>
-                  <td>".$users[$j]["user_login"]."</td>
-                  <td><form method='post' action='/admin'>
-                  ".$bouton."
-                  	<input type='hidden' name='id_event' value='".$users[$j]["event_id"]."'>
-                  	</form></td>
+			<tr class="events success" style="display: none;" id="user-<?=$user['user_id']?>-events">
+				<td colspan="3">
+				<?php if ($events) :?>
+					<table id="<?= $user['user_id'] ?>" class="table">
+						<thead>
+							<tr class="success">
+								<th colspan="3" class='events-title text-center'>Evenements de l'utilisateur <?= $user['user_login']?></th>
+							</tr>
+							<tr class="success">
+								<th>Nom du site</th>
+								<th>Mail associé</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php foreach ($events as $event): ?>
 
-			</tr>";
-			  }
-            ?>
+							<tr class="event success">
+								<td><?= $event['event_title']; ?></td>
+								<td><?= $event["event_mail"] ?></td>
+								<td>
+									<form method='post' action='/admin'>
+										<input type='hidden' name='id_event' value="<?= $event['event_id'] ?>">
+										<?php if ($event['event_active'] == 1) {
+											$bouton = "<button type='submit' name='envoyer' value='0' class='btn btn-danger glyphicon glyphicon-remove'> Desactiver";
+										} else {
+											$bouton = "<button type='submit' name='envoyer' value='1' class='btn btn-success glyphicon glyphicon-ok'> Activer";
+										}
+										  echo $bouton;?>
+										
+									</form>
+								</td>
+
+							</tr>
+						<?php endforeach; ?>
+						</tbody>
+					</table>
+				<?php else: ?>
+					Cet utilisateur n'a pas encore ajoute d'evenements.
+				<?php endif;?>
+				</td>
+			</tr>
+		<?php endforeach; ?>
 		</tbody>
-	</table>
-</div>
+		</table>
+		</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    
+	$('.user-show-events').click(function(e){
+		 var target = $(this).attr('target');
+		 $(target).slideToggle();
+	});
+
+});
+</script>
 <?php
 include ('footer.php');
