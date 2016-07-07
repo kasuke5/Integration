@@ -8,7 +8,7 @@ $categories = get_categories();
 $message = "";
 function verif_champs($champs){
 	$erreur = 0;
-	if(strlen($champs["nom"])<3 || strlen($champs["nom"])>15){
+	if(strlen($champs["nom"])<3 || strlen($champs["nom"])>30){
 		$erreur = 1;
 	}
 	if(strlen($champs["adresse"])<2 || strlen($champs["adresse"])>200){
