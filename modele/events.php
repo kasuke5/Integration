@@ -92,6 +92,19 @@ function get_users_by_event($id){
 	return $renvoyer;
 }
 
+function getusersbyevent($id){  // sans le count car il ne renvoie qu'une ligne
+        global $bdd;
+        $donnees = 0;
+        $i=0;
+        $renvoyer = [];
+        $req = $bdd->prepare('SELECT user_login, user_id FROM t_user u JOIN Users_has_Events ue ON u.user_id = ue.Users_idUsers AND ue.Events_idEvents = ?');
+        $req->execute(array($id)) or die ( print_r($req->errorInfo()) );
+        while($donnees = $req->fetch()){
+                        $renvoyer[$i] = $donnees;
+                        $i++;
+        }
+        return $renvoyer;
+}
 
 
 function get_tag_by_name($name){
@@ -123,6 +136,7 @@ function remove_event($id_event,$id_user){
 	$req = $bdd->prepare('DELETE FROM t_event WHERE event_id = ?');
 	$req->execute(array($id_event)) or die ( print_r($req->errorInfo()) );
 	$donnees = $req->fetch();
+	send_mail("suppression",$id_event,$id_user);
 	return $donnees;
 }
 
@@ -134,6 +148,7 @@ function inscription_event($id_user,$id_event){
     'user_id' => $id_user,
     'event_id' => $id_event,
     'role' => 0	)) or die ( print_r($req->errorInfo()) );
+	send_mail("inscription",$id_event,$id_user);
 
 }
 
@@ -197,4 +212,34 @@ function desinscription($id_event,$id_user){
    	$req->execute(array(
     'user_id' => $id_user,
     'event_id' => $id_event )) or die ( print_r($req->errorInfo()) );
+}	
+	
+function send_mail($action,$event,$user){
+	$nom = get_event_by_id($event)["event_title"];
+	if($action == "suppression"){
+		$participants = get_users_by_event($event);
+		$nb = count($participants);
+		for($i=0;$i<$nb;$i++){
+		$commande = 'echo  "Bonjour,\n Nous avons le regret de vous informer que l évènement '.$nom.' auquel vous étiez inscrit a été annulé par son organisateur." | mail -r noreply@$eventizi.itinet.fr -s "Infos" '.$participants[$i]["user_login"].'@eventizi.itinet.fr';
+		var_dump(participants[$i]["user_login"]);
+			exec($commande);
+
+		}
+	}elseif($action = "inscription"){
+		$participants = getusersbyevent($event);
+		$nb = count($participants);
+		$message = "Bonjour,\n Vous avez un nouveau participant à votre évènement, il s'agit de".$user.". Voici la liste actualisée des participants à votre évènement : \n"; 
+		$nb = count($participants);
+		for($i=0;$i<$nb;$i++){
+			$message = $message.$participants[$i]["user_login"]."\n";
+		}
+		var_dump($participants);
+		 $commande = 'echo "'.$message.'" | mail -r noreply@$eventizi.itinet.fr -s "Infos" '.$nom.'@eventizi.itinet.fr';
+		exec($commande);
+	}else{
+		echo"";
+	}
+	
+
+
 }
