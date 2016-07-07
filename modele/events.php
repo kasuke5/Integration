@@ -136,7 +136,6 @@ function remove_event($id_event,$id_user){
 	$req = $bdd->prepare('DELETE FROM t_event WHERE event_id = ?');
 	$req->execute(array($id_event)) or die ( print_r($req->errorInfo()) );
 	$donnees = $req->fetch();
-	send_mail("suppression",$id_event,$id_user);
 	return $donnees;
 }
 
@@ -212,6 +211,7 @@ function desinscription($id_event,$id_user){
    	$req->execute(array(
     'user_id' => $id_user,
     'event_id' => $id_event )) or die ( print_r($req->errorInfo()) );
+	send_mail("desinscription",$id_event,$id_user);
 }	
 	
 function send_mail($action,$event,$user){
