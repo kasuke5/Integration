@@ -83,7 +83,7 @@ function get_users_by_event($id){
 	$donnees = 0;
 	$i=0;
 	$renvoyer = [];
-	$req = $bdd->prepare('SELECT user_login, user_id, count(user_login) as nombre FROM t_user u JOIN Users_has_Events ue ON u.user_id = ue.Users_idUsers AND ue.Events_idEvents = ?');
+	$req = $bdd->prepare('SELECT user_login, user_id, count(user_login) as nombre FROM t_user u JOIN Users_has_Events ue ON u.user_id = ue.Users_idUsers AND ue.Events_idEvents = ? AND ue.role = 0');
 	$req->execute(array($id)) or die ( print_r($req->errorInfo()) );
 	while($donnees = $req->fetch()){
 			$renvoyer[$i] = $donnees;
@@ -97,7 +97,7 @@ function getusersbyevent($id){  // sans le count car il ne renvoie qu'une ligne
         $donnees = 0;
         $i=0;
         $renvoyer = [];
-        $req = $bdd->prepare('SELECT user_login, user_id FROM t_user u JOIN Users_has_Events ue ON u.user_id = ue.Users_idUsers AND ue.Events_idEvents = ?');
+        $req = $bdd->prepare('SELECT user_login, user_id FROM t_user u JOIN Users_has_Events ue ON u.user_id = ue.Users_idUsers AND ue.Events_idEvents = ? AND ue.role = 0');
         $req->execute(array($id)) or die ( print_r($req->errorInfo()) );
         while($donnees = $req->fetch()){
                         $renvoyer[$i] = $donnees;
@@ -193,6 +193,16 @@ function add_tags($POST){
 	}
 }
 
+function GetLoginById($id){
+	global $bdd;
+	$donnees = 0;
+	$req = $bdd->prepare('SELECT user_login, user_password, user_role FROM t_user WHERE user_id = ?');
+	$req->execute(array($id));
+	$donnees = $req->fetch();
+	return $donnees;
+}
+
+
 
 function url_transform($str)
 {
@@ -216,10 +226,11 @@ function desinscription($id_event,$id_user){
 	
 function send_mail($action,$event,$user){
 	$nom = get_event_by_id($event)["event_title"];
-	if($action = "inscription"){
-		$message = "Bonjour,\n Vous avez un nouveau participant à votre évènement, il s'agit de".$user.". Voici la liste actualisée des participants à votre évènement : \n"; 
+	$nom_user = GetLoginById($user)["user_login"];
+	if($action == "inscription"){
+		$message = "Bonjour,\n Vous avez un nouveau participant à votre évènement, il s'agit de ".$nom_user.". Voici la liste actualisée des participants à votre évènement : \n"; 
 	}else{
-		$message = "Bonjour,\n Quelqu'un s'est désinscrit de votre évènement, il s'agit de".$user.". Voici la liste actualisée des participants à votre évènement : \n"; 
+		$message = "Bonjour,\n Quelqu'un s'est désinscrit de votre évènement, il s'agit de".$nom_user.". Voici la liste actualisée des participants à votre évènement : \n"; 
 	}
 		$participants = getusersbyevent($event);
 		$nb = count($participants);
