@@ -1,30 +1,24 @@
 <?php
 	
-
 include_once("modele/events.php");
 include_once("modele/membre.php");
 include_once("modele/co_in.php");
 include_once("modele/connexion_bdd.php");
-
 $categories = get_categories();
 $message = "";
-
-
 function verif_champs($champs){
 	$erreur = 0;
-	if(strlen($champs["nom"])<3 || strlen($champs["nom"])>15){
+	if(strlen($champs["nom"])<3 || strlen($champs["nom"])>30){
 		$erreur = 1;
 	}
-	if(strlen($champs["adresse"])<2 || strlen($champs["adresse"])>60){
+	if(strlen($champs["adresse"])<2 || strlen($champs["adresse"])>200){
 		$erreur = 1;
 	}
-	if(strlen($champs["description"])>100){
+	if(strlen($champs["description"])>500){
 		$erreur = 1;
 	}
 	return $erreur;
 }
-
-
 function verif_upload($image){
 	if($image["size"] == 0){
 		$erreur = -1;
@@ -40,19 +34,15 @@ function verif_upload($image){
 	}
 	return $erreur;
 }
-
-
 function move_file($image,$existe){
-	if($existe > 0){
-			$chemin = "img/".$_SESSION["login_user"];
-		if(is_dir($chemin)){
+	$chemin = "img/".$_SESSION["login_user"];
+	if(is_dir($chemin)){
 			mkdir($chemin."/".$_POST["nom"]);
 		}else{
 			mkdir("img/".$_SESSION["login_user"]);
 			mkdir($chemin."/".$_POST["nom"]);
 		}
-
-
+	if($existe > 0){
 		$newImage = imagecreatefromjpeg($image['tmp_name']);
 		$taille = getimagesize($image['tmp_name']);
 		$hauteur = 300;
@@ -63,6 +53,14 @@ function move_file($image,$existe){
 		imagedestroy($newImage);
 		$resultat = imagejpeg($image_redim,$chemin."/".$_POST["nom"]."/event.jpg",100);
 	}else{
+
+		$image = imagecreatefromjpeg('img/wallpaper.jpg');
+		$white = imagecolorallocate($image, 255, 255, 255);
+		$font_path = 'img/CWGSans.TTF';
+		$text = $_POST["nom"];
+		imagettftext($image, 50, 0, 150, 150, $white, $font_path, $text);
+		imagejpeg($image,$chemin."/".$_POST["nom"]."/event.jpg",100);
+      	imagedestroy($image);
 		$resultat = 1;
 	}
 	
@@ -70,7 +68,6 @@ function move_file($image,$existe){
 }
 
 if(isset($_SESSION["id_user"])){
-
 	if(isset($_POST["action"])){
 		if(!verif_champs($_POST)){
 			$verif = verif_upload($_FILES["photo"]);
@@ -78,8 +75,6 @@ if(isset($_SESSION["id_user"])){
 				$infos_user = GetLoginById($_SESSION["id_user"]);
 				$login = $infos_user["user_login"];
 				$role = $infos_user["user_role"];
-
-
 				if($_POST["choix"] == "wordpress"){
 					$site = 1;
 				}elseif ($_POST["choix"]=="importer") {
@@ -115,8 +110,8 @@ if(isset($_SESSION["id_user"])){
 									exec($commande_bdd);
 									break;
 							}
-							exec($commande_web);
 							exec($commande_chat);
+							exec($commande_web);
 							include("controleur/tableau_bord.php");
 						}else{
 						$message = "erreur fichier";
@@ -127,7 +122,6 @@ if(isset($_SESSION["id_user"])){
 						include"vue/ajout_evenement.php";
 					}
 				
-
 				
 				
 				}else{

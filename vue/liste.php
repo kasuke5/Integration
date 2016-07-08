@@ -98,6 +98,7 @@ if(isset($_GET["term"])){
 			echo"Aucun évènement ne correspond à votre recherche";
 		}else{
 			for($i=0;$i<count($renvoyer);$i++){
+				$nom = url_transform($renvoyer[$i]["event_title"]);
 	            echo"<div class='row'>
 	            <div class='col-md-7'>
 	                <a href='#''>
@@ -108,7 +109,7 @@ if(isset($_GET["term"])){
 	                <h4>".$renvoyer[$i]["event_title"]."</h4>
 	                <h3>Cet évènement commence le ".$renvoyer[$i]["event_date_debut"]."</h3>
 	                <p>".$renvoyer[$i]["event_description"]."</p>
-	                <a class='btn btn-primary' href='http://".$renvoyer[$i]["event_title"].".eventizi.itinet.fr''>View Project <span class='glyphicon glyphicon-chevron-right'></span></a>
+	                <a class='btn btn-primary' href='http://".$nom.".eventizi.itinet.fr' target='_blank' >View Project <span class='glyphicon glyphicon-chevron-right'></span></a>
 	                ".afficher_participation($_GET["id"],$renvoyer[$i]["event_id"])."
 	            </div>
 	        </div>

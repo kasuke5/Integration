@@ -35,6 +35,7 @@ include ('header.php');
 <div id='events'>
         <?php
           for($i=0;$i<count($events);$i++){
+		  $nom = url_transform($events[$i]["event_title"]);
             $user = GetLoginById($events[$i]["event_organisateur"]);
               echo"<div class='row'>
               <div class='col-md-5'>
@@ -43,10 +44,10 @@ include ('header.php');
                   </a>
               </div>
               <div class='col-lg-5'>
-                  <h4>".$events[$i]["event_title"]."</h4>
-                  <h3>Cet évènement commence le ".$events[$i]["event_date_debut"]."</h3>
+                  <h3>".$events[$i]["event_title"]."</h3>
+                  <h4>Cet évènement commence le ".$events[$i]["event_date_debut"]."</h4>
                   <p>".$events[$i]["event_description"]."</p>
-                  <a class='btn btn-primary' href='http://".$events[$i]["event_title"].".eventizi.itinet.fr' target='_blank'>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
+                  <a class='btn btn-primary' href='http://".$nom.".eventizi.itinet.fr' target='_blank'>Voir le site <span class='glyphicon glyphicon-chevron-right'></span></a>
                     ".afficher_participation($_SESSION["id_user"],$events[$i]["event_id"])."
               </div>
           </div>

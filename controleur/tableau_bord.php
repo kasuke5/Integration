@@ -16,9 +16,10 @@ if (isset($_SESSION["id_user"])) {
 				$events_org[$j] = $events[$i];
 				$nb_event[$j] = get_users_by_event($events[$i]["event_id"])[0]["nombre"];
 				$j++;
-			}else
+			}else{
 				$events_ins[$k] = $events[$i];
 				$k++;
+			}
 		}
 	include_once("vue/tableaubord.php");
 } else {
