@@ -193,17 +193,6 @@ function add_tags($POST){
 	}
 }
 
-function GetLoginById($id){
-	global $bdd;
-	$donnees = 0;
-	$req = $bdd->prepare('SELECT user_login, user_password, user_role FROM t_user WHERE user_id = ?');
-	$req->execute(array($id));
-	$donnees = $req->fetch();
-	return $donnees;
-}
-
-
-
 function url_transform($str)
 {
   		$str    =       preg_replace('#[^\\p{L}\d]+#u', '', $str);
