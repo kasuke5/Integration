@@ -1,5 +1,5 @@
 <?php
-
+	include("modele/co_in.php");
 	include("modele/events.php");
 
 	if($_POST["action"] == "supprimer"){
