@@ -19,6 +19,7 @@ if (isset($_SESSION["id_user"])) {
 			}else{
 				$events_ins[$k] = $events[$i];
 				$k++;
+			}
 		}
 	include_once("vue/tableaubord.php");
 } else {
